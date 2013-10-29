@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Mon Oct 28 16:56:56 CET 2013
+markTmpDer=true
+builderNum=6
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=ejercicios_estadistica_farmacia_2013-2014.tex
+outputFile=ejercicios_estadistica_farmacia_2013-2014.pdf
+langSpell=es
+markDer=true
+srcDir=

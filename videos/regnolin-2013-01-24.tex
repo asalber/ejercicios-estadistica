@@ -1,0 +1,166 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Regresión no lineal}\\
+Titulaciones: & \structure{Química, Biotecnología}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+Se sometió a una persona a unas sesiones de entrenamiento para el manejo de una máquina de análisis químicos y se valoró la destreza en el manejo en diversas ocasiones, valorandola en una escala de 0 a 100. 
+Los resultados obtenidos aparecen en la siguiente tabla
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\hline
+Sesiones & 2 & 5 & 7 & 10 & 12 & 16\\
+Destreza & 15 & 40 & 62 & 86 & 92 & 95\\
+\hline
+\end{tabular}
+\end{center} 
+Se pide:
+\begin{enumerate}
+\item Calcular la destreza alcanzada al cabo de 8 sesiones empleando el modelo logarítmico. 
+\item Calcular el número de sesiones necesarias para alcanzar una destreza de 80 empleando el modelo exponencial.
+\item Justificar razonadamente cuál de las predicciones anteriores es más fiable. 
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.5\textwidth}
+\begin{enumerate}
+\item Calcular la destreza alcanzada al cabo de 8 sesiones empleando el modelo logarítmico. 
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.5\textwidth}
+\structure{Datos}\\
+$X$=Sesiones de entrenamiento\\
+$Y$=Destreza alcanzada\\[.5cm]
+\begin{tabular}{lrrrrrr}
+\hline
+Sesiones & 2 & 5 & 7 & 10 & 12 & 16\\
+Destreza & 15 & 40 & 62 & 86 & 92 & 95\\
+\hline
+\end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.5\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Calcular el número de sesiones necesarias para alcanzar una destreza de 80 empleando el modelo exponencial.\end{enumerate}
+\end{column}
+\begin{column}[T]{0.5\textwidth}
+\structure{Datos}\\
+$X$=Sesiones de entrenamiento\\
+$Y$=Destreza alcanzada\\
+$Z=\log(X)$\\
+\medskip
+\begin{tabular}{lrrrrrr}
+\hline
+Sesiones & 2 & 5 & 7 & 10 & 12 & 16\\
+Destreza & 15 & 40 & 62 & 86 & 92 & 95\\
+\hline
+\end{tabular} 
+
+\medskip
+$\bar z = 1.9681$ $\log(\text{sesiones})$\\
+$s_z^2=0.4635$ $\log^2(\text{sesiones})$\\
+$\bar y = 65$ puntos\\
+$s_{zy} = 19.6489$ $\log(\text{sesiones}\cdot\text{puntos})$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.5\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Justificar razonadamente cuál de las predicciones anteriores es más fiable. 
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.5\textwidth}
+\structure{Datos}\\
+$X$=Sesiones de entrenamiento\\
+$Y$=Destreza alcanzada\\
+$Z=\log(X)$\\
+\medskip
+\begin{tabular}{lrrrrrr}
+\hline
+Sesiones & 2 & 5 & 7 & 10 & 12 & 16\\
+Destreza & 15 & 40 & 62 & 86 & 92 & 95\\
+\hline
+\end{tabular}
+
+\medskip
+$s_z^2=0.4635$ $\log^2(\text{sesiones})$\\
+$s_y^2 = 867.3333$ puntos$^2$\\
+$s_{zy} = 19.6489$ $\log(\text{sesiones}\cdot\text{puntos})$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\end{document}

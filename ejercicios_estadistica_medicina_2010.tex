@@ -1,0 +1,236 @@
+\documentclass[a4paper,titlepage]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{svn-multi}
+% Version control information:
+\svnidlong
+{$HeadURL: http://172.20.100.115/svn/maths/ejercicios_estadistica/ejercicios_estadistica.tex $}
+{$LastChangedDate: 2007-10-01 16:04:26 +0200 (lun, 01 oct 2007) $}
+{$LastChangedRevision: 2 $}
+{$LastChangedBy: alf $}
+%\svnid{$Id: ejercicios_estadistica.tex 2 2007-10-01 14:04:26Z alf $}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{macros}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{probsoln-alf}
+%\usepackage{times}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfauthor={Alfredo S\'anchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de Estad\'istica} } 
+\usepackage{url}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}} \rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Métodos Cuantitativos}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+\pdfinfo{/CreationDate (D:\svnpdfdate)}
+\svnRegisterAuthor{alf}{Alfredo Sánchez Alberca}
+
+\makeatletter
+\let\savees@listquot\es@listquot
+\def\es@listquot{\protect\savees@listquot}
+\makeatletter
+
+\reversemarginpar
+\showshortanswers
+%\showanswers
+%\PSNrandseed{2007}
+
+
+\begin{document}
+\sloppy
+
+\title{\vskip 2cm
+\shadowbox{\Huge \textbf{\textsf{\quad \textcolor[rgb]{0.00,0.00,0.50}{EJERCICIOS DE ESTADÍSTICA}\quad}}}\\
+   \vskip 1cm
+   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Asignatura: Bioestadística }}}\\
+   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Curso: 1º de Licenciatura en Medicina}}}
+   }
+\author{
+   Santiago Angulo Díaz-Parreño (\url{sangulo@ceu.es})
+   \and
+   José Miguel Cárdenas Rebollo (\url{cardenas@ceu.es})
+   \and
+   Anselmo Romero Limón (\url{arlimon@ceu.es})
+   \and
+   Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+}
+\date{Curso 2010-2011\\[1cm]
+\includegraphics[scale=0.3]{img/logo_uspceu_01}}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\input{descriptiva}
+\input{regresion}
+\input{probabilidad}
+\input{variables_aleatorias_discretas}
+\input{variables_aleatorias_continuas}
+\input{estimacion}
+\input{contrastes}
+
+\section{Estadística Descriptiva}
+\begin{enumerate}[leftmargin=*]
+\item \useproblem{des-1}
+\item \useproblem{des-2}
+\item \useproblem{des-3}
+\item \useproblem{des-52}
+\item \useproblem{des-51}
+\item \useproblem{des-7}
+\item \useproblem{des-10}
+\item \useproblem{des-12}
+\item \useproblem{des-13}
+\item \useproblem{des-16}
+\item \useproblem{des-17}
+\item \useproblem{des-19}
+\item \useproblem{des-20}
+\item \useproblem{des-21}
+\item \useproblem{des-23}
+\item \useproblem{des-24}
+\item \useproblem{des-29}
+\item \useproblem{des-30}
+\end{enumerate}
+
+\section{Regresión y Correlación}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{reg-38}
+\item \useproblem{reg-8}
+\item \useproblem{reg-3}
+\item \useproblem{reg-30}
+\item \useproblem{reg-9}
+\item \useproblem{reg-10}
+\item \useproblem{reg-11}
+\item \useproblem{reg-7}
+\item \useproblem{reg-14}
+\item \useproblem{reg-17}
+\item \useproblem{reg-18}
+\item \useproblem{reg-24}
+\item \useproblem{reg-25}
+\item \useproblem{reg-36}
+\item \useproblem{reg-37}
+\item \useproblem{reg-41}
+\item \useproblem{reg-42}
+\item \useproblem{reg-43}
+\end{enumerate}
+
+\section{Probabilidad}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{pro-31}
+\item \useproblem{pro-33}
+\item \useproblem{pro-1}
+\item \useproblem{pro-2}
+\item \useproblem{pro-3}
+\item \useproblem{pro-5}
+\item \useproblem{pro-8}
+\item \useproblem{pro-10}
+\item \useproblem{pro-11}
+\item \useproblem{pro-9}
+\item \useproblem{pro-14}
+\item \useproblem{pro-18}
+\item \useproblem{pro-20}
+\item \useproblem{pro-24}
+\item \useproblem{pro-25}
+\item \useproblem{pro-37}
+\item \useproblem{pro-38}
+\item \useproblem{pro-39}
+\item \useproblem{pro-40}
+\item \useproblem{pro-42}
+\item \useproblem{pro-43}
+\end{enumerate}
+
+\section{Variables Aleatorias}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{vad-1}
+\item \useproblem{vad-2}
+\item \useproblem{vad-3}
+\item \useproblem{vad-35}
+\item \useproblem{vad-5}
+\item \useproblem{vad-7}
+\item \useproblem{vad-8}
+\item \useproblem{vad-10}
+\item \useproblem{vad-11}
+\item \useproblem{vad-15}
+\item \useproblem{vad-18}
+\item \useproblem{vad-19}
+\item \useproblem{vad-20}
+\item \useproblem{vad-22}
+\item \useproblem{vad-27}
+\item \useproblem{vad-28}
+\item \useproblem{vad-30}
+\item \useproblem{vad-31}
+\item \useproblem{vad-32}
+\item \useproblem{vad-34}
+\item \useproblem{vad-37}
+\item \useproblem{vad-40}
+\item \useproblem{vac-6}
+\item \useproblem{vac-11}
+\item \useproblem{vac-13}
+\item \useproblem{vac-17}
+\item \useproblem{vac-21}
+\item \useproblem{vac-30}
+\item \useproblem{vac-31}
+\item \useproblem{vac-34}
+\item \useproblem{vac-32}
+\end{enumerate}
+
+\section{Estimación de parámetros}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{ico-35}
+\item \useproblem{ico-1}
+\item \useproblem{ico-3}
+\item \useproblem{ico-4}
+\item \useproblem{ico-5}
+\item \useproblem{ico-10}
+\item \useproblem{ico-12}
+\item \useproblem{ico-13}
+\item \useproblem{ico-33}
+\item \useproblem{ico-15}
+\item \useproblem{ico-16}
+\item \useproblem{ico-40}
+\item \useproblem{ico-21}
+\item \useproblem{ico-19}
+\item \useproblem{ico-23}
+\item \useproblem{ico-24}
+\item \useproblem{ico-36}
+\item \useproblem{ico-34}
+\item \useproblem{ico-27}
+\item \useproblem{ico-29}
+\item \useproblem{ico-38}
+\item \useproblem{ico-41}
+\end{enumerate}
+
+
+\section{Contraste de hipótesis}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{hip-1}
+\item \useproblem{hip-19}
+\item \useproblem{hip-2}
+\item \useproblem{hip-20}
+\item \useproblem{hip-3}
+\item \useproblem{hip-4}
+\item \useproblem{hip-8}
+\item \useproblem{hip-9}
+\item \useproblem{hip-12}
+\item \useproblem{hip-16}
+\item \useproblem{hip-17}
+\item \useproblem{hip-21}
+\item \useproblem{hip-22}
+\end{enumerate} 
+
+\vspace{2cm} 
+
+\textsc{Nota}: Los problemas marcados con una estrella ($\bigstar$) son problemas de
+exámenes de otros años.
+\end{document}

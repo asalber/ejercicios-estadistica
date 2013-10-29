@@ -1,0 +1,974 @@
+% Author Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\newproblem{vad-1}{gen}{}
+%ENUNCIADO
+{Sea $X$ una variable aleatoria discreta cuya ley de probabilidad es
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+X & 4 & 5 & 6 & 7 & 8 \\ 
+\hline
+f(x) & 0.15 & 0.35 & 0.10 & 0.25 & 0.15 \\ 
+\hline
+\end{array}
+\]
+\begin{enumerate}
+\item  Calcular y representar gráficamente la función de distribución.
+\item  Obtener:
+\begin{enumerate}
+\item  $P(X<7.5)$.
+\item  $P(X>8)$.
+\item  $P(4\leq X\leq 6.5)$.
+\item  $P(5<X<6)$.
+\end{enumerate}
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item \[
+F(x)=
+\begin{cases}
+0 & \text{si $x<4$,}\\
+0.15 & \text{si $4\leq x<5$,}\\
+0.5 & \text{si $5\leq x<6$,}\\
+0.6 & \text{si $6\leq x<7$,}\\
+0.85 & \text{si $7\leq x<8$,}\\
+1 & \text{si $8\leq x$.}
+\end{cases}
+\]
+\item $P(X<7.5)=0.85$, $P(X>8)=0$, $P(4\leq x\leq 6.5)=0.6$ y $P(5<X<6)=0$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-2}{gen}{}
+%ENUNCIADO
+{Sea la variable aleatoria X con la siguiente función de distribución:
+\[
+F(x)=
+\begin{cases}
+0 & \text{si $x<1$,} \\
+1/5 & \text{si $1\leq x< 4$,} \\
+3/4 & \text{si $4\leq x<6$,} \\
+1 & \text{si $6\leq x$.}
+\end{cases}
+\]
+Se pide:
+\begin{enumerate}
+\item  Distribución de probabilidad.
+\item  Obtener:
+\begin{enumerate}
+\item  $P(X=6)$.
+\item  $P(X=5)$.
+\item  $P(2<X<5.5)$.
+\item  $P(0\leq X<4)$.
+\end{enumerate}
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item \[
+\begin{array}{|c|c|c|c|}
+\hline
+X & 1 & 4 & 6 \\
+\hline
+f(x) & 1/5 & 11/20 & 1/4\\
+\hline
+\end{array}
+\]
+\item $P(X=6)=1/4$, $P(X=5)=0$, $P(2<X<5.5)=11/20$ y $P(0\leq X<4)=1/5$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-3}{med}{*}
+%ENUNCIADO
+{Se realiza un experimento aleatorio consistente en inyectar un virus a tres tipos de ratas y observar si sobreviven o
+no.
+Se sabe que la probabilidad de que viva el primer tipo de rata es $0.5$, la de que viva el segundo es $0.4$ y la de
+que viva el tercero $0.3$.
+Se pide:
+\begin{enumerate}
+\item Construir la variable aleatoria que mida el número de ratas vivas y su función de probabilidad.
+\item Calcular la función de distribución.
+\item Calcular $P(X\leq 1)$, $P(X\geq 2)$ y $P(X=1.5)$.
+\item Calcular la media y la desviación típica.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item \[
+\begin{array}{|c|c|c|c|c|}
+\hline
+X & 0 & 1 & 2 & 3 \\
+\hline
+f(x) & 0.21 & 0.44 & 0.29 & 0.06\\
+\hline
+\end{array}
+\]
+\item \[
+F(x)=
+\begin{cases}
+0 & \text{si $x<0$,}\\
+0.21 & \text{si $0\leq x<1$,}\\
+0.65 & \text{si $1\leq x<2$,}\\
+0.94 & \text{si $2\leq x<3$,}\\
+1 & \text{si $3\leq x$.}
+\end{cases}
+\]
+\item $P(X\leq 1)=0.65$, $P(X\geq 2)=0.35$ y $P(X=1.5)=0$.
+\item $\mu=1.2$ ratas, $\sigma^2=0.7$ ratas$^2$ y $\sigma=0.84$ ratas.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-4}{gen}{}
+%ENUNCIADO
+{Una tómbola asegura que en cada 1000 boletos hay 500 con ``siga intentándolo'', 100 con un premio de 1\euro, 60 con un premio de 2\euro, 30 con un premio de 3\euro, y 10 con un premio de 10\euro. Un individuo decide comprar un boleto que cuesta 1\euro. Se pide:
+
+\begin{enumerate}
+\item Construir una variable aleatoria que mida la ganancia (o pérdida) con la compra de un boleto.
+\item ¿Cual es la probabilidad de que pierda dinero?
+\item ¿Qué ganancia espera obtener?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-5}{med}{}
+%ENUNCIADO
+{La probabilidad de curación de un paciente al ser sometido a un determinado tratamiento es $0.85$.
+Calcular la probabilidad de que en un grupo de $6$ enfermos sometidos a tratamiento:
+\begin{enumerate}
+\item se curen la mitad.
+\item se curen al menos $4$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ al número de pacientes curados de los 6 sometidos al tratamiento, se tiene que $X\sim B(6,\,0.85)$.
+\begin{enumerate}
+\item $P(X=3)=0.041$.
+\item $P(X\geq 4)=0.9526$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-6}{gen}{*}
+%ENUNCIADO
+{En una mesa de juego, en 1654, Meré propuso a Pascal la siguiente afirmación: ``es más probable obtener al menos un as con cuatro dados, que al menos un doble as en veinticuatro tiradas de dos dados''.
+
+Demostrar que Meré tenía razón.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-7}{med}{}
+%ENUNCIADO
+{Se sabe que la probabilidad de que aparezca una bacteria en un mm$^3$ de cierta disolución es de $0.002$.
+Si en cada mm$^3$ a los sumo puede aparecer una bacteria, determinar la probabilidad de que en un cm$^3$ haya como
+máximo $5$ bacterias.}
+%SOLUCIÓN
+{Llamando $X$ al número de bacterias en 1 cm$^3$ de disolución, se tiene $X\sim B(1000,\,0.002)\approx P(2)$.\\
+$P(X\leq 5)=0.9834$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-8}{med}{}
+%ENUNCIADO
+{Diez individuos entran en contacto con un portador de tuberculosis. La probabilidad de que la enfermedad se contagie del portador a un sujeto cualquiera es $0.10$.
+\begin{enumerate}
+\item ¿Qué probabilidad hay de que ninguno se contagie?
+\item ¿Qué probabilidad hay de que al menos dos se contagien?
+\item ¿Cuántos se espera que contraigan la enfermedad?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-9}{gen}{*}
+%ENUNCIADO
+{Las matrículas de los coches constan de una parte numérica formada por cuatro cifras, y una parte literal. Se pide:
+
+\begin{enumerate}
+\item  Hallar la probabilidad de que al pasar 30 coches haya menos de dos cuya parte numérica sea capicúa.
+\item  ¿Cuántos coches deben pasar para que la probabilidad de que alguno tenga la parte numérica capicúa sea mayor
+que 0.1?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-10}{med}{}
+%ENUNCIADO
+{La probabilidad de que al administrar una vacuna dé una determinada reacción es $0.001$. Si se vacunan 2000 personas, ¿Cuál es la probabilidad de que aparezca una reacción adversa?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-11}{gen}{*}
+%ENUNCIADO
+{El número medio de llamadas por minuto que llegan a una centralita telefónica es igual a 120.
+Hallar las probabilidades de los sucesos siguientes: 
+
+\begin{enumerate}
+\item  $A=\{\text{durante 2 segundos lleguen a la centralita menos de 4 llamadas}\}$.
+\item  $B=\{\text{durante 3 segundos lleguen a la centralita 3 llamadas como mínimo}\}$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Si $X$ es el número de llamadas en 2 segundos, entonces $X\sim P(4)$ y $P(X<4)=0.4335$.
+\item Si $Y$ es el número de llamadas en 3 segundos, entonces $Y\sim P(6)$ y $P(Y\geq 3)=0.938$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-12}{nut}{}
+%ENUNCIADO
+{En un laboratorio de análisis de alimentos se sabe, de experiencias anteriores, que la probabilidad de que una muestra de café contenga plomo en cantidades superiores a las permitidas por la legislación vigente es $0.2$. Si se reciben $50$ muestras de café, ¿cuál es la probabilidad de rechazar al menos $5$?
+¿Cuál será el número medio de muestras que rechazaremos?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-13}{far}{}
+%ENUNCIADO
+{Un proceso de fabricación de un fármaco produce por término medio 6 fármacos defectuosos por hora.
+¿Cuál es probabilidad de que en un hora se produzcan menos de 3 fármacos defectuosos?
+¿Y la de que en la próxima media hora se produzcan más de un fármaco defectuoso?}
+%SOLUCIÓN
+{Llamando $X$ al número de fármacos defectuosos en 1 hora, se tiene $X\sim P(6)$ y $P(X<3)=0.062$.\\
+Llamando $Y$ al número de fármacos defectuosos en $1/2$ hora, se tiene $Y\sim P(3)$ y $P(Y>1)=0.8009$.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-14}{gen}{}
+%ENUNCIADO
+{Una mecanógrafa comete, en promedio, una errata cada 2000 caracteres que escribe.
+Suponiendo que escribe un folio con treinta líneas y setenta caracteres por línea, ¿cuál es la probabilidad de que
+cometa más de un error en dicho folio?}
+%SOLUCIÓN
+{Llamando $X$ al número de errores en un folio, se tiene que $X\sim B(2100,\,1/2000)\approx P(1.05)$, y $P(X>1)=0.2826$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-15}{gen}{}
+%ENUNCIADO
+{Un examen de tipo test consta de 10 preguntas con tres respuestas posibles para cada una de ellas.
+Se obtiene un punto por cada respuesta acertada y se pierde medio punto por cada pregunta fallada.
+Un alumno sabe tres de las preguntas del test y las contesta correctamente, pero no sabe las otras siete y las contesta
+al azar.
+¿Qué probabilidad tiene de aprobar el examen?}
+%SOLUCIÓN
+{Llamando $X$ al número de preguntas acertadas de las 7 contestadas al azar, se tiene $X\sim B(7,\,1/3)$ y $P(X\geq
+4)=0.1733$.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-16}{gen}{*}
+%ENUNCIADO
+{Un equipo de fútbol tiene 7 delanteros. Se sabe que por término medio, cada delantero se pierde 5 partidos por lesión en una temporada de 40 partidos. Suponiendo que todos los delanteros tienen la misma probabilidad de lesionarse, se pide:
+\begin{enumerate}
+\item  ¿Cuál es la probabilidad de que en un partido determinado tenga menos de 5 delanteros en condiciones de jugar?
+\item  ¿Cuál es la probabilidad de que a lo largo de la temporada haya más de un partido en que tenga menos de 5  delanteros en condiciones de jugar?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-17}{amb}{}
+%ENUNCIADO
+{Para reforestar un bosque se compran árboles a un vivero en el que el 4\% de los árboles suele morir debido a una enfermedad. Si la repoblación se efectúa por parcelas en las que se ponen 10 árboles, se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que no muera ningún árbol en una parcela.
+\item Calcular la probabilidad de no mueran más de 2 árboles en una parcela.
+\item Si en total se reforestan 3000 parcelas, ¿cuál es la probabilidad de que haya alguna en la que mueran más de dos árboles?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-18}{med}{*}
+%ENUNCIADO
+{En un estudio sobre un determinado tipo de parásito que ataca el riñón de las ratas, se sabe que el número medio de
+parásitos en cada riñón es 3.
+Se pide:
+\begin{enumerate}
+\item  Calcular la probabilidad de que una rata tenga más de 8 parásitos.\\
+(Nota: se supone que una rata normal tiene dos riñones).
+\item  Si se tienen 10 ratas, ¿cuál es la probabilidad de que haya al menos 9 con parásitos?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Si $X$ es el número de parásitos en una rata, $X\sim P(6)$ y $P(X>8)=0.1528$.
+\item Si $Y$ es el número de ratas con parásitos en un grupo de 10 ratas, entonces $Y\sim B(10,\,0.9975)$ y $P(Y\geq
+9)=0.9997$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-19}{med}{*}
+% ENUNCIADO
+{Se ha comprobado experimentalmente que una de cada 20 billones de células expuestas a un determinado tipo de radiación muta volviéndose
+cancerígena. Sabiendo que el cuerpo humano tiene aproximadamente 1 billón de células por kilogramo de tejido, calcular la probabilidad de
+que una persona de 60 kg expuesta a dicha radiación desarrolle cáncer. Si la radiación ha afectado a 3 personas de 60 kg, ¿cuál es la
+probabilidad de que desarrolle el cáncer más de una? }
+% SOLUCIÓN
+{}
+% RESOLUCIÓN
+{}
+
+
+\newproblem{vad-20}{med}{*}
+%ENUNCIADO
+{En un servicio de urgencias de cierto hospital se sabe que, en media, llegan 2 pacientes a la hora.
+Calcular:
+\begin{enumerate}
+\item Si los turnos en urgencias son de 8 horas, ¿cuál será la probabilidad de que en un turno lleguen más de 5 pacientes?
+\item Si el servicio de urgencias tiene capacidad para atender adecuadamente como mucho a 4 pacientes a la hora, ¿cuál
+es la probabilidad de que a lo largo de un turno de 8 horas el servicio de urgencias se vea desbordado en alguna de las
+horas del turno?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Llamando $X$ al número de pacientes en un turno, se tiene que $X\sim P(16)$ y $P(X>5)=0.9986$.
+\item Llamando $Y$ al número de horas en el que el servicio se vea desbordado porque lleguen más de 4 pacientes, se
+tiene que $Y\sim B(8,\,0.0527)$ y $P(Y\geq 1)=0.3515$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-21}{amb}{}
+%ENUNCIADO
+{En un Parque Nacional se contabilizan 15 linces. Si sabemos, por estudios previos, que mueren en promedio 1 de cada 10 individuos a lo largo de un año (ya sea por accidentes, caza de furtivos o por causas naturales):
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que en el Parque Nacional se contabilicen más de 2 muertes de linces en un año?
+\item Suponiendo un periodo de 12 años, ¿cuál es la probabilidad de que en el Parque Nacional haya algún año
+en el que mueran 2 linces?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-22}{med}{*}
+%ENUNCIADO
+{El síndrome de Turner es una anomalía genética que se caracteriza porque las mujeres tienen sólo un cromosoma $X$.
+Afecta aproximadamente a 1 de cada 2000 mujeres.
+Además, aproximadamente 1 de cada 10 mujeres con síndrome de Turner, como consecuencia, también sufren un
+estrechamiento anormal de la aorta.
+Se pide:
+\begin{enumerate}
+\item En un grupo de 4000 mujeres, ¿cuál es la probabilidad de que haya más de 3 afectadas por el síndrome de Turner?
+¿Y de que haya alguna con estrechamiento de aorta como consecuencia de padecer el síndrome de Turner?
+\item En un grupo de 20 chicas afectadas por el síndrome de Turner, ¿cuál es la probabilidad de que menos de 3 sufran
+un estrechamiento anormal de la aorta?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Si $X$ es el número de mujeres afectadas por el síndrome de Turner en el grupo de 4000 mujeres, entonces $X\sim
+B(4000,\,1/2000)\approx P(2)$ y $P(X>3)=0.1429$.\\
+Si $Y$ es el número de mujeres con estrechamiento de la aorta en el grupo de 4000 mujeres, entonces $Y\sim
+B(4000,\,1/20000)\approx P(0.2)$ y $P(Y>0)=0.1813$.
+\item Si $Z$ es el número de mujeres con estrechamiento de la aorta en el grupo de 20 mujeres con el síndrome de
+Turner, entonces $Z\sim B(20,\,1/10)$ y $P(Z<3)=0.6769$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-23}{amb}{}
+%ENUNCIADO
+{Por estudios previos se sabe que, en una comarca, hay dos tipos de larvas que parasitan, de forma completamente
+independiente, los chopos, y que producen su muerte.
+Si la larva de tipo $A$ está parasitando un 15\% de los chopos, y la $B$ un 30\%, y en una zona concreta de la comarca
+hay 10 chopos:
+\begin{enumerate}
+\item ¿Qué probabilidad hay que de estén siendo parasitados por $A$ más de dos?
+\item ¿Qué probabilidad hay de que estén libres de $B$ más de 8?
+\item ¿Qué probabilidad hay de que más de 1 tenga los dos tipos de larva?
+\item ¿Qué probabilidad hay de que más de 3 tengan algún tipo de larva?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $X_A$ es el número de chopos parasitados por larvas del tipo $A$, entonces $X_A\sim B(10,\,0.15)$ y
+$P(X_A>2)=0.1798$.
+\item Si $X_{\overline{B}}$ es el número de chopos no parasitados por larvas del tipo $B$, entonces
+$X_{\overline{B}}\sim B(10,\,0.7)$ y $P(X_{\overline{B}}>8)=0.1493$.
+\item Si llamamos $X_{A\cap B}$ al número de chopos parasitados por larvas de ambos tipos, entonces $X_{A\cap B}\sim
+B(10,\,0.045)$ y $P(X_{A\cap B}>1)=0.0717$.
+\item Si llamamos $X_{A\cup B}$ al número de chopos parasitados por algún tipo de larva, entonces $X_{A\cup B}\sim
+B(10,\,0.405)$ y $P(X_{A\cup B}>3)=0.6302$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-24}{amb}{*}
+%ENUNCIADO
+{En un Parque Regional se contabilizan 10 parejas de buitre leonado. Si sabemos que el 70\% de las parejas de esta especie logran que alguna de sus crías sobreviva:
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que 8 parejas de buitre leonado del Parque logren que alguna de sus crías sobreviva?
+\item ¿Cuál es la probabilidad de que alguna pareja logre que alguna de sus crías sobreviva?
+\item Si sabemos que en dicho Parque Regional nidifican, en promedio, 8 parejas al año, ¿cuál es la probabilidad de que en un año concreto nidifiquen más de 6?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{vad-25}{gen}{}
+%ENUNCIADO
+{Al lanzar 100 veces una moneda, ¿cuál es la probabilidad de obtener entre 40 y 60 caras?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-26}{psi}{}
+%ENUNCIADO
+{El trastorno de pánico aparece en 1 de cada 75 personas.
+¿Cuál es la probabilidad de que en un grupo de 100 personas aparezca alguna con trastorno de pánico?
+¿Cuál es el número esperado de personas con trastorno de pánico en ese grupo?
+}
+%SOLUCIÓN
+{Llamando $X$ al número de personas que sufren trastorno del pánico en el grupo de 100 personas, se tiene que $X\sim
+B(100,\,1/75)$ y $P(X\geq 1)=0.7379$.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-27}{med}{}
+%ENUNCIADO
+{Se sabe que 2 de cada 1000 pacientes son alérgicos a un fármaco $A$, y que 6 de cada 1000 lo son a un fármaco $B$.
+Además, el 30\% de los alérgicos a $B$, también lo son a $A$.
+Si se aplican los dos fármacos a 500 personas,
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que no haya ninguna con alergia a $A$?
+\item ¿Cuál es la probabilidad de que haya al menos 2 con alergia a $B$?
+\item ¿Cuál es la probabilidad de que haya menos de 2 con las dos alergias?
+\item ¿Cuál es la probabilidad de que haya alguna con alergia?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Llamando $X_A$ al número de personas alérgicas al fármaco $A$ en el grupo de 500 personas, se tiene que $X_A\sim
+B(500,\,0.002)\approx P(1)$ y $P(X_A=0)=0.3678$.
+\item Llamando $X_B$ al número de personas alérgicas al fármaco $B$ en el grupo de 500 personas, se tiene que $X_B\sim
+B(500,\,0.006)\approx P(3)$ y $P(X_B\geq 2)=0.8009$.
+\item Llamando $X_{A\cap B}$ al número de personas alérgicas a ambos fármacos $A\cap B$ en el grupo de 500 personas, se
+tiene que $X_A\sim B(500,\,0.0018)\approx P(0.9)$ y $P(X_{A\cap B}<2)=0.7725$.
+\item Llamando $X_{A\cup B}$ al número de personas alérgicas a alguno de los fármacos $A\cup B$ en el grupo de 500
+personas, se tiene que $X_A\sim B(500,\,0.0062)\approx P(3.1)$ y $P(X_{A\cup B}\geq 1)=0.9550$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-28}{gen}{}
+%ENUNCIADO
+{En una clase hay 40 alumnos de los cuales el 35\% son fumadores.
+Si se toma una muestra aleatoria con reemplazamiento de 4 alumnos, ¿cuál es la probabilidad de que haya al menos 1
+fumador?
+¿Cuál sería dicha probabilidad si la muestra se hubiese tomado sin reemplazamiento?}
+%SOLUCIÓN
+{Si $X$ es el número de fumadores en una muestra aleatoria con reemplazamiento de tamaño $4$, entonces $X\sim
+B(4,\,0.35)$ y $P(X\geq 1)=0.8215$.\\
+Si la muestra es sin reemplazamiento $P(X\geq 1)= 0.8364$.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-29}{med}{*}
+%ENUNCIADO
+{Se sabe que por término medio 2 de cada 10000 niños que nacen son albinos.
+\begin{enumerate}
+\item Si en una región nacen cada año 22000 niños ¿cuál es la probabilidad de que un año nazcan al menos 4 albinos?
+\item ¿Cuál es la probabilidad de que en esa región, en un periodo de 10 años no nazca ningún niño albino?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Llamando $X$ al número de niños albinos que nacen en un año, se tiene que $X\sim B(22000,\,2/10000)\approx
+P(4.4)$ y $P(X\geq 4)=0.6406$.
+\item Llamando $Y$ al número de niños albinos que nacen en 10 años, se tiene que $Y\sim B(220000,\,2/10000)\approx
+P(44)$ y $P(Y=0)=0$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-30}{med}{*}
+%ENUNCIADO
+{Suponiendo una facultad en la que hay un 60\% de chicas y un 40\% de chicos:
+\begin{enumerate}
+\item  Si un año van 6 alumnos a hacer prácticas en un hospital, ¿qué probabilidad hay de que vayan más chicos que chicas?
+\item En un período de 5 años, ¿cuál es la probabilidad de que más de 1 año no haya ido ningún chico?
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item Si $X$ es el número de chicos, $X\sim B(6,\,0.4)$  y $P(X\geq 4)=0.1792$.
+\item Si $Y$ es el número de años que no ha ido ningún chico, $Y \sim B(5,\,0.0467)$ y $P(Y>1)=0.0199$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{\begin{enumerate}
+\item Si consideramos un total de $n=6$ alumnos, con un $60\%$ de chicas y un $40\%$ de chicos, la variable $X$ que es el número de alumnos chicos que van a hacer las prácticas de un total de 6, sigue una distribución binomial de 6 intentos y probabilidad de éxito igual a $0.4$: $X\sim B(6\,,\,0.4)$. Como nos piden la probabilidad de que haya más chicos que chicas, eso se consigue si el número de chicos es 4 o más. Por lo tanto, nos piden la probabilidad de que $X$ sea mayor o igual que 4:
+\[
+P(X \ge 4) = P(X = 4) + P(X = 5) + P(X = 6)
+\]
+Calculando estas probabilidades con la función de probabilidad de la variable binomial, tenemos
+\begin{align*}
+P(X = 4) &= \binom{6}{4}\cdot 0.4^4  \cdot (1-0.4)^{6-4}  = 12\cdot 0.4^4\cdot 0.6^2 = 0.1382,\\
+P(X = 5) &= \binom{6}{5}\cdot 0.4^5  \cdot (1-0.4)^{6-5}  = 6\cdot 0.4^5 \cdot 0.6 = 0.0369,\\
+P(X = 6) &= \binom{6}{6}\cdot 0.4^6  \cdot (1-0.4)^{6-6}  = 1\cdot 0.4^6 \cdot 0.6^0 = 0.0041
+\end{align*}
+Y sumando los tres resultados obtenidos:
+\[
+P(X \ge 4) = P(X = 4) + P(X = 5) + P(X = 6)= 0.1382+0.0369+0.0041=0.1792.
+\]
+
+\item Si consideramos, en un total de 5 años, la probabilidad de que más de un año no haya ido ningún chico, la variable a tener en cuenta $Y$ será el número de años en el total de 5 sin ningún chico, y de nuevo esta variable sigue una distribución binomial, esta vez con 5 intentos, cuyo éxito viene dado por la probabilidad de que en un año concreto no haya ningún chico: $Y \sim B(5\,,\,p)$, donde $p=P(X=0)$.
+\[
+p = P(X = 0) = \binom{6}{0}\cdot 0.4^0  \cdot (1-0.4)^{6-0}  = 1\cdot 0.4^0\cdot 0.6^6 = 0.0467.
+\]
+Por lo tanto, $Y \sim B(5\,,\,0.0467)$.
+
+Además, nos piden la probabilidad de más de una año en el total de 5; es decir: 
+\[
+P(Y>1)=1-P(Y\leq 1) = 1-P(Y=0)-P(Y=1).
+\]
+Aplicando, de nuevo, la fórmula de la función de probabilidad de la binomial, obtenemos:
+\begin{align*}
+P(Y = 0) &= \binom{5}{0}\cdot 0.0467^0  \cdot (1 - 0.0467)^{5-0} = 1\cdot 0.0467^0\cdot 0.9533^5  = 0.7873,\\
+P(Y = 1) &= \binom{5}{1}\cdot 0.0467^1  \cdot (1 - 0.0467)^{5-1} = 5\cdot 0.0467^1\cdot 0.9533^4  = 0.1928.
+\end{align*}
+Teniendo lo anterior en cuenta, la probabilidad que nos piden vale:
+\[
+P(Y>1)=1-P(Y=0)-P(Y=1)=1-0.7873-0.1928=0.0199.
+\]
+\end{enumerate}
+}
+
+
+\newproblem*{vad-31}{med}{*}
+%ENUNCIADO
+{La probabilidad de que en un grupo de 5 individuos mayores de 70 años todos padezcan arterioesclerosis cerebral es de $12,5$ por mil.
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de padecer la enfermedad entre los mayores de 70 años?
+\item En un grupo de 1000 personas, ¿cuál es la probabilidad de que padezcan la enfermedad más de 450?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-32}{gen}{*}
+%ENUNCIADO
+{¿Cuánto habría que restar a cada pregunta errada en un examen de tipo test de 5 preguntas con cuatro opciones y sólo
+una correcta, para que un individuo que responda al azar tenga una puntuación esperada de 0? 
+}
+%SOLUCIÓN
+{$1/3$.}
+%RESOLUCIÓN
+{Si llamamos $X$ al número de preguntas acertadas, está claro que $X$ sigue una distribución binomial $B(5,\,1/4)$ ya
+que el examen tiene 4 preguntas, y la probabilidad de acertar cualquiera de ellas al azar es $1/4$ ya que hay cuatro
+opciones y sólo una es la correcta.
+}
+
+
+\newproblem{vad-33}{psi}{}
+%ENUNCIADO
+{Se sabe que el $6.8$\% las personas presentan a lo largo de su adolescencia un trastorno de hiperactividad, de los
+cuales tres cuartas partes son mujeres.
+Si en la población hay el mismo número de hombres y mujeres, se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que en una muestra de tres hombres, haya alguno que haya tenido hiperactividad en su
+adolescencia. 
+\item Calcular la probabilidad de que en una muestra de 2 hombres y 2 mujeres, haya alguno que haya tenido
+hiperactividad en su adolescencia. 
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Si llamamos $X$ al número de hombres que han tenido hiperactividad en su adolescencia en una muestra de 3
+hombres, se tiene que $X\sim B(3,\,0.034)$ y $P(X\geq 1)=0.0986$.
+\item Si llamamos $X_H$ al número de hombres que han tenido hiperactividad en su adolescencia en una muestra de 2
+hombres y $X_M$ al número de mujeres que han tenido hiperactividad en su adolescencia en una muestra de 2 mujeres,
+entonces $X_H\sim B(2,\,0.034)$ y $X_M(2,\,0.102)$. Entonces $P(X_H\geq 1\cup X_M\geq 1)=0.2475$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vad-34}{gen}{*}
+%ENUNCIADO
+{A un hospital llegan pacientes por la mañana a efectuarse extracciones de sangre. Se ha medido la frecuencia de llegada de los mismos en
+intervalos de 15 minutos. La distribución de probabilidad (medida de forma frecuentista) se  muestra en la siguiente tabla:
+\[
+\begin{array}{c|c|c|c|c|c|c|c|}
+  X   &  0  &  1  &  2   &  3   &  4   &  5  &  6   \\
+\hline
+ P(x) & 0.1 & 0.2 & 0.25 & 0.15 & 0.15 & 0.1 & 0.05 \\
+\end{array}
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que en un intervalo de 15 minutos lleguen 2 o más personas, y probabilidad de que lleguen menos de 8
+personas.
+\item ¿Cuál es el número medio esperado de personas que llegarán a sacarse sangre cada 15 minutos?
+\item Suponiendo que el número de personas que llegan a sacarse sangre en 15 minutos sigue una distribución de Poisson de media la  
+calculada en el apartado anterior, ¿cuál es la probabilidad de que llegue alguna en 15 minutos? ¿Y de que llegue alguna en 5 minutos? 
+\end{enumerate}
+} 
+%SOLUCIÓN
+{Llamemos $J$ al suceso consitente en que una persona con la lesión sea joven, $C$ al suceso consistente en curarse, y $A$ y $B$ a los sucesos consistentes en aplicar las respectivas técnicas de
+rehabilitación:
+\begin{enumerate}
+\item Llamando $X$ al número de personas que llegan en un intervalo de 15 minutos: $P(X\geq 2)=0.7$ y $P(X<8)=1$.
+\item $\mu=2.55$ personas.
+\item Suponiendo $X\sim P(2.55)$, $P(X\geq 1)=0.9219$.\\
+Llamando $Y$ al número de personas que llegan en un intervalo de 5 minutos, $P(Y\geq 1)=0.5726$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{\begin{enumerate}
+\item Teniendo en cuenta que nos dan la distribución de probabilidad de la variable aleatoria discreta $X$ que expresa el número de
+pacientes que llegan en 15 minutos, nos están pidiendo $P(X\geq 2)$ y $P(X<8)$. Estas probabilidades son:
+\begin{align*}
+P(X\geq 2) & =1-P(X<2)=1-P(X=0)-P(X=1)=1-0.2-0.3=0.7,\\
+P(X<8)& =1-P(X\geq 8)=1.
+\end{align*}
+\item El número esperado es la media de la variable aleatoria:
+\[
+\mu =\sum xf(x)=0\cdot 0.1+1\cdot 0.2+2\cdot 0.25+3\cdot 0.15+4\cdot 0.15+5\cdot 0.1+6\cdot 0.05=2.55 \text{ personas}.
+\]
+
+\item Suponiendo que $X$ sigue una distribución de Poisson con $\lambda =2.55$, $X\sim P(2.55),$ la probabilidad de que llegue alguna
+persona en 15 minutos vendrá dada por:
+\[
+P(X\geq 1)=1-P(X=0)=1-e^{-2.55}\dfrac{2.55^{0}}{0!}=0.9219.
+\]
+
+Para la segunda pregunta, teniendo en cuenta que el número medio de personas que llegan cada 15 minutos es $2.55$, en 5 minutos llegarán en
+media $2.55/3 = 0.85$ personas, y, por tanto, tenemos una nueva variable aleatoria $Y$, que seguirá una distribución de Poisson con $\lambda
+^{\prime }=0.85.$
+\[
+P(Y\geq 1)=1-P(Y=0)=1-e^{-0.85}\dfrac{0.85^{0}}{0!}=0.5726.
+\]
+\end{enumerate}
+}
+
+
+\newproblem{vad-35}{gen}{*}
+%ENUNCIADO
+{En las siguientes tablas, indicar razonadamente, en los caso que sea posible,
+los valores de $h$ que deben ponerse en cada tabla para que se tenga una
+distribución de probabilidad:
+\[
+\begin{array}{c|c}
+x & f(x) \\
+\hline
+-2 & 0.3  \\
+5 & h  \\
+8 & 0.1
+\end{array}
+\qquad
+\begin{array}{c|c}
+x & f(x) \\
+\hline
+ 1 & -0.2 \\
+ 3 & 0.7 \\
+ 4 & h
+\end{array}
+ \qquad
+\begin{array}{c|c}
+x & f(x) \\
+\hline
+ 2 & h \\
+ 3 & 0.5 \\
+ 4 & 0.6
+\end{array}
+\]
+
+En las tablas que constituyan una distribución de probabilidad:
+\begin{enumerate}
+\item Representar gráficamente la función de distribución.
+\item Calcular media y desviación típica.
+\item Calcular la mediana.
+\item Si a los valores de $x$ se multiplican por una constante $k<0$, ¿cómo se ve afectada la media? ¿Y la desviación típica?
+\end{enumerate}
+} 
+%SOLUCIÓN
+{La única tabla que puede ser una distribución de probabilidad es la primera para $h=0.6$.
+\begin{enumerate}[start=2]
+\item $\mu=3.2$ y $\sigma=3.516$.
+\item $Me=5$.
+\item $\mu_y=k\mu_x$ y $\sigma_y=|k|\sigma_x$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{La segunda tabla no puede ser una distribución de probabilidad pues $f(1)=-0.2$ y la función de probabilidad no puede tomar valores
+negativos. Por otro lado, la tercera tabla tampoco puede ser una distribución de probabilidad ya que la suma de todas las probabilidades
+debe ser 1, y para ello debería ser $h=-0.1$, lo cual no es posible al no poder tomar valores negativos. Así pues la única tabla que puede
+ser una distribución de probabilidad es la primera, y como la suma de todas las probabilidades tiene que ser 1, $0.3+h+0.1=1$, se deduce que
+$h=0.6$. Trabajaremos pues, con la distribución
+\[
+\begin{array}{r|r}
+ x  & f(x) \\
+\hline
+ -2 & 0.3  \\
+ 5  & 0.6  \\
+ 8  & 0.1  \\
+\end{array}
+\]
+
+\begin{enumerate}
+\item La función de distribución se define como $F(x_0)=P(X\leq x_0)$, y por tanto,  mide probabilidades acumuladas. Acumulando las
+probabilidades de la tabla anterior tenemos
+\[
+\begin{array}{r|r|r}
+ x  & \multicolumn{1}{c|}{f(x)} & \multicolumn{1}{c}{F(x)}\\
+\hline
+ -2 & 0.3 & 0.3 \\
+ 5  & 0.6 & 0.9 \\
+ 8  & 0.1 & 1 \\
+\end{array}
+\]
+O lo que es lo mismo, expresado como una función a trozos
+\[
+F(x)=
+\left\{%
+\begin{array}{ll}
+   0, & \hbox{si $x<-2$;} \\
+   0.3, & \hbox{si $-2\leq x<5$;} \\
+   0.9, & \hbox{si $5\leq x<8$;} \\
+   1, & \hbox{si $x\geq 8$.} \\
+\end{array}%
+\right.
+\]
+
+La gráfica de esta función es la siguiente
+\begin{center}
+\includegraphics[scale=0.3]{grafica1}\hspace*{1cm}
+\end{center}
+
+\item Calculamos los estadísticos que nos piden
+\begin{align*}
+\mu &= \sum x_if(x_i)=-2\cdot0.3+5\cdot 0.6+8\cdot 0.1=3.2,\\
+\sigma^2 &= \sum x_i^2f(x_i)-\mu^2=(-2)^2\cdot 0.3+5^2\cdot 0.6+8^2\cdot 0.1-3.2^2=22.6-10.24=12.36,\\
+\sigma &= \sqrt{12.36}=3.516.
+\end{align*}
+
+\item La mediana es el valor que deja acumulada una probabilidad $0.5$, es decir, $F(med)=0.5$, y mirando en la función de distribución, el
+valor donde se consigue acumular esta probabilidad es el 5.
+
+\item Sea $Y=kX$ donde $k<0$. Por las propiedades de las transformaciones lineales de variables aleatorias, tenemos que $\mu_y=k\mu_x$, y
+por tanto la media quedará también multiplicada por la constante $k$. Para la desviación típica tenemos que $\sigma_y=|k|\sigma_x$ y la
+desviación típica quedará multiplicada por el valor absoluto de $k$.
+\end{enumerate}
+}
+
+
+\newproblem{vad-36}{gen}{*}
+%ENUNCIADO
+{En una empresa el número de días al año que los empleados están de baja es, por término medio, 5. Suponiendo que un año tiene 240 días
+laborables y que cada mes tiene 20, se pide:
+\begin{enumerate}
+\item Calcular el porcentaje de empleados que no faltarían más de 5 días al año.
+\item Calcular la probabilidad de que un empleado falte algún día en un mes.
+\item ¿Cual es la probabilidad de que en un año haya más de 2 meses en los que haya faltado alguna vez?
+\end{enumerate}
+} 
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Llamando $X$ a la variable que mide el número de días de baja al año de cada empleado, $X\sim B(240,\,5/240)\approx P(5)$ y
+$P(X\leq 5)=0.616$.
+\item Llamando $Y$ a la variable que mide el número de días de baja al mes de cada empleado, $Y\sim B(20,\,5/240)$ y $P(Y\geq 1)=0.3437$.
+\item Llamando $Z$ a la variable que mide el número de meses al año en que un empleado falta alguna vez, $Z\sim B(12\,,\,0.3437)$ y
+$P(Z>2)=0.8379$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{
+\begin{enumerate}
+\item Sea $X$ la variable que mide el número de días de baja al año de cada empleado. Entonces \mbox{$X\sim B(240\,,\,5/240)$}, pero como
+$n=240>30$ y $p=5/240<0.1$, podemos aproximarla como una distribución Poisson $P(5)$. La probabilidad de que un empleado no falte más de 5
+días al año es
+\begin{align*}
+P(X\leq 5)&= P(X=0)+P(X=1)+P(X=2)+P(X=3)+P(X=4)+P(X=5)= \\
+&= e^{-5}\frac{5^0}{0!}+
+e^{-5}\frac{5^1}{1!}+e^{-5}\frac{5^2}{2!}+e^{-5}\frac{5^3}{3!}
++e^{-5}\frac{5^4}{4!}+e^{-5}\frac{5^5}{5!}= \\
+&= 0.0067+0.0337+0.0842+0.1404+0.1755+0.1755=0.616,
+\end{align*}
+es decir, un $61.6\%$.
+
+\item Sea $Y$ la variable que mide el número de días de baja al mes de cada empleado. Entonces \mbox{$Y\sim B(20,\,5/240)$}, y la
+probabilidad de que algún empleado falte algún día en un mes es
+\begin{align*}
+P(Y\geq1)&=1-P(Y<1)=1-P(Y=0)=
+1-\binom{20}{0}\left(\frac{5}{240}\right)^0\left(1-\frac{5}{240}\right)^{20}= \\
+&=1-\left(\frac{235}{240}\right)^{20}=0.3437.
+\end{align*}
+
+\item Sea ahora $Z$ la variable que mide el número de meses al año en que un empleado falta alguna vez. Entonces, como la probabilidad de
+que un empleado falte alguna vez en un mes, según el apartado anterior es $0.3437$, tenemos que $Z\sim B(12\,,\,0.3437)$. Así pues, la
+probabilidad que nos piden  es
+\begin{align*}
+P(Z>2)&=1-P(Z\leq 2)=1-P(Z=0)-P(Z=1)-P(Z=2)=\\
+&= 1-\binom{12}{0}0.3437^0 0.6563^{12}-\binom{12}{1}0.3437^1 0.6563^{11}-
+\binom{12}{2}0.3437^2 0.6563^{10}=\\
+&=1-0,0064-0,0401-0,1156=0.8379.
+\end{align*}
+\end{enumerate}
+}
+
+
+\newproblem{vad-37}{med}{*}
+%ENUNCIADO
+{Sabiendo que la prevalencia de la isquemia cardíaca es del 1\%, y que la aplicación de un test diagnóstico para detectar la isquemia
+cardíaca tiene una sensibilidad del 90\%, y una especificidad del 95\%. Calcular:
+\begin{enumerate}
+\item Los valores predictivos, tanto el positivo como el negativo.
+\item La probabilidad de diagnóstico acertado.
+\item Si tenemos un grupo de 10 enfermos de isquemia cardíaca, ¿cuál es la probabilidad de que diagnostiquemos la enfermedad a
+menos de 8?
+\end{enumerate}
+} 
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{vad-38}{med}{*}
+%ENUNCIADO
+{Supongamos que para la detección de una enfermedad se utiliza un test diagnóstico tal que la probabilidad de positivo con dicho test vale
+0,01, y sus valores predictivos positivo y negativo valen, respectivamente, $0.95$ y $0.98$. Se pide:
+\begin{enumerate}
+\item ¿Cuál es la prevalencia de la enfermedad?
+\item ¿Cuánto valen la sensibilidad y la especificidad del test?
+\item Si aplicamos el test a 12 individuos enfermos, ¿qué probabilidad hay de que se equivoque en alguno de ellos?
+\item Si aplicamos el test a 12 individuos, ¿que probabilidad hay de que acierte en todos?
+\end{enumerate}
+} 
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{vad-39}{med}{*}
+%ENUNCIADO
+{La probabilidad de que en un grupo de 5 individuos mayores de 70 años todos padezcan arterioesclerosis cerebral es de $12.5$ por mil.
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de padecer la enfermedad entre los mayores de 70 años?
+\item En un grupo de 1000 personas, ¿cuál es la probabilidad de que padezcan la enfermedad más de 450?
+\end{enumerate}
+} 
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{vad-40}{med}{*}
+%ENUNCIADO
+{Si sabemos, por estudios previos, que las cepas que provocarán la gripe del siguiente otoño-invierno afectarán a un 20\% de la
+población:
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que en una población de 10000 habitantes queden infectados menos de 1900?
+\item Suponiendo que se vacunan los 10000 habitantes y sabiendo, por estudios previos, que la vacuna inmuniza al 98\% de los vacunados,
+¿Cuál es la probabilidad de que queden sin inmunizar menos de 180?
+\item De nuevo, suponiendo que se han vacunado los 10000 habitantes y teniendo en cuenta que, por estudios previos, la vacuna produce
+reacciones alérgicas en uno de cada 5000 casos, ¿cuál es la probabilidad de que se produzca alguna reacción alérgica en dicha población?
+\end{enumerate}
+} 
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+

@@ -1,0 +1,933 @@
+% Author Alfredo S�nchez Alberca (asalber@ceu.es)
+
+\newproblem{ico-1}{gen}{}
+% ENUNCIADO
+{Una muestra aleatoria de tamaño $81$ extraída de una población normal con $\sigma ^2=64$, tiene una $\overline{x}=78$.
+Calcular el intervalo de confianza del $95\%$ para $\mu$.
+}
+%SOLUCIÓN
+{$\mu\in 79\pm 1.742 = (76.258,\,79.742)$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-2}{nut}{}
+% ENUNCIADO
+{Para determinar si un pescado es o no apto para el consumo por su contenido en Hg (mercurio), se realizan $15$
+valoraciones obteniendo una media de $0.44$ ppm (partes por millón) de Hg, y una desviación típica de $0.08$ ppm.
+Calcular los límites de confianza para la media, a un nivel de significación $\alpha =0.1.$ }
+% SOLUCIÓN
+{
+$\mu\in 0.44\pm 0.0376$ ppm = $(0.4024\text{ppm},\,0.4776\text{ppm})$.
+}
+% RESOLUCIÓN
+{}
+
+
+\newproblem{ico-3}{qui}{}
+% ENUNCIADO
+{Se obtuvieron cinco determinaciones del pH de una solución con los siguientes resultados: 
+\[7.90, 7.85, 7.89, 7.86, 7.87.\]
+Hallar unos límites de confianza de la media de todas las determinaciones del pH de la misma solución, al nivel de
+significación $\alpha =0.01.$
+}
+% SOLUCIÓN
+{
+$\mu \in 7.874\pm 0.0426 = (7.8314,\,7.9166)$.
+}
+% RESOLUCIÓN
+{}
+
+
+\newproblem{ico-4}{med}{}
+% ENUNCIADO
+{Se desea saber cuál debe ser el tamaño muestral mínimo de una muestra para poder realizar la estimación de la tasa media
+de glucosa plasmática de una determinada población, con un nivel de confianza $0.95$ y pretendiendo una amplitud de $2.5$
+mg.
+
+\noindent NOTA: En una muestra previa de tamaño 10 se obtuvo una desviación típica de 10 mg.
+}
+%SOLUCIÓN
+{
+249 individuos.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-5}{far}{}
+%ENUNCIADO
+{Para que un fármaco sea efectivo, la concentración de un determinado principio activo debe ser 20 mg/mm$^3$.
+Se recibe un lote de dicho fármaco y se analizan 10 para medir la concentración del principio activo, obteniendo los
+resultados siguientes:
+\[
+17.6 - 19.2 - 21.3 - 15.1 - 17.6 - 18.9 - 16.2 - 18.3 - 19 - 16.4.
+\]
+En vista de los resultados, ¿podremos rechazar el lote con una confianza $0.95$ de no equivocarnos?
+}
+%SOLUCIÓN
+{
+$17.96\pm 1.278$ mg/mm$^3$ = $(16.682\text{mg/mm}^3,\,19.238\text{mg/mm}^3)$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-6}{nut}{*}
+%ENUNCIADO
+{En un estudio sobre el consumo anual de litros de cerveza entre la población de menores de 18 años de una ciudad se
+obtuvo la siguiente muestra: 
+\[ 42, 16, 60, 29, 7, 20, 30, 25, 38, 5.\]
+Se pide:
+\begin{enumerate}
+\item Calcular el intervalo de confianza del 95\% para la media. Si se considera que un consumo medio por encima de 40
+litros es peligroso, ¿existen pruebas significativas para afirmar que la población de partida no está en peligro?
+\item ¿Qué tamaño muestral mínimo hubiese sido necesario para conseguir un intervalo de confianza de amplitud 5?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-7}{amb}{}
+%ENUNCIADO
+{En una explotación minera se mide el contenido en mercurio de las rocas extraídas.
+Tras analizar 20 rocas, se obtiene un contenido medio del $10.8\%$ y una desviación típica de $2.7\%$. Se pide: 
+\begin{enumerate}
+\item Si, para que la explotación sea rentable, el porcentaje medio de contenido de mercurio debe ser superior al
+10\%, ¿existen pruebas para afirmar que la explotación será rentable?
+\item ¿Y si para que la explotación sea rentable, el contenido de mineral debe tener cierta uniformidad ($\sigma<3$)?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-8}{amb}{}
+%ENUNCIADO
+{Para ver si una población de aves se ha visto afectada por los vertidos tóxicos de una fábrica, se pretende estimar
+la proporción de aves contaminadas con metales pesados.
+Para ello se realiza un sondeo preliminar con 30 aves, de las que 5 resultan estar contaminadas.
+Se pide:
+\begin{enumerate}
+\item Construir un intervalo de confianza del 95\% para la proporción de aves contaminadas.
+\item Si se desea estimar la proporción con un error máximo de $\pm 2\%$, ¿qué tamaño muestral habría que tomar?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-9}{far}{}
+%ENUNCIADO
+{Se realizó un estudio sobre el contenido de principio activo de un determinado fármaco a partir de una muestra,
+determinándose los siguientes resultados en mg/cm$^{3}$:
+\[ 46.4-46.1-45.8-47.0-46.1-45.9-45.8-46.9-45.2-46.0. \]
+Obtener un intervalo de confianza del 95\% para la varianza del contenido de principio activo de dicho fármaco,
+suponiendo que sigue una distribución normal.
+}
+%SOLUCIÓN
+{
+$\sigma^2 \in (0.1356(\text{mg/cm}^3)^2,\,0.9541(\text{mg/cm}^3)^2)$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-10}{med}{}
+%ENUNCIADO
+{Se desea hacer un estudio estadístico sobre el número de hematíes en las mujeres.
+Se selecciona una muestra de 25 mujeres y se obtiene un número medio de hematíes de 4300000 con una desviación típica
+de 200000 (en cada milímetro cúbico de sangre).
+Calcular el intervalo de confianza para la media y la varianza del número de hematíes de las mujeres en la población,
+con un nivel de significación $0.1$.
+}
+%SOLUCIÓN
+{
+Intervalo de confianza del 95\% para la media: $\mu \in 4.3\cdot 10^6\pm 69850$ hematíes = $(4230150,\,4369850)$.\\
+Intervalo de confianza del 95\% para la varianza: $\sigma^2\in (2747\cdot 10^10,\,7246\cdot 10^10)$ hematíes$^2$. 
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-11}{med}{*}
+%ENUNCIADO
+{Para determinar el nivel medio de colesterol en la sangre de una población, se realizaron análisis sobre una muestra
+de 8 personas, obteniéndose los siguientes resultados:
+\begin{center}
+196 -- 212 -- 188 -- 206 -- 203 -- 210 -- 201 -- 198
+\end{center}
+Hallar intervalos de confianza para la media y la varianza de nivel de colesterol con un nivel de significación 0.1, suponiendo que el nivel de colesterol en la población sigue una distribución normal.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-12}{med}{}
+%ENUNCIADO
+{Para determinar la concentración media de albúmina en la sangre se realizaron mediciones sobre un grupo experimental
+obteniéndose los siguientes resultados, expresados en g/l: 
+\[38-42-46-37-49-42-40-36.\]
+Obtener un intervalo de confianza para la varianza de la población con un nivel de significación $0.05$.
+}
+%SOLUCIÓN
+{
+$\sigma^2\in (8.844\text{g}^2/\text{l}^2,\,83.728\text{g}^2/\text{l}^2)$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-13}{med}{}
+%ENUNCIADO
+{El tiempo que tarda en hacer efecto un analgésico sigue una distribución aproximadamente normal.
+En una muestra de 20 pacientes se obtuvo una media de $25.4$ minutos y una desviación típica de $5.8$ minutos.
+Calcular el intervalo de confianza del 90\% e interpretarlo.
+¿Cuántos pacientes habría que tomar para poder estimar la media con una precisión de $\pm 1$ minuto? }
+%SOLUCIÓN
+{Intervalo de confianza del 90\% para $\mu$: $(23.0992,\,27.7008)$.\\
+Tamaño muestral para una precisión de $\pm 1$ minuto: $n=96$.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-14}{med}{}
+%ENUNCIADO
+{En un estudio para el estado de la salud oral de una ciudad, se tomó una muestra elegida al azar de 280 varones entre
+35 y 44 años y se contó el número de piezas dentarias en la boca.
+Tras la revisión pertinente, los dentistas informaron que había 70 individuos con 28 o más dientes.
+Se desea realizar una estimación por intervalo de confianza de la proporción de individuos de esta ciudad con 28
+dientes o más, con un nivel de confianza $0.95$.
+}
+%SOLUCIÓN
+{
+$p\in 0.25\pm 0.0507 = (0.1993,\,0.3007)$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-15}{med}{}
+%ENUNCIADO
+{Leemos en una revista médica que la cuarta parte de los cancerosos de cierto tumor de estómago presentan vómitos, con
+una precisión o tolerancia del 10\% y con una confianza del 99\%.
+¿Con cuántos pacientes se ha realizado el estudio?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-16}{med}{*}
+%ENUNCIADO
+{Un país está siendo afectado por una epidemia de un virus.
+Para valorar la gravedad de la situación se tomaron 40 personas al azar y se comprobó que 12 de ellas tenían el virus.
+Determinar el intervalo de confianza para el porcentaje de infectados con un nivel de significación $0.05$.
+}
+%SOLUCIÓN
+{
+$p\in (0.1580,\,0.4420)$ con un 95\% de confianza.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-17}{gen}{}
+%ENUNCIADO
+{Se desea obtener un intervalo de confianza del 95\% para la diferencia de marcas obtenidas por chicos y chicas en una
+prueba física.
+Se toma una muestra de 50 chicas y 75 chicos, obteniendo las chicas una marca media de 76 y los chicos de 82.
+Además, se conocen las desviaciones típicas de las marcas obtenidas en las poblaciones de chicas y chicos, que son 6 y
+8 respectivamente.
+}
+%SOLUCIÓN
+{
+$\mu_1-\mu_2 \in 6\pm 2.458$ puntos = $(3.542\text{puntos},\,8.458)$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-18}{amb}{}
+%ENUNCIADO
+{Las temperaturas medias mensuales (en $^\circ$C) durante el año 2001 en Madrid y Sevilla fueron:
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+Ciudad &    Ene &    Feb &    Mar &    Abr &    May &    Jun &    Jul &    Ago &    Sep &    Oct &    Nov &    Dic \\
+\hline
+ Madrid                  &  $7.2$ &  $8.4$ & $12.2$ & $13.7$ & $16.7$ & $23.3$ & $24.2$ & $25.5$ & $20.4$ & $16.2$ &  $8.1$ &  $4.2$ \\
+\hline
+ Sevilla                 & $12.1$ & $13.6$ & $16.8$ & $19.0$ & $20.9$ & $27.0$ & $26.6$ & $28.2$ & $24.7$ & $21.3$ & $13.8$ & $11.5$ \\
+\hline
+\end{tabular}
+\end{center}
+¿Existen diferencias significativas en las temperaturas medias de ambas ciudades?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-19}{fis}{}
+%ENUNCIADO
+{Se está ensayando un nuevo procedimiento de rehabilitación para una cierta lesión.
+Para ello se trataron nueve pacientes con el procedimiento tradicional y otros nueve con el nuevo, y se midieron los
+días que tardaron en recuperase, obteniéndose los siguientes resultados:
+\begin{center}
+\begin{tabular}{ll}
+Método tradicional: & 32-37-35-28-41-44-35-31-34\\
+Método nuevo: & 35-31-29-25-34-40-27-32-31
+\end{tabular}
+\end{center}
+Se desea obtener un intervalo de confianza del 95\% para la diferencia de las medias del tiempo de recuperación
+obtenido con ambos procedimientos.
+Se supone que los tiempos de recuperación siguen una distribución normal, y que las varianzas son aproximadamente
+iguales para los dos procedimientos.
+}
+%SOLUCIÓN
+{
+$\mu_1-\mu_2\in 3.667\pm 4.712$ días = $(-1.045\text{ días},\,8.379\text{ días})$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-20}{med}{}
+%ENUNCIADO
+{En un hospital pediátrico se comprobó que de 200 niños con un determinado síndrome, 48 murieron antes de cumplir un
+año de edad, mientras que sólo 25 de 125 niñas con el mismo síndrome murieron.
+¿Se puede afirmar con cierta seguridad que el síndrome es más letal en los niños que en las niñas?
+}
+%SOLUCIÓN
+{
+$p_1-p_2 \in 0.04\pm 0.077 = (-0.037,\,0.117)$ luego no se puede afirmar que el síndrome sea más letal en los niños que
+en las niñas con un 95\% de confianza.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-21}{med}{}
+%ENUNCIADO
+{Se ha realizado un estudio para investigar el efecto del ejercicio físico en el nivel de colesterol en la sangre. En el estudio
+participaron once personas, a las que se les midió el nivel de colesterol antes y después de desarrollar un programa de ejercicios. Los
+resultados obtenidos fueron los siguientes
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline Persona & Nivel previo & Nivel posterior \\ 
+\hline\hline 
+1 & 182 & 198 \\
+\hline 
+2 & 232 & 210 \\ 
+\hline 
+3 & 191 & 194 \\ 
+\hline 
+4 & 200 & 220 \\ 
+\hline 
+5 & 148 & 138 \\ 
+\hline 
+6 & 249 & 220 \\ 
+\hline 
+7 & 276 & 219 \\ 
+\hline 
+8 & 213 & 161 \\
+\hline 
+9 & 241 & 210 \\ 
+\hline 
+10 & 280 & 213 \\ 
+\hline 
+11 & 262 & 226 \\ 
+\hline
+\end{tabular}
+\end{center}
+Hallar un intervalo de confianza del 90\% para la diferencia del nivel medio de colesterol antes y después del ejercicio.
+}
+%SOLUCIÓN
+{
+$\mu_{x_1-x_2}\in 24.0909\pm 19.4766$ mg/dl = $(4.6143\text{mg\dl},\, 43.5675\text{mg/dl})$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-22}{qui}{}
+%ENUNCIADO
+{Dos químicos $A$ y $B$ realizan 14 y 16 determinaciones, respectivamente, de plutonio.
+Los resultados obtenidos se muestran en la siguiente tabla
+\begin{center}
+\begin{tabular}{cc|cc}
+\multicolumn{2}{c|}{$A$} & \multicolumn{2}{c}{$B$} \\ \hline
+263.36 & 254.68 & 286.53 & 254.54 \\
+248.64 & 276.32 & 284.55 & 286.30 \\
+243.64 & 256.42 & 272.52 & 282.90 \\
+272.68 & 261.10 & 283.85 & 253.75 \\
+287.33 & 268.41 & 252.01 & 245.26 \\
+287.26 & 282.65 & 275.08 & 266.08 \\
+250.97 & 284.27 & 267.53 & 252.05 \\
+&  & 253.82 & 269.81
+\end{tabular}
+\end{center}
+Se pide:
+
+\begin{enumerate}
+\item Calcular intervalos de confianza del 95\% de confianza para cada caso.
+\item ¿Se puede decir que existen diferencias significativas en la media?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Intervalo de confianza del 95\% para la media de $A$: $\mu_A \in 266.98\pm 8.681 = (258.299,\,275.661)$.\\
+Intervalo de confianza del 95\% para la media de $B$: $\mu_B \in 267.91\pm 7.677 = (260.233,\,275.587)$.
+\item $\mu_A-\mu_B \in -0.93\pm 11.020 = (-11.95,\,10.92)$, luego no hay diferencias significativas en las medias con
+un 95\% de confianza.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-23}{med}{*}
+%ENUNCIADO
+{Un equipo de investigación está interesado en ver si una droga reduce el colesterol en la sangre.
+Con tal fin se toma una muestra de 10 pacientes y determina el contenido de colesterol antes y después del tratamiento.
+Los resultados expresados en miligramos por cada 100 mililitros son los siguientes:
+\[
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Paciente & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+Antes & 217 & 252 & 229 & 200 & 209 & 213 & 215 & 260 & 232 & 216 \\ \hline
+Después & 209 & 241 & 230 & 208 & 206 & 211 & 209 & 228 & 224 & 203 \\
+\hline
+\end{tabular}
+\]
+Se pide:
+
+\begin{enumerate}
+\item Construir la variable Diferencia que recoja la diferencia entre los niveles de colesterol antes y después del
+tratamiento, y calcular el intervalo de confianza con $1-\alpha =0.95$ para la media de dicha variable.
+\item A la vista del intervalo anterior, ¿hay pruebas significativas de que la droga disminuye el nivel de colesterol
+en sangre?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $\mu_{x_1-x_2}\in 7.4\pm 7.572$ mg/100ml = $(-0.172\text{mg/100ml},\,14.972\text{mg/100ml})$.
+\item No se puede afirmar que la droga disminuya el colesterol con un 95\% de confianza.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-24}{fis}{*}
+%ENUNCIADO
+{Se está ensayando un nuevo procedimiento de rehabilitación para una cierta lesión.
+Se sabe que de 80 deportistas tratados con el procedimiento tradicional, se recuperaron perfectamente 26, mientras que
+de los 20 tratados con el nuevo procedimiento se han recuperado 11.
+¿Se puede afirmar con una confianza del 95\% que el nuevo procedimiento es mejor que el tradicional?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-25}{amb}{*}
+%ENUNCIADO
+{En una muestra aleatoria de 200 personas, 114 están a favor de la fluoración de las aguas.
+Se pide:
+\begin{enumerate}
+\item Hallar el intervalo de confianza del 96\% para la fracción de la población que está a favor de la fluoración de
+las aguas.
+\item ¿Qué tamaño mínimo de muestras habría que tomar para tener una confianza del 96\% de que la proporción muestral
+difiere menos de $0.02$ de la proporción real de la población?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $p\in 0.375\pm 0.197 = (0.178,\,0.572)$.
+\item 2634 individuos.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-26}{far}{*}
+%ENUNCIADO
+{Para ver si una campaña de publicidad sobre un fármaco ha influido en sus ventas, se tomó una muestra de 8 farmacias
+y se midió el número de fármacos vendidos durante un mes, antes y después de la campaña, obteniéndose los siguientes
+resultados:
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+\hline
+Antes & 147 & 163 & 121 & 205 & 132 & 190 & 176 & 147  \\
+\hline
+Después & 150 & 171 & 132 & 208 & 141 & 184 & 182 & 145  \\
+\hline
+\end{tabular}
+\end{center}
+Obtener la variable diferencia y construir un intervalo de confianza para la media de la diferencia con un nivel de
+significación $0.05$.
+¿Existen pruebas suficientes para afirmar con un 95 \% de confianza que la campaña de publicidad ha aumentado las
+ventas?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-27}{med}{*}
+%ENUNCIADO
+{Para comparar la eficacia de dos tratamientos $A$ y $B$ en la prevención de repeticiones de infarto de miocardio, se
+aplicó el tratamiento $A$ a 80 pacientes y el $B$ a 60.
+Al cabo de dos años se observó que habían sufrido un nuevo infarto 14 pacientes de los sometidos al tratamiento $A$ y
+15 de los del $B$.
+Se pide:
+\begin{enumerate}
+\item Construir un intervalo de confianza del $95\%$ para la diferencia entre las proporciones de personas sometidas a los tratamientos $A$ y $B$ que no vuelven a sufrir un infarto.
+\item A la vista del resultado obtenido, razonar si con ese nivel de confianza puede afirmarse que uno de los tratamientos es más eficaz que el otro.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{itemize}
+\item $p_A-p_B\in (-0.2126,\,0.0626)$ con un nivel de confianza del 95\%.
+\item No puede afirmarse que un tratamiento sea más eficaz que otro pues la diferencia de medias podría ser positiva,
+negativa o cero. 
+\end{itemize}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-28}{amb}{}
+%ENUNCIADO
+{La siguiente tabla muestra el porcentaje de industrias españolas y europeas según el consumo de energía primaria de
+las mismas durante el año 2002 (se estudiaron 1000 industrias).
+\[
+\begin{tabular}{|l|c|c|}
+\hline
+Fuente energética  &  España  & Resto de Europa \\
+\hline
+Petróleo            & $52.2$\% &    $40.4$\%     \\
+Carbón              & $15.2$\% &    $14.8$\%     \\
+Nuclear             & $13.0$\% &    $15.2$\%     \\
+Gas                 & $12.8$\% &    $23.5$\%     \\
+Energías Renovables & $6.5$\%  &     $6.1$\%     \\
+Saldo Energético    & $0.2$\%  &       0\%       \\
+\hline
+\end{tabular}
+\]
+Estudiar para qué energías el porcentaje de industrias de España es significativamente diferente del resto de Europa.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-29}{nut}{*}
+%ENUNCIADO
+{En un análisis de obesidad dependiendo del hábitat en niños menores de 5 años, se obtienen los siguientes resultados:
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\cline{2-3}
+\multicolumn{1}{l|}{} & Casos analizados & Casos con sobrepeso \\
+\hline
+Hábitat rural & 1150 & 480 \\
+\hline
+Hábitat urbano & 1460 & 660 \\
+\hline
+\end{tabular}
+\end{center}
+Se pide:
+
+\begin{enumerate}
+\item  Construir un intervalo de confianza, con un nivel de significación $0.01$, para la proporción de niños menores
+de 5 años con sobrepeso en el hábitat rural. Igualmente para el hábitat urbano.
+\item Construir un intervalo de confianza, con un nivel de confianza del $95\%$, para la diferencia de proporciones de
+niños menores de 5 años con sobrepeso entre el hábitat rural y el urbano.
+A la vista del resultado obtenido, ¿se puede concluir, con un $95\%$ de confianza, que la proporción de niños menores
+de 5 años con sobrepeso depende del hábitat?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{itemize}
+\item $p_R \in (0.3799,\,0.4548)$ y $p_U\in (0.4185,\,0.4856)$ con un 99\% de confianza.
+\item $p_R-p_U\in (-0.0729,\,0.0036)$ con un nivel de confianza del 95\%, luego no se puede afirmar que haya
+diferencias en las proporciones de niños menores de 5 años con sobrepeso.
+\end{itemize}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-30}{med}{}
+%ENUNCIADO
+{Se ha realizado un estudio con 1000 mujeres que han dado a luz recientemente, elegidas al azar entre los registros de
+los diferentes hospitales de la comunidad de Madrid, para saber si un nuevo protocolo (visitas al médico y consumo de
+ciertos fármacos) resulta más efectivo para prevenir las infecciones (ya sean pre, intra o postparto).
+Del total, 750 han seguido el protocolo habitual, entre las cuales 35 han sufrido algún tipo de infección; mientras
+que 250 han seguido el protocolo nuevo y 9 de ellas han padecido alguna infección.
+¿Se puede afirmar, con un 95\% de confianza, que la proporción de mujeres que ha tenido algún tipo de infección ha
+sido diferente según el protocolo utilizado?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-31}{amb}{*}
+%ENUNCIADO
+{La siguiente tabla muestra los datos de emisiones de CO$_2$ y CH$_4$ (en Kg/hab) y el producto interior bruto per
+cápita (en miles US\$) de varios países en el último año:
+\[
+\begin{array}{|l|r|r|r|}
+\hline
+\mbox{País} & \mbox{CO}_2 & \mbox{CH}_4 & \mbox{PIB}\\
+\hline\hline
+\mbox{Austria}     & 7.60 & 0.97 & 38.40\\ \hline
+\mbox{España}      & 6.73 & 0.81	& 30.12\\ \hline
+\mbox{Francia}     & 5.71 & 0.94	& 33.19\\ \hline
+\mbox{EEUU}        &19.40 & 1.72	&	45.84\\ \hline
+\mbox{Alemania}    & 9.80 & 0.83	& 34.18\\ \hline
+\mbox{Canadá}      &15.60 & 3.08	& 38.43\\ \hline
+\mbox{Italia}      & 7.29 & 0.58	& 30.44\\ \hline
+\mbox{Japón}       &	9.44 & 0.16	& 33.58\\ \hline
+\mbox{Australia}   &17.48 & 6.36	& 36.26\\ \hline
+\mbox{Reino Unido} & 8.99 & 0.76	& 35.13\\ \hline
+\end{array}
+\qquad
+\begin{array}{|l|r|r|r|}
+\hline
+\mbox{País} & \mbox{CO}_2 & \mbox{CH}_4 & \mbox{PIB}\\
+\hline\hline
+\mbox{Bolivia}     & 1.05 & 3.44	& 40.13\\ \hline
+\mbox{Niger}       &	0.1	 & 0.12	&	 0.67\\ \hline
+\mbox{Senegal}     &	0.35 & 0.76 &  1.69\\ \hline
+\mbox{Pakistán}    & 0.65 & 0.59	&  2.59\\ \hline
+\mbox{Filipinas}   &	0.83 & 0.46	&  3.38\\ \hline
+\mbox{Perú}        & 0.94 & 0.75	&  7.80\\ \hline
+\mbox{Túnez}      & 2.17 & 0.48	&  7.47\\ \hline
+\mbox{Nepal}       & 0.13 & 0.90	&  1.21\\ \hline
+\mbox{Nicaragua}   & 0.7	 & 0.32	&  2.62\\ \hline
+\mbox{Mauritania}  & 0.97 & 0.85	&  2.01\\ \hline
+\end{array}
+\]
+¿Existen diferencias significativas en la emisión de CO$_2$ entre los países con un PIB superior a 10 mil US\$ y los
+países con un PIB inferior? ¿Y en las emisiones de CH$_4$? Justificar la respuesta.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-32}{gen}{}
+%ENUNCIADO
+{En una muestra de 250 estudiantes de una universidad, 146 hablaban inglés.
+¿Entre qué valores estará el porcentaje de individuos de la universidad que hablan inglés, con un nivel de confianza
+del 90\%?
+}
+%SOLUCIÓN
+{
+$p\in (0.5327,\,0.6353)$ con un 90\% de confianza.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-33}{psi}{}
+%ENUNCIADO
+{Si el porcentaje de indivudos daltónicos de una muestra aleatoria es 18\%, ¿cuál será el mínimo tamaño muestral
+necesario para conseguir una estimación del porcentaje de daltónicos con una confianza del 95\% y un error menor del 3\%?
+}
+%SOLUCIÓN
+{
+$n=2520$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-34}{psi}{}
+% ENUNCIADO
+{Un psicólogo está estudiando la concentración de una encima en la saliba como un posible indicador de la ansiedad crónica.
+En un experimento se tomó una muestra de 12 neuróticos por ansiedad y otra de 10 personas con bajos niveles de ansiedad.
+En ambas muestras se midió la concentración de la encima, obteniendo los siguientes resultados:
+\[
+\begin{array}{rcccccccccccc}
+\hline
+\mbox{Con ansiedad:} & 2.60 & 2.90 & 2.60 & 2.70 & 3.91 & 3.15 & 3.94 & 2.46 & 2.91 & 3.88 & 3.55 & 3.96\\
+\mbox{Sin ansiedad:} & 2.37 & 1.10 & 2.55 & 2.64 & 2.20 & 2.12 & 2.47 & 2.90 & 1.66 & 2.72 \\
+\hline
+\end{array}
+\]
+¿Se puede concluir a partir de estos datos que la población de neuróticos con ansiedad y la población de personas sin
+ansiedad son diferentes en el nivel medio de concentración de encimas?
+Justificar la respuesta.
+}
+%SOLUCIÓN
+{
+$\frac{\sigma_1^2}{\sigma_2^2}\in (0.3383,\,4.7486)$ con un nivel de confianza del 95\%, luego se puede suponer que las
+varianzas son iguales.\\
+$\mu_1-\mu_2\in (0.4296,\,1.4510)$ con un 95\% de confianza, luego se puede concluir que hay diferencias entre las
+medias.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-35}{gen}{}
+%ENUNCIADO
+{Las notas en Estadística de una muestra de 10 alumnos han sido:
+\begin{center}
+$6.3$, $5.4$, $4.1$, $5.0$, $8.2$, $7.6$, $6.4$, $5.6$, $4.3$, $5.2$
+\end{center}
+Dar una estimación puntual de la nota media, de la varianza y del porcentaje de aprobados en la clase.
+}
+%SOLUCIÓN
+{$\bar x= 5.81$ puntos, $\hat s^2=1.7721$ puntos$^2$ y $\hat p=0.8$.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-36}{psi}{}
+%ENUNCIADO
+{Para estudiar si la estación del año influye en el estado de ánimo de la gente, se ha tomado una muestra 12 personas y
+se ha medido su nivel de depresión en verano e invierno mediante un cuestionario con puntuaciones de 0 a 100 (a mayor
+puntuación mayor depresión). Los resultados obtenidos fueron:
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+Invierno & 65 & 72 & 84 & 31 & 80 & 61 & 75 & 52 & 73 & 79 & 85 & 71\\
+\hline
+Verano &   60 & 51 & 81 & 45 & 62 & 53 & 70 & 52 & 64 & 51 & 67 & 62\\
+\hline
+\end{tabular}
+\end{center}
+¿Se puede afirmar que la estación del año influye en el estado de ánimo de la gente con un 99\% de confianza?
+¿Cómo influye?
+}
+%SOLUCIÓN
+{
+No se puede afirmar que la estación influya en el estado de ánimo ya que la media de la diferencia está en
+$(-0.7498,\,19.0831)$ con un 99\% de confianza.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-37}{psi}{}
+%ENUNCIADO
+{Para realizar una determinada tarea se necesitan personas con un cierto nivel de pericia.
+Una empresa está interesada en contratar a un grupo de personas que tengan la pericia necesaria para realizar la tarea,
+pero que además sean bastante homogéneas en cuanto a la pericia, es decir, que su rendimiento sea parecido.
+Para ver si un grupo de alumnos que se han formado en dicha tarea cumplen los requisitos, se ha tomado una muestra y se
+les ha sometido una prueba para ver cuántas tareas son capaces de realizar con éxito en una hora.
+Los resultados obtenidos fueron:
+\begin{center}
+16 - 12 - 14 - 21 - 11 - 15 - 17 - 15 - 18 - 24 - 10 - 14 - 17 - 14 
+\end{center}
+Se pide: 
+\begin{enumerate}
+\item Si la empresa busca un grupo de empleados capaces de realizar una media de al menos 12 tareas por hora, ¿se puede
+afirmar con una confianza del 95\% que el grupo lo cumple?
+\item Si la empresa busca que entre los trabajadores haya una dispersión media de $\sigma<3$ tareas, ¿se puede afirmar
+con una confianza del 95\% que el grupo lo cumple? 
+\end{enumerate} 
+}
+%SOLUCIÓN
+{
+\begin{itemize}
+\item Lo cumple ya que $\mu\in (13.4026,\,17.7403)$ con un 95\% de confianza.
+\item No lo cumple ya que $\sigma \in (2.7232,\,6,0516)$ con un 95\% de confianza.
+\end{itemize}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{ico-38}{psi}{}
+%ENUNCIADO
+{Se cree que el consumo de tabaco va ligado al consumo de alcohol y para corroborar esta hipótesis se ha realizado un
+estudio en el que se han obtenido los siguientes datos
+\begin{center}
+\begin{tabular}{lcc}
+ & Bebedores & No bebedores\\
+\cline{2-3}
+Fumadores & \multicolumn{1}{|c}{487} & \multicolumn{1}{c|}{137} \\
+No fumadores & \multicolumn{1}{|c}{312} & \multicolumn{1}{c|}{365}\\
+\cline{2-3}
+\end{tabular}
+\end{center}
+¿Se puede afirmar que existe relación entre el consumo de tabaco y el de alcohol?
+Justificar la respuesta.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{ico-39}{far}{*}
+%ENUNCIADO
+{Para analizar la eficacia de un determinado fármaco para aumentar las horas de sueño se realiza un estudio con 8 pacientes a los que se les
+controla durante todo un mes, en el que no toman el medicamento y se cuantifica la media de las horas de sueño para cada uno de ellos. El
+mismo proceso se lleva a cabo durante todo un mes en el que sí que toman el fármaco. Los resultados (en horas de sueño) aparecen en la
+siguiente tabla:
+\[
+\begin{array}{ccc}
+\hline
+\text{Paciente} & \text{Sin el fármaco} & \text{Con el fármaco} \\
+\hline
+    1     &        8.3        &         9.0         \\
+    2     &        6.9        &         8.1         \\
+    3     &        7.2        &         9.2         \\
+    4     &        9.1        &         9.5         \\
+    5     &        8.2        &         8.5         \\
+    6     &        7.5        &         9.0         \\
+    7     &        6.1        &         8.0         \\
+    8     &        7.4        &         7.9         \\
+\hline
+\end{array}
+\]
+¿Se puede concluir con un nivel de confianza del 99\% que el fármaco ha sido eficaz para aumentar las horas de sueño?
+}
+%SOLUCIÓN
+{El intervalo de confianza de 99\% para la media de la diferencia entre las horas de sueño sin el fármaco y con el fármaco es
+$(-1.9067\,,\,-0.2183)$, luego si se puede concluir que el fármaco ha sido eficaz para aumentar las horas de sueño.
+}
+%RESOLUCIÓN
+{Para ver si el fármaco ha sido eficaz necesitamos calcular el intervalo de confianza para la media de la diferencia entre horas de sueño
+sin y con el fármaco. Al tratarse de datos pareados, construimos una nueva variable $X$ que recoja esta diferencia.
+\[
+\begin{array}{cccc}
+\hline
+\text{Paciente} & \text{Sin el fármaco} & \text{Con el fármaco} & X=\text{Diferencia} \\
+\hline 
+    1     &        8.3        &         9.0         & -0.7\\
+    2     &        6.9        &         8.1         & -1.2\\
+    3     &        7.2        &         9.2         & -2.0\\
+    4     &        9.1        &         9.5         & -0.4\\
+    5     &        8.2        &         8.5         & -0.3\\
+    6     &        7.5        &         9.0         & -1.5\\
+    7     &        6.1        &         8.0         & -1.9\\
+    8     &        7.4        &         7.9         & -0.5\\
+\hline
+\end{array}
+\]
+
+Puesto que tenemos una muestra pequeña (8 pacientes), debemos utilizar el intervalo de confianza de la t de Student, cuya fórmula es
+\[
+\bar x\pm t(n-1)_{\alpha/2}\frac{\hat s}{\sqrt{n}}.
+\]
+Calculamos primero los estadísticos necesarios para construir el intervalo
+\begin{align*}
+\bar x &= \frac{\sum x_{i}}{n}=\frac{-0.7-\cdots -0.5}{8}= \frac{-8.5}{8}=-1.0625,\\
+s^2 &= \frac{\sum{x_{i}^2}}{n}-\bar x^2=\frac{(-0.7)^2+\cdots +(-0.5)^2}{8}-(-1.0625)^2= \frac{12.29}{8}-1.1289=0.4073,\\
+\hat s^2 &= \frac{n}{n-1}\cdot s^2= \frac{8}{7}\cdot 0.4073 = 0.4655,\\
+\hat s &= \sqrt{0.4655}=0.6823.
+\end{align*}
+Como nos piden una confianza del 99\%, $\alpha=0.01$ y el valor de $t(n-1)_{\alpha/2}=t(7)_{0.005}$ lo buscamos en la tabla de la función de
+distribución de la t de Student con 7 grados de libertad. Dicho valor es $t(7)_{0.005}=3.499$.
+
+Sustituyendo estos valores en la fórmula del intervalo de confianza, tenemos
+\[
+-1.0625\pm 3.499\frac{0.6823}{\sqrt{8}}= -1.0625\pm 0.8442,
+\]
+con lo que el intervalo de confianza resultante es
+$(-1.9067\,,\,-0.2183)$.
+
+Según este intervalo, al 99\% de confianza existen pruebas significativas de que la media de la diferencia de horas es negativa y por tanto
+el número de horas de sueño después del fármaco aumenta por término medio. Podemos concluir, con un 99\% de confianza, que el fármaco es
+eficaz.
+}
+
+
+\newproblem{ico-40}{med}{*}
+% ENUNCIADO
+{Se quiere probar si la cirrosis hepática hace variar el índice de colinesterasa en suero. Se eligen 2 muestras aleatorias e independientes,
+una primera de 60 individuos normales, con media $1.6$ y desviación típica $0.3$, y la segunda de 50 individuos cirróticos, con media $1.1$
+y desviación típica $0.4$. ¿Podemos concluir que existen diferencias significativas, con un 99\% de confianza, entre las medias de la
+colinesterasa en individuos normales e individuos cirróticos?
+}
+% SOLUCIÓN
+{
+}
+% RESOLUCIÓN
+{
+}
+
+
+\newproblem{ico-41}{med}{*}
+% ENUNCIADO
+{Un grupo de investigadores obtuvo datos acerca de las concentraciones de amilasa en el suero de muestras de individuos sanos y de
+individuos hospitalizados, con el objetivo de determinar si la concentración media es, o no, diferente en ambas poblaciones. Las
+concentraciones, en unidades/ml, en 10 individuos sanos fueron:
+\begin{center}
+\begin{tabular}{llllllllll}
+100 & 103 & 96 & 93 & 91 & 104 & 93 & 99 & 88 & 91 \\
+\end{tabular}
+\end{center}
+Y en 12 individuos enfermos fueron:
+\begin{center}
+\begin{tabular}{llllllllllll}
+118 & 115 & 101 & 104 & 116 & 114 & 112 & 113 & 117 & 123&119&121 \\
+\end{tabular}
+\end{center}
+
+Suponiendo que la concentración de amilasa en suero sigue una distribución normal, tanto en individuos sanos como hospitalizados, y que las
+varianzas son desconocidas pero iguales, se pide:
+\begin{enumerate}
+\item Calcular el intervalo de confianza para la diferencia de medias con un nivel de confianza del 95\%.
+\item ¿A qué conclusión deben llegar los investigadores sobre la igualdad o no de la concentración de amilasa? Justificar la respuesta.
+\end{enumerate}
+}
+% SOLUCIÓN
+{
+}
+% RESOLUCIÓN
+{
+}
+
+
+\newproblem{ico-42}{med}{*}
+% ENUNCIADO
+{En un estudio se pretende contrastar el efecto de una vacuna contra la alergia. Para ello, se dispone de un grupo experimental formado por
+200 individuos y otro control formado por 300 individuos.
+Teniendo en cuenta que en el grupo experimental sufrieron alergia 20 personas, con una duración media de 20 días y una desviación típica de
+6, y en el control la sufrieron 42, con una duración media de 25 días y una desviación típica de 7.
+Se pide:
+\begin{enumerate}
+\item Calcular el intervalo de confianza al 90\% para la diferencia de proporciones de los afectados por la alergia entre los que han sido
+vacunados y los que no. ¿Se puede concluir que la vacuna ha disminuido significativamente la proporción de afectados por la alergia? Justificar adecuadamente la respuesta. 
+\item Suponiendo varianzas poblacionales iguales y que la duración de la alergia sigue una distribución normal, tanto en el grupo
+experimental como en el grupo control, calcular el intervalo de confianza del 95\% para la diferencia entre la duración media de la alergia
+en el grupo experimental y en el grupo control. ¿Se puede concluir que la vacuna ha disminuido significativamente la duración de la alergia? Justificar adecuadamente la respuesta.  
+\end{enumerate}
+}
+% SOLUCIÓN
+{
+}
+% RESOLUCIÓN
+{
+}
+

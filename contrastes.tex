@@ -1,0 +1,617 @@
+% Version control information:
+% $HeadURL: https://ejerciciosestadistica.googlecode.com/svn/trunk/contrastes.tex $
+% $LastChangedDate: 2011-02-17 12:09:26 +0100 (jue, 17 feb 2011) $
+% $LastChangedRevision: 7 $
+% $LastChangedBy: asalber $
+% $Id: contrastes.tex 7 2011-02-17 11:09:26Z asalber $
+
+\newproblem{hip-1}{far}{}
+% ENUNCIADO
+{Se sabe que una vacuna que se está utilizando al cabo de dos años sólo protege al 60\% de las personas a las que se
+administró.
+Se desarrolla una nueva vacuna, y se quiere saber si al cabo de dos años protege a más personas que la primera.
+Para ello se seleccionan 10 personas al azar y se les inyecta la nueva vacuna.
+Establecemos que si más de 8 de los vacunados conservan la protección al cabo de dos años, entonces consideraremos la
+nueva vacuna mejor que la antigua.
+Se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de cometer un error de tipo I.
+\item Si la nueva vacuna protegiera a un 80\% de las personas vacunadas al cabo de 2 años, ¿Cuál será la probabilidad
+de cometer un error de tipo II?
+\end{enumerate}
+
+Repetir los cálculos si se toma una muestra de 100 personas y se establece que la vacuna es mejor si más de 75 de los
+vacunados conservan la protección al cabo de 2 años.
+
+\noindent \textbf{Nota}: Aproximar la distribución binomial mediante una distribución normal.
+}
+%SOLUCIÓN
+{
+Contraste: $H_0:p=0.6$, $H_1:p>0.6$. Muestra de tamaño 10:
+\begin{itemize}
+\item $P(\text{Rechazar }H_0/H_0)=0.0464$.
+\item $P(\text{Aceptar }H_0/H_1)= 0.6242$.
+\end{itemize}
+Muestra de tamaño 100:
+\begin{itemize}
+\item $P(\text{Rechazar }H_0/H_0)=0.0011$.
+\item $P(\text{Aceptar }H_0/H_1)=0.1056$.
+\end{itemize}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-2}{fisio}{}
+% ENUNCIADO
+{Un fisioterapeuta afirma que con un nuevo procedimiento de rehabilitación que él aplica, determinada lesión tiene un
+tiempo de recuperación medio no mayor de 15 días.
+Se seleccionan al azar 36 personas que sufren dicho tipo de lesión para verificar su afirmación, y se obtiene un tiempo
+medio de recuperación de 13 días y una cuasivarianza de 9.
+¿Contradice lo observado en la muestra la afirmación del fisioterapeuta para un $\alpha =0.05$? }
+%SOLUCIÓN
+{
+Contraste para la media: $H_0:\mu=15$, $H_1:\mu<15$.\\
+Región de aceptación para $\alpha=0.05$: $-1.6444<z$.\\
+Estadístico del contraste: $z=-4$. Como cae fuera de la región de aceptación se rechaza la hipótesis nula y se
+confirma confirma la afirmación del fisioterapeuta.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-3}{far}{}
+% ENUNCIADO
+{Se decide retirar una cierta vacuna si produce más de un 10\% de reacciones alérgicas. Se consideran 100 pacientes sometidos a la vacuna y
+se observan 15 reacciones alérgicas. ¿Debe retirarse la vacuna? (Utilizar un $\alpha =0.01$).
+}
+%SOLUCIÓN
+{Contraste para la proporción: $H_0: p=0.1$, $H_1: p>0.1$.\\
+Región de aceptación para $\alpha=0.01$: $z>2.3263$.\\
+Estadístico del contraste: $z=1.6667$. Como cae dentro de la región de aceptación, se acepta la hipótesis nula y se
+concluye que no hay pruebas suficientes para retirar la vacuna.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-4}{med}{}
+% ENUNCIADO
+{Se utiliza un grupo de 150 pacientes para comprobar la teoría de que la vitamina C tiene alguna influencia en el
+tratamiento del cáncer.
+Los 150 pacientes fueron divididos en dos grupos de 75. Un grupo recibió 10 gramos de vitamina C y el otro un placebo
+cada día, además de la medicación habitual.
+De los que recibieron la vitamina C, 47 presentaban alguna mejoría al cabo de cuatro semanas, mientras que de los que
+recibieron el placebo, 43 experimentaron mejoría.
+Contrastar esta hipótesis.
+}
+%SOLUCIÓN
+{
+Contraste para la comparación de proporciones: $H_0:p_1=p_2$, $H_1:p_1\neq p_2$.\\
+Región de aceptación para $\alpha=0.05$: $-1.96<z<1.96$.\\
+Estadístico del contraste $z=0.6677$. Como cae dentro de la región de aceptación, se acepta la hipótesis nula
+y no se pude concluir que la vitamina C tenga influencia en el tratamiento del cáncer.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-5}{med}{}
+% ENUNCIADO
+{Se realizó en dos hospitales una encuesta entre los pacientes sobre la satisfacción con la atención recibida,
+calificándola de 0 a 100.
+En el hospital A rellenaron la encuesta 12 pacientes, obteniéndose una media de 85 y una cuasivarianza de 16, mientras
+que en el hospital B rellenaron la encuesta 10 pacientes, obteniéndose una media de 81 y una cuasivarianza de 25.
+¿Puede concluirse que el nivel de satisfacción en el hospital A es mayor que en el B?
+
+\noindent \textbf{Nota}: Hacer previamente un contraste de igualdad de varianzas.
+}
+%SOLUCIÓN
+{Contraste de comparación de varianzas: $H_0:\sigma_A=\sigma_B$, $H_1:\sigma_A\neq \sigma_B$.\\
+Región de aceptación para $\alpha=0.05$: $0.2787<f<3.9121$.\\
+Estadístico del contraste: $f=0.64$. Como cae dentro de la región de aceptación, se acepta la
+hipótesis de que las varianzas son iguales.\\
+Contraste de comparación de medias: $H_0:\mu_A=\mu_B$, $H_1:\mu_A>\mu_B$.\\
+Región de aceptación para $\alpha=0.05$: $t>1.7247$
+Estadístico del contraste: $t=2.0863$. Como cae fuera de la región de aceptación, se rechaza la hipótesis nula y se
+concluye que hay pruebas significativas de que el nivel de satisfación en el hospital A es mayor que en el B.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-6}{med}{*}
+% ENUNCIADO
+{Se compararon los niveles de ácido ascórbico en plasma de mujeres embarazadas fumadoras y no fumadoras,
+obteniéndose los siguientes resultados expresados en gramos de ácido ascórbico por mililitro de plasma:
+\begin{itemize}
+\item[] Mujeres fumadoras: $0.97$--$0.72$--$1.00$--$0.81$--$0.62$--$1.32$--$1.24$.
+\item[] Mujeres no fumadoras: $0.48$--$0.71$--$0.98$--$0.68$--$0.5$.
+\end{itemize}
+Realizar un contraste de hipótesis para comprobar si el nivel de ácido ascórbico en la sangre de mujeres fumadoras es
+mayor que el de mujeres no fumadoras.
+}
+%SOLUCIÓN
+{Contraste de comparación de varianzas: $H_0:\sigma_1=\sigma_2$, $H_1:\sigma_1\neq \sigma_2$.\\
+Región de aceptación para $\alpha=0.05$: $0.1606<f<9.1973$.\\
+Estadístico del contraste: $f=1.6592$. Como cae dentro de la región de aceptación, se acepta la hipótesis de que las
+varianzas son iguales.\\
+Contraste de comparación de medias: $H_0:\mu_1=\mu_2$, $H_2:\mu_1>\mu_2$.\\
+Región de aceptación para $\alpha=0.05$: $t<1.8125$.\\
+Estadístico del contraste: $t=2.0372$. Como cae fuera de la región de aceptación, se rechaza la hipótesis nula y se
+concluye que las mujeres fumadoras tienen mayor nivel de ácido ascórbico. 
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{hip-7}{qui}{}
+% ENUNCIADO
+{Verificar la hipótesis de que el contenido medio de unos recipientes de ácido sulfúrico es de 10 litros, si los
+contenidos de una muestra aleatoria de 10 recipientes son $10.2$, $9.7$, $10.1$, $10.3$, $10.1$, $10.1$, $9.8$, $9.9$,
+$10.4$, $10.3$ y $9.8$ litros.
+Utilizar un nivel de significación de $0.01$ y suponer que la distribución de los contenidos es normal.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-8}{gen}{}
+% ENUNCIADO
+{Un fabricante de equipos de medida afirma que sus equipos pueden realizar al menos 12 mediciones más que los de la
+competencia sin necesidad de un nuevo ajuste.
+Para probar esta afirmación se realizan mediciones con 50 equipos de este fabricante y 50 de la competencia.
+En los suyos el número de mediciones hasta necesitar un nuevo ajuste tuvo de media $86.7$ y cuasidesviación típica
+$6.28$, mientras que en los de la competencia estos valores fueron $77.8$ y $5.61$ respectivamente.
+Verificar la afirmación del fabricante con $\alpha=0.05$.
+}
+%SOLUCIÓN
+{
+Contraste de comparación de medias: $H_0:\mu_1<\mu_2+12$, $H_1:\mu_1\geq\mu_2 12$.\\
+Intervalo de confianza para la diferencia de medias: $\mu_1-\mu_2\in (6.5659,\,11.2341)$ con un 95\% de confianza,
+luego hay diferencias significativas entre el número medio de mediciones, pero no se puede afirmar que sean mayores de
+12 mediciones.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{hip-9}{med}{}
+% ENUNCIADO
+{Para determinar si un nuevo suero detiene la leucemia, se seleccionan 9 ratones con leucemia en una fase avanzada. 
+Cinco reciben el tratamiento y cuatro no.
+Los tiempos de supervivencia, en años, desde el momento que comenzó el experimento son los siguientes:
+\begin{itemize}
+\item[] Con tratamiento: $2.1$ -- $5.3$ -- $1.4$ -- $4.6$ -- $0.9$.
+\item[] Sin tratamiento: $1.9$ -- $0.5$ -- $2.8$ -- $3.1$.
+\end{itemize}
+¿Puede afirmarse con un $\alpha=0.05$ que el suero es eficaz?
+Suponer que ambas distribuciones son normales con varianzas iguales.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-10}{gen}{}
+% ENUNCIADO
+{Un estudio afirma que el 70\% de los habitantes de la capital lee diariamente algún periódico.
+¿Estaríamos de acuerdo con las conclusiones de dicho estudio si al preguntar a 15 personas elegidas aleatoriamente, 8
+leen diariamente algún periódico? }
+%SOLUCIÓN
+{Contraste para la proporción: $H_0:p=0.7$, $H_1:p\neq 0.7$.\\
+Región de aceptación para $\alpha=0.05$: $-1.96<z<1.96$.\\
+Estadístico del contraste: $z=-1.408590$. Como cae dentro de la región de aceptación, se acepta la hipótesis nula
+y se estaría de acuerdo con las afirmación del estudio.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{hip-11}{gen}{}
+% ENUNCIADO
+{Un distribuidor de tabaco asegura que el 20\% de los fumadores de su ciudad prefiere los cigarrillos de marca $A$.
+Se selecciona al azar una muestra de 20 fumadores, y 6 de ellos prefieren la marca $A$.
+¿Qué conclusión se obtiene con $\alpha=0.05$?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-12}{psi}{}
+% ENUNCIADO
+{En un estudio sobre el consumo de alcohol entre los jóvenes durante los fines de semana, se preguntó a 100 chicos y a
+125 chicas, de los que 63 chicos y 59 chicas contestaron que consumían.
+En vista de estos datos, ¿existe alguna diferencia significativa entre las respuestas de chicos y chicas?
+Utilizar $\alpha=0.10$.
+} 
+%SOLUCIÓN
+{
+Contraste de comparación de proporciones: $H_0:p_1=p_2$, $H_1:p_1\neq p_2$.\\
+Región de aceptación para $\alpha=0.01$: $-1.6449<z<1.6449$.\\
+Estadístico del contraste: $z=2.4026$. Como cae fuera de la región de aceptación, se rechaza la hipótesis nula y se
+concluye que hay diferencias significativas entre el consumo de alcohol de chicos y chicas.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-13}{gen}{}
+% ENUNCIADO
+{Un fabricante de baterías para automóvil asegura que la duración de sus baterías tiene una distribución
+aproximadamente normal con desviación típica no superior a $0.9$ años.
+Si una muestra aleatoria de 10 de estas baterías tiene una cuasidesviación típica de $0.7$ años, ¿qué se puede concluir
+sobre la afirmación del fabricante?
+}
+%SOLUCIÓN
+{Contraste para la desviación típica: $H_0:\sigma=0.9$, $H_1:\sigma<0.9$.\\
+Región de aceptación para $\alpha=0.05$: $3.3251<j$.\\
+Estadístico del contraste: $j=4$. Como cade dentro de la región de aceptación, no se puede rechazar la hipótesis
+nula y se concluye que no hay pruebas significativas de que sea cierta la afirmación del fabricante.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{hip-14}{amb}{}
+% ENUNCIADO
+{En un estudio sobre el contenido de ortofósforo de las aguas de un río, se realizaron medidas en dos estaciones distintas.
+Se sacaron 15 muestras de la estación 1 y 12 de la estación 2.
+Las muestras de la estación 1 presentaron un contenido medio de ortofósforo de $3.84$ mg/l y una cuasidesviación típica
+de $3.07$ mg/l, mientras que las de la estación 2 tuvieron media $1.49$ mg/l y una cuasidesviación típica $0.8$ mg/l.
+
+Se pide:
+\begin{enumerate}
+\item Calcular el intervalo de confianza para el cociente de varianzas.
+\item Realizar el contraste de hipótesis de igualdad de varianzas.
+\end{enumerate}
+Utilizar un $\alpha=2$.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{hip-15}{amb}{}
+% ENUNCIADO
+{Se ha desarrollado un aditivo para gasolina que reduce la emisión de CO$_2$ en la combustión.
+Para comprobar la efectividad del aditivo, se realiza un estudio en el que se mide en una muestra de 10 coches la
+cantidad de CO$_2$ emitida (en Kg/l), tanto con gasolina con aditivo, como con gasolina sin aditivo, obteniendo los
+siguientes resultados:
+\[
+\begin{array}{rcccccccccc}
+\mbox{Sin aditivo:}  & 0.38 & 0.42 & 0.41 & 0.39 & 0.45 & 0.47 & 0.44 & 0.38 & 0.40 & 0.50  \\
+\mbox{Con  aditivo:} & 0.38 & 0.36 & 0.38 & 0.32 & 0.39 & 0.45 & 0.39 & 0.39 & 0.35 & 0.48 \\
+\end{array}
+\]
+Se pide:
+\begin{enumerate}
+\item Realizar un contraste de hipótesis para comprobar la efectividad del aditivo.
+\item ¿Qué potencia tiene el contraste para detectar una reducción en la emisión de CO$_2$ de $0.2$ Kg/l?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-16}{psi}{}
+% ENUNCIADO
+{Un psicólogo está estudiando la concentración de una encima en la saliba como un posible indicador de la ansiedad crónica.
+En un experimento se tomó una muestra de 12 neuróticos por ansiedad y otra de 10 personas con bajos niveles de ansiedad.
+En ambas muestras se midió la concentración de la encima, obteniendo los siguientes resultados:
+\[
+\begin{array}{rcccccccccccc}
+\hline
+\mbox{Con ansiedad:} & 2.60 & 2.90 & 2.60 & 2.70 & 3.91 & 3.15 & 3.94 & 2.46 & 2.91 & 3.88 & 3.55 & 3.96\\
+\mbox{Sin ansiedad:} & 2.37 & 1.10 & 2.55 & 2.64 & 2.20 & 2.12 & 2.47 & 2.90 & 1.66 & 2.72 \\
+\hline
+\end{array}
+\]
+¿Se puede concluir a partir de estos datos que la población de neuróticos con ansiedad y la población de personas sin
+ansiedad son diferentes en el nivel medio de concentración de encimas?
+Justificar la respuesta.
+}
+%SOLUCIÓN
+{
+Contraste de comparación de varianzas: $H_0:\sigma_1=\sigma_2$, $H_1:\sigma_1\neq\sigma_2$.\\
+Región de aceptación para $\alpha=0.05$: $0.2787<f<3.9121$.\\
+Estadístico del contraste: $f=1.2138$. Como cade dentro de la región de aceptación, se acepta la hipótesis nula y se
+concluye que las varianzas son iguales.\\
+Contraste de comparación de medias: $H_0:\mu_1=\mu_2$, $H_1:\mu_1\neq\mu_2$.\\
+Región de aceptación para $\alpha=0.05$: $-2.0860<t<2.0860$.\\
+Estadístico del contraste: $t=3.8407$. Como cae fuera de la región de aceptación, se rechaza la hipótesis nula y
+se puede concluir que hay diferencia entre la concentración media de encimas para neuróticos con ansiedad y sin ansiedad.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-17}{psi}{}
+% ENUNCIADO
+{En una investigación para ver la efectividad de una nueva droga antidepresiva, se ha tomado un muestra de 15
+pacientes depresivos que han completado un cuestionario para detectar el nivel depresivo, antes y después de recibir
+la droga.
+En la puntuación del cuestionario los valores menores indican una mayor depresión.
+Los resultados obtenidos han sido:
+\[
+\begin{array}{rccccccccccccccc}
+\hline
+\mbox{Antes:}  & 18 & 21 & 16 & 19 & 14 & 23 & 16 & 14 & 21 & 18 & 17 & 14 & 16 & 14 & 20 \\
+\mbox{Después:}& 23 & 20 & 17 & 20 & 16 & 22 & 18 & 18 & 21 & 16 & 19 & 20 & 15 & 15 & 21 \\
+\hline 
+\end{array}
+\]
+Realizar un constraste para averiguar si la droga tiene un efecto positivo sobre la depresión.
+¿Qué tamaño muestral sería necesario para detectar una diferencia en la puntuación como la que hay entre las medias de las muestras?
+}
+%SOLUCIÓN
+{
+Contraste para la media de la diferencia entre antes y después: $H_0:\mu=0$, $H_1:\mu<0$.\\
+Región de aceptación par $\alpha=0.05$: $-1.7613<t$.\\
+Estadístico del contraste: $t=-2.2563$. Como cae fuera de la región de aceptación, se rechaza la hipótesis nula y
+se puede afirmar que la droga reduce la depresión.\\
+El tamaño muestral para detectar una diferencia de $\delta=\bar x_1-\bar x_2 = 17.4-18.7333=-1.3333$ con una potencia
+del 90\% es $n=26$ individuos.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-18}{psi}{}
+% ENUNCIADO
+{Un experimento pretende contrastar la teoría de que la memoria a corto plazo se ve afectada por la similitud entre los
+estímulos. El experimento consiste en leer en voz alta una secuencia de letras a un sujeto, quien después de una breve
+pausa debe repetir la secuencia.
+Si la teoría es correcta, habrá más errores en la lista que contenga letras que suenan de forma similar que si
+contiene letras que se parecen.
+A cada sujeto se le presentan dos tipos de secuencias, una con letras que suenan de forma similar y otra con letras
+que se escriben de forma parecida.
+Los errores producidos en cada secuencia son:
+\[
+\begin{array}{rccccccccc}
+\hline
+\mbox{Errores de letras que suenan parecidas:}  & 7 & 5 & 6 & 11 & 3 & 8 & 4 & 10 & 9\\
+\mbox{Errores de letras con similiar escritura:}& 8 & 2 & 5 &  9 & 5 & 4 & 4 &  7 & 4\\
+\hline 
+\end{array} 
+\]
+¿Se puede validar la teoría?
+}
+%SOLUCIÓN
+{
+Contraste para la media de la diferencia entre los errores de letras que suenan parecidas y los errores en letras con
+similar escritura: $H_0:\mu=0$, $H_1:\mu>0$.\\
+Región de aceptación para $\alpha=0.05$: $t>1.8595$.\\
+Estadístico del contraste: $t=2.1320$. Como cae fuera de la región de aceptación, se rechaza la hipótesis nula y
+se concluye que la teoría es cierta.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-19}{psi}{}
+% ENUNCIADO
+{Se sabe que el tiempo de reacción ante un estímulo sigue una distribución normal de media $30$ ms y desviación típica
+$10$ ms.
+Se cree que la alcoholemia aumenta el tiempo de reacción de los sujetos, y para comprobar esta hipótesis se ha tomado
+una muestra aleatoria de 40 individuos a los que se les ha inducido una alcoholemia de $0.8$ g/l y en los que se ha
+apreciado un tiempo medio de respuesta de $35$ ms y una desviación típica de $12$ ms.
+¿Se puede afirmar que una alcoholemia de $0.8$ gm/l influye en el tiempo medio de respuesta con un riesgo
+$\alpha=0.05$? ¿Y con un riesgo $\alpha=0.01$?
+
+¿Cuál será la potencia del contraste para detectar una difererencia en la media del tiempo de reacción de 4 ms? ¿Cuál
+debería ser el tamaño muestral para aumentar la potencia hasta un 90\%?
+}
+%SOLUCIÓN
+{Contraste para la media: $H_0: \mu=30$, $H_1:\mu>30$.\\
+Región de aceptación para $\alpha=0.01$: $z<2.3263$.\\
+Estadístico del contraste: $z=2.6020$. Como cae fuera de la región de aceptación, se rechaza la hipótesis nula
+tanto para $\alpha=0.01$ y con mayor motivo para $\alpha=0.05$, de manera que se concluye que la alcoholemia influye en
+el tiempo de respuesta.\\
+Potencia del contraste  para $\delta=4$: $1-\beta=1-0.5966=0.4034$.\\
+El tamaño muestral para, $\alpha=0.05$, $\delta=4$ y una potencia del 90\% es $n=80$.  
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-20}{med}{}
+%ENUNCIADO
+{Se cree que el nivel medio de protrombina en plasma de una población normal tiene una media de 19mg/100ml y una
+desviación típica de 4mg/100ml.
+Para contrastar estas hipótesis se tomó una muestra de 8 individuos en los que se obtuvieron los siguientes niveles de
+protrombina en plasma:
+\[
+16.3 - 18.4 - 20.0 - 17.6 - 15.4 - 23.7 - 17.8 - 19.5
+\]
+¿Se pueden aceptar ambas hipótesis con un riesgo $\alpha=0.1$?
+}
+%SOLUCIÓN
+{Contraste para la media: $H_0:\mu=19$, $H_1:\mu\neq 19$.\\
+Región de aceptación para $\alpha=0.1$: $-1.8946<t<1.8946$.\\
+Estadístico del contraste: $t=-0.4552$. Como cae dentro de la región de aceptación, se mantiene la hipótesis de
+que la media es 19mg/100ml.\\
+Contraste para la varianza: $H_0:\sigma=4$, $H_1:\sigma\neq 4$.\\
+Región de aceptación para $\alpha=0.1$: $2.1673<j<14.0671$.\\
+Estadístico del contraste: $j=2.8743$. Como cae dentro de la región de aceptación, también se mantiene la hipótesis
+de que la desviación típica es de 4mg/100ml.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{hip-21}{gen}{*}
+%ENUNCIADO
+{Para ver si la ley antitabaco está influyendo en el número de cigarros que se fuman mientras se está en los bares se
+seleccionó una muestra en la que se midió el número de cigarros fumados por hora mientras se estaba en un bar antes de la entrada en vigor de la ley y otra
+muestra distinta en la que también se midió el número de cigarros fumados por hora después de la entrada en vigor de la ley (se entiende
+que con la ley en vigor los cigarros se fuman en el exterior de los bares). Los resultados aparecen en la siguientes tablas:
+\begin{center}
+\begin{tabular}{cc}
+\multicolumn{2}{c}{Antes}\\
+\hline
+Cigarros & Personas \\
+\hline
+0-1 & 12\\
+1-2 & 21\\
+2-3 & 20\\
+3-4 & 8\\
+\hline
+\end{tabular}
+\qquad
+\begin{tabular}{cc}
+\multicolumn{2}{c}{Después}\\
+\hline
+Cigarros & Personas \\
+\hline
+0-1 & 22\\
+1-2 & 18\\
+2-3 & 8\\
+3-4 & 4\\
+\hline
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Calcular el intervalo de confianza del 99\% para el número medio de cigarros fumados por hora en los bares antes de la entrada en
+vigor de la ley. ¿Cuántos individuos serían necesarios para poder estimar dicha media con un margen de error no mayor de $\pm 0.1$ cigarros
+por hora?
+\item Contrastar si la nueva ley ha reducido significativamente el consumo medio de tabaco en los bares. ¿Cuánto vale el $p$-valor del
+contraste?
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item El intervalo de confianza del 99\% para el número medio de cigarros fumados por hora en los bares antes de la entrada en vigor de la
+ley es $(1.5789,\,2.2079)$. El tamaño muestral necesario para estimar la media con un margend e error no mayor de $\pm 0.1$ cigarros es
+$n=603$ individuos.
+\item Contraste para de comparación de medias: $H_0:\mu_x=\mu_y$, $H_1:\mu_x> \mu_y$.\\
+Región de aceptación para $\alpha=0.05$: $Z\leq z_\alpha=1.6449$.\\
+Estadístico del contraste: $z= 2.8447$. Como cae dentro fuera de la región de aceptación, se rechaza la hipótesis nula y se concluye que la
+ley ha reducido el consumo medio de cigarros por hora.\\
+El $p$-valor del contraste vale $0.0022$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{Sean $X$ e $Y$ las variables que miden el número medio de cigarros fumados por hora antes y después de la entrada envigor de la ley respectivamente.
+\begin{enumerate}  
+\item Puesto que se trata de una muestra grande de $n_x=61$, la fórmula del intervalo de confianza para la media es
+\[
+\bar x \pm z_{\alpha/2}\frac{\hat s}{\sqrt n}.
+\]
+A partir de la tabla de frecuencias se calculan los estadísticos necesarios:
+\begin{align*}
+\bar x &= \frac{\sum x_in_i}{n_x} = \frac{0.5\cdot12+\cdots+3.5\cdot8}{61} = \frac{115.5}{61} = 1.8934,\\
+s_x^2 & = \frac{\sum x_i^2n_i}{n_x}-\bar x^2 = \frac{0.5^2\cdot12+\cdots+3.5^2\cdot8}{61} -1.8934^2= \frac{273.25}{61}-3.585 = 0.8944,\\
+\hat s_x^2 &= \frac{n_x}{n_x-1}s_x^2 = \frac{61}{60}0.8944 = 0.9093,\\
+\hat s_x & = \sqrt{0.9093} = 0.9536.
+\end{align*}
+Como se pide un nivel de confianza del $99\%$ se tiene que $\alpha=0.01$ y $\alpha/2=0.005$, de modo que buscando en la tabla de la función de distribución de la normal estándar se tiene que $z_{\alpha/2} =2.5758$. Así pues, sustituyendo en la fórmula del intervalo se obtiene
+\[
+\bar x \pm z_{\alpha/2}\frac{\hat s}{\sqrt n} = 1.8934 \pm 2.5758\frac{0.9536}{\sqrt{61}} = 1.8934\pm 0.3145 = (1.5789,\,2.2079).
+\]
+
+Por otro lado, el número de individuos necesario para estimar la media con un margen de error no mayor de $\pm 0.1$ cigarros por hora y una confianza del $99\%$ es
+\[
+n = \frac{4 z_{\alpha/2}^2 \hat s^2}{A^2} = \frac{4\cdot 2.5758^2 \cdot 0.9093}{(2\cdot 0.1)^2} = 603.2974,
+\]
+es decir, se necesitarían como mínimo $603$ individuos. 
+
+\item Para contrastar si la nueva ley ha reducido significativamente el consumo medio de tabaco en los bares hay que realizar un contraste unilateral de comparación de medias
+\begin{align*}
+H_0 &: \mu_x = \mu_y\\
+H_1 &: \mu_x > \mu_y
+\end{align*}
+Como los tamaños muestrales son grandes, $n_x=61$ y $n_y=52$, y no se conocen las varianzas poblacionales, el estadístico de contraste es 
+\[
+Z = \frac{\bar x -\bar y}{\sqrt{\frac{\hat s_x^2}{n_x}+\frac{\hat s_y^2}{n_y}}},
+\]
+que sigue una distribución normal estándar.
+Para calcularlo se necesitan, además de los estadísticos de $X$ calculados en el apartado anterior, los estadísticos de $Y$, que son:
+\begin{align*}
+\bar y &= \frac{\sum y_jn_j}{n_y} = \frac{0.5\cdot22+\cdots+3.5\cdot4}{52} = \frac{72}{52} = 1.3846,\\
+s_y^2 & = \frac{\sum y_j^2n_j}{n_y}-\bar y^2 = \frac{0.5^2\cdot22+\cdots+3.5^2\cdot4}{52} -1.3846^2= \frac{145}{52}-1.9171 = 0.8713,\\
+\hat s_y^2 &= \frac{n_y}{n_y-1}s_y^2 = \frac{52}{51}0.8713 = 0.8884,\\
+\end{align*}
+de manera que sustituyendo en la fórmula del estadístico de contraste se obtiene
+\[
+Z = \frac{\bar x -\bar y}{\sqrt{\frac{\hat s_x^2}{n_x}+\frac{\hat s_y^2}{n_y}}} 
+= \frac{1.8934-1.3846}{\sqrt{\frac{0.9093}{61}+\frac{0.8884}{52}}} = 2.8447.
+\]
+Como el estadístico sigue una distribucion normal estándar, la región de aceptación para un nivel de signficación $\alpha=0.05$ es $Z\leq z_\alpha=1.6449$, y como el estadístico cae fuera de esta región se rechaza la hipótesis nula y se concluye que hay pruebas significativas de que la nueva ley ha reducido el consumo medio de tabaco en los bares.
+
+Finalmente, el $p$-valor del contraste es $P(Z>2.8447)= 1- P(Z\leq 2.8447) = 1 - F(2.8447) = 0.0022$.
+\end{enumerate}
+}
+
+
+\newproblem{hip-22}{gen}{*}
+%ENUNCIADO
+{En un estudio sobre el reparto de género de las tareas domésticas se ha medido el número medio de horas diarias que se destinan a las
+tareas domésticas en un grupo de personas, obteniendo los siguientes resultados:
+\[
+\begin{array}{lrrrrrrrr}
+\text{Mujeres:} & 3.2 & 3.1 & 2.7 & 4.4 & 3.7 & 3.9 & 2.4 & 3.6 \\
+\text{Hombres:} & 3.3 & 2.1 & 1.7 & 2.4 & 1.6 & 1.8 & 2.7 
+\end{array}
+\]
+Contrastar si las mujeres dedican más tiempo que los hombres a las tareas domésticas. 
+¿Entre qué valores estará la diferencia del tiempo medio destinado a tareas domésticas entre mujeres y hombres para un 95\% de confianza?
+}
+%SOLUCIÓN
+{Estadísticos muestrales:\\
+$\bar x_M=3.375$, $s_M^2 = 0.3744$, $\hat s_M^2 = 0.4279$, $\hat s_M = 0.654$,\\ 
+$\bar x_H=2.2286$, $s_H^2 = 0.3249$, $\hat s_H^2 = 0.379$, $\hat s_H = 0.616$.
+
+Contraste de comparación de varianzas: $H_0:\ \sigma_M^2=\sigma_H^2$, \quad $H_1:\ \sigma_M^2\neq \sigma_H^2$,\\
+Estadístico del contraste: $F=1.129$,\\
+Región de aceptación para $\alpha=0.05$: $(0.1954,\,5.6955)$.\\
+Por tanto, se acepta la hipótesis nula y se supone que las varianzas son iguales.
+
+Contraste de comparación de medias: $H_0:\ \mu_M=\mu_H$, \quad $H_1:\ \mu_M> \mu_H$,\\
+Estadístico del contraste: $T=3.479$.\\
+Región de aceptación para $\alpha=0.05$: $(1.7709,\infty)$.\\
+Por tanto, se rechaza la hipótesis nula y se concluye que las mujeres dedican más tiempo que los hombres a tareas domésticas.
+
+Intervalo de confianza del $0.95$\% para $\mu_M-\mu_H$: $(0.4345,\,1.8583)$.
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{hip-23}{psi}{*}
+%ENUNCIADO
+{Un estudio sobre la adicción a los videojuegos ha medido el número medio de horas diárias que un grupo de jóvenes pasa
+jugando a los videojuegos, obteniendo los siguientes resultados:
+\[
+2.8 - 4.1 - 1.8 - 2.2 - 0.5 - 3.2 - 1.6 - 1.1 - 2.5 - 0.7 - 4.5 - 3.3 - 1.4 - 1.4 - 1.2 - 1.7 
+\] 
+Se pide:
+\begin{enumerate}
+\item Calcular el intervalo de confianza para el número medio de horas diarias de juego.
+\item Si un número de horas de juego superior a 2 horas puede suponer un alto riesgo de adicción, estimar mediante un intervalo de confianza
+del 90\% el porcentaje de jóvenes que estarán en riesgo de adicción. ¿Qué tamaño muestral sería necesario para poder estimar dicho
+porcentaje con un margen de error no mayor de $\pm 5\%$?
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item Estadísticos muestrales: $\bar x=2.125$, $\hat s^2 = 1.3913$, $\hat s = 1.18$. Intervalo de confianza del $0.95$\% para $\mu$:
+$(1.4962,\,2.7538)$.
+
+\item Proporción muestral: $\hat p = 0.4375$. Intervalo de confianza del $0.9$\% para $p$: $(0.2335,\,0.6415)$.\\
+Tamaño muestral necesario para estimar $p$ con una confianza del $0.9$ y un error $A=\pm 0.05 = 0.1$: $n=266.342$. 
+\end{enumerate}
+}
+%RESOLUCIÓN
+{
+}

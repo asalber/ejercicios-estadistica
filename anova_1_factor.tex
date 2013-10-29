@@ -1,0 +1,193 @@
+% Version control information: $HeadURL:
+% http://172.20.100.115/svn/maths/ejercicios_estadistica/ejercicios_estadistica.tex $ $LastChangedDate:
+% 2007-10-01 16:04:26 +0200 (lun, 01 oct 2007) $ $LastChangedRevision: 4 $ $LastChangedBy: asalber $ $Id:
+% ejercicios_estadistica.tex 2 2007-10-01 14:04:26Z alf $
+
+\newproblem*{anova1-1}{med}{}
+% ENUNCIADO
+{Se realiza un estudio para comparar la eficacia de tres programas terapéuticos para el tratamiento del acné.
+Se emplean tres métodos:
+\begin{enumerate}
+\item Lavado, dos veces al día, con cepillo de polietileno y un jabón abrasivo, junto con el uso diario de 250 mg de tetraciclina.
+\item Aplicación de crema de tretinoína, evitar el sol, lavado dos veces al día con un jabón emulsionante y agua, y utilización dos veces al día de 250 mg de tetraciclina.
+\item Evitar el agua, lavado dos veces al día con un limpiador sin lípidos y uso de crema de tretinoína y de peróxido benzoílico.
+\end{enumerate}
+En el estudio participan 35 pacientes. Se separó aleatoriamente a estos pacientes en tres subgrupos de tamaños 10, 12 y 13, a los que se asignó respectivamente los tratamientos I, II, y III.
+Después de 16 semanas se anotó para cada paciente el porcentaje de mejoría en el número de lesiones.
+\begin{center}
+\begin{tabular}{ll|ll|ll}
+\multicolumn{6}{c}{Tratamiento} \\
+\hline
+\multicolumn{2}{c}{I} & \multicolumn{2}{c}{II} & \multicolumn{2}{c}{III} \\
+\hline
+48,6 & 50,8 & 68,0 & 71,9 & 67,5 & 61,4 \\
+49,4 & 47,1 & 67,0 & 71,5 & 62,5 & 67,4 \\
+50,1 & 52,5 & 70,1 & 69,9 & 64,2 & 65,4 \\
+49,8 & 49,0 & 64,5 & 68,9 & 62,5 & 63,2 \\
+50,6 & 46,7 & 68,0 & 67,8 & 63,9 & 61,2 \\
+ &  & 68,3 & 68,9 & 64,8 & 60,5 \\
+ & \multicolumn{1}{l}{} &  &  & 62,3 &  \\
+\hline
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Dibujar el diagrama de dispersión.
+¿Qué conclusiones sacas de la nube de puntos?
+\item Obtener la tabla de ANOVA correspondiente al problema.
+¿Se puede concluir que los tres tratamientos tienen el mismo efecto medio con un nivel de significación de $0.05$?
+\end{enumerate}
+}
+
+
+\newproblem*{anova1-2}{amb}{}
+% ENUNCIADO
+{Se sabe que se ha arrojado material tóxico a un río que desemboca en una gran área de pesca comercial en agua salada.
+Se pretende estudiar la forma en que el agua transporta el material tóxico midiendo la cantidad de material (en partes por millón) hallada en las ostras recogidas en tres lugares diferentes, desde la salida del estuario hasta la bahía donde se realiza la mayor parte de la pesca comercial.
+Los resultados obtenidos son los
+siguientes:
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\multicolumn{1}{c}{Lugar 1} & \multicolumn{1}{c}{Lugar 2} & \multicolumn{1}{c}{Lugar 3} \\
+\multicolumn{1}{c}{(estuario)} & \multicolumn{1}{c}{(lejos de la bahía)} & \multicolumn{1}{c}{(cerca de la bahía)} \\
+\hline
+\multicolumn{1}{c}{15} & \multicolumn{1}{c}{19} & \multicolumn{1}{c}{22} \\
+\multicolumn{1}{c}{26} & \multicolumn{1}{c}{15} & \multicolumn{1}{c}{26} \\
+\multicolumn{1}{c}{20} & \multicolumn{1}{c}{10} & \multicolumn{1}{c}{24} \\
+\multicolumn{1}{c}{20} & \multicolumn{1}{c}{26} & \multicolumn{1}{c}{26} \\
+\multicolumn{1}{c}{29} & \multicolumn{1}{c}{11} & \multicolumn{1}{c}{15} \\
+\multicolumn{1}{c}{28} & \multicolumn{1}{c}{20} & \multicolumn{1}{c}{17} \\
+\multicolumn{1}{c}{21} & \multicolumn{1}{c}{13} & \multicolumn{1}{c}{24} \\
+\multicolumn{1}{c}{26} & \multicolumn{1}{c}{15} & \multicolumn{1}{c}{} \\
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{18} & \multicolumn{1}{c}{} \\
+\hline
+\end{tabular}
+\end{center}
+Contrastar si hay o no diferencias en la contaminación media de las ostras dependiendo del lugar en el que han sido recogidas, con un nivel de significación de $0.05$.
+}
+
+
+
+\newproblem*{anova1-3}{med}{}
+% ENUNCIADO
+{Se midió la frecuencia cardíaca (latidos por minuto) en cuatro grupos de adultos; controles normales (A), pacientes con angina (B), individuos con arritmias cardíacas (C) y pacientes recuperados del infarto de miocardio (D).
+Los resultados son los siguientes:
+\begin{center}
+\begin{tabular}{llll}
+A & B & C & D \\
+\hline
+83 & 81 & 75 & 61 \\
+61 & 65 & 68 & 75 \\
+80 & 77 & 80 & 78 \\
+63 & 87 & 80 & 80 \\
+67 & 95 & 74 & 68 \\
+89 & 89 & 78 & 65 \\
+71 & 103 & 69 & 68 \\
+73 & 89 & 72 & 69 \\
+70 & 78 & 76 & 70 \\
+66 & 83 & 75 & 79 \\
+57 & 91 & 69 & 61 \\
+\hline
+\end{tabular}
+\end{center}
+¿Proporcionan estos datos la suficiente evidencia para indicar una diferencia en la frecuencia cardiaca media entre esos cuatro tipos de pacientes?.
+Considerar $\alpha=0.05$.
+}
+
+
+\newproblem*{anova1-4}{gen}{}
+% ENUNCIADO
+{Se sospecha que hay diferencias en la preparación del examen de selectividad entre los diferentes centros de bachillerato de una ciudad.
+Con el fin de comprobarlo, de cada uno de los 5 centros, se eligieron 8 alumnos al azar, con la condición de que hubieran cursado las mismas asignaturas, y se anotaron las calificaciones que obtuvieron examen de selectividad.
+Los resultados fueron:
+\begin{center}
+\begin{tabular}{lllll}
+\multicolumn{5}{c}{Centros} \\
+\hline
+1 & 2 & 3 & 4 & 5 \\
+\hline
+5,5 & 6,1 & 4,9 & 3,2 & 6,7 \\
+5,2 & 7,2 & 5,5 & 3,3 & 5,8 \\
+5,9 & 5,5 & 6,1 & 5,5 & 5,4 \\
+7,1 & 6,7 & 6,1 & 5,7 & 5,5 \\
+6,2 & 7,6 & 6,2 & 6,0 & 4,9 \\
+5,9 & 5,9 & 6,4 & 6,1 & 6,2 \\
+5,3 & 8,1 & 6,9 & 4,7 & 6,1 \\
+6,2 & 8,3 & 4,5 & 5,1 & 7,0 \\
+\hline
+\end{tabular}
+\end{center}
+Estudiar si se confirma o no la sospecha de partida.
+}
+
+
+\newproblem*{anova1-5}{med}{}
+% ENUNCIADO
+{Se midió la frecuencia respiratoria (inspiraciones por minuto) en ocho animales de laboratorio y con tres niveles
+diferentes de exposición al monóxido de carbono.
+Los resultados son los siguientes:
+\begin{center}
+\begin{tabular}{lll}
+\multicolumn{3}{c}{Nivel de exposición} \\
+\hline
+\multicolumn{1}{c}{Bajo} & \multicolumn{1}{c}{Moderado} & \multicolumn{1}{c}{Alto} \\
+\hline
+\multicolumn{1}{c}{36} & \multicolumn{1}{c}{43} & \multicolumn{1}{c}{45} \\
+\multicolumn{1}{c}{33} & \multicolumn{1}{c}{38} & \multicolumn{1}{c}{39} \\
+\multicolumn{1}{c}{35} & \multicolumn{1}{c}{41} & \multicolumn{1}{c}{33} \\
+\multicolumn{1}{c}{39} & \multicolumn{1}{c}{34} & \multicolumn{1}{c}{39} \\
+\multicolumn{1}{c}{41} & \multicolumn{1}{c}{28} & \multicolumn{1}{c}{33} \\
+\multicolumn{1}{c}{41} & \multicolumn{1}{c}{44} & \multicolumn{1}{c}{26} \\
+\multicolumn{1}{c}{44} & \multicolumn{1}{c}{30} & \multicolumn{1}{c}{39} \\
+\multicolumn{1}{c}{45} & \multicolumn{1}{c}{31} & \multicolumn{1}{c}{29} \\
+\hline
+\end{tabular}
+\end{center}
+Con base en estos datos, ¿es posible concluir que los tres niveles de exposición, en promedio, tienen un efecto diferente sobre la frecuencia respiratoria?
+Tomar $\alpha=0,05$.
+}
+
+
+\newproblem*{anova1-6}{psi}{}
+% ENUNCIADO
+{Se ensayan dos nuevas técnicas de aprendizaje frente a la tradicional para realizar una tarea.
+Para ver su efectividad se crean tres grupos de niños y se instruye a cada grupo con una de las técnicas.
+La puntuación obtenida en la realización de la tarea por parte de los niños de los tres grupos es:
+\[
+\begin{array}{|cc|cc|cc|}
+\hline
+\multicolumn{2}{|c|}{\mbox{Método 1}} & \multicolumn{2}{c|}{\mbox{Método 2}} & \multicolumn{2}{c|}{\mbox{Tradicional}}\\
+\hline
+85 & 76 & 65 & 57 & 58 & 43 \\
+80 & 62 & 67 & 51 & 49 & 47 \\
+83 & 71 & 69 & 61 & 44 & 57 \\
+77 & 68 & 55 & 63 & 50 & 46 \\
+79 & 81 & 66 &    &    &    \\
+\hline
+\end{array} 
+\]
+¿Existen diferencias significativas entre los tres métodos de aprendizaje?
+¿Y entre los dos métodos nuevos?
+Justificar la respuesta. 
+}
+
+
+\newproblem*{anova1-7}{psi}{}
+% ENUNCIADO
+{Para ver cómo afecta la estación del año sobre el grado de depresión, se tomó un grupo de 20 pacientes depresivos y se les distribuyó aleatoriamente cuatro grupos.
+A cada grupo se le sometión a distintos estímulos en una estación del año, midiendo el grado de depresión.
+Las puntuaciones obtenidas fueron (a mayor puntuación mayor depresión):
+\[
+\begin{array}{lccccc}
+\hline
+\mbox{Primavera} & 7 & 6 & 5 & 5 & 6\\
+\mbox{Verano}    & 4 & 3 & 4 & 4 & 5\\
+\mbox{Otoño}     & 8 & 7 & 6 & 7 & 8\\
+\mbox{Invierno}  & 8 & 6 & 7 & 5 & 6\\
+\hline
+\end{array}
+\]
+De acuerdo a estos datos, ¿se puede afirmar que la estación del año influye en la depresión?
+Justificar la respuesta.
+}

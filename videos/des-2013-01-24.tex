@@ -1,0 +1,218 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Estadística descriptiva}\\
+Titulaciones: & \structure{Ciencias de la Salud}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+En un grupo de personas sometidas a una anestesia general se ha medido
+la dosis de sustancia anestésica recibida ($X$) en mg  y el tiempo que estuvieron dormidas ($Y$) en horas.
+Las frecuencias observadas aparecen en la siguiente tabla:
+\[
+\begin{array}{|l|rrr|r|}
+\hline 
+X\backslash Y & [1,2) & [2,3) & [3,4) & n_x\\
+\hline
+(20,30] & 14 & 10 & 0 & 24\\
+(30,40] & 12 & 26 & 7 & 45\\
+(40,50] & 2 & 12 & 17 & 31\\
+\hline
+n_y & 28 & 48 & 24 & 100\\
+\hline
+\end{array}
+\]
+Se pide:
+\begin{enumerate}
+\item ¿En qué variable es más representativa la media? Justificar la respuesta.
+\item ¿Por encima de cuánto tiempo estarán dormidas el 10\% de las personas que reciben una dosis entre 30 y 40 mg?
+\item ¿En qué variable hay más asimetría? Justificar la respuesta.
+\item Según el modelo de regresión lineal, ¿cuánta sustancia anestésica será necesaria para domir a alguien durante al menos dos horas?
+¿Es fiable la predicción? 
+Justificar la respuesta.
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.55\textwidth}
+\begin{enumerate}
+\item ¿En qué variable es más representativa la media? Justificar la respuesta
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.45\textwidth}
+\structure{Datos}\\
+$X$=Dosis de anestesia en mg\\
+$Y$=Tiempo dormidas en horas
+\[
+\begin{array}{|l|rrr|r|}
+\hline 
+X\backslash Y & [1,2) & [2,3) & [3,4) & n_x\\
+\hline
+(20,30] & 14 & 10 & 0 & 24\\
+(30,40] & 12 & 26 & 7 & 45\\
+(40,50] & 2 & 12 & 17 & 31\\
+\hline
+n_y & 28 & 48 & 24 & 100\\
+\hline
+\end{array}
+\]
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.55\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item ¿Por encima de cuánto tiempo estarán dormidas el 10\% de las personas que reciben una dosis entre 30 y 40 mg?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.45\textwidth}
+\structure{Datos}\\
+$X$=Dosis de anestesia en mg\\
+$Y$=Tiempo dormidas en horas
+\[
+\begin{array}{|l|rrr|r|}
+\hline 
+X\backslash Y & [1,2) & [2,3) & [3,4) & n_x\\
+\hline
+(20,30] & 14 & 10 & 0 & 24\\
+(30,40] & 12 & 26 & 7 & 45\\
+(40,50] & 2 & 12 & 17 & 31\\
+\hline
+n_y & 28 & 48 & 24 & 100\\
+\hline
+\end{array}
+\]
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.55\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item ¿En qué variable hay más asimetría? Justificar la respuesta.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.45\textwidth}
+\structure{Datos}\\
+$X$=Dosis de anestesia en mg\\
+$Y$=Tiempo dormidas en horas
+\[
+\begin{array}{|l|rrr|r|}
+\hline 
+X\backslash Y & [1,2) & [2,3) & [3,4) & n_x\\
+\hline
+(20,30] & 14 & 10 & 0 & 24\\
+(30,40] & 12 & 26 & 7 & 45\\
+(40,50] & 2 & 12 & 17 & 31\\
+\hline
+n_y & 28 & 48 & 24 & 100\\
+\hline
+\end{array}
+\]
+$\bar x =35.7$ mg, $s_x=7.3831$ mg\\
+$\bar y =2.46$ horas, $s_y=0.72$ horas
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.55\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item Según el modelo de regresión lineal, ¿cuánta sustancia anestésica será necesaria para domir a alguien durante al menos dos horas?
+¿Es fiable la predicción? 
+Justificar la respuesta.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.45\textwidth}
+\structure{Datos}\\
+$X$=Dosis de anestesia en mg\\
+$Y$=Tiempo dormidas en horas
+\[
+\begin{array}{|l|rrr|r|}
+\hline 
+X\backslash Y & [1,2) & [2,3) & [3,4) & n_x\\
+\hline
+(20,30] & 14 & 10 & 0 & 24\\
+(30,40] & 12 & 26 & 7 & 45\\
+(40,50] & 2 & 12 & 17 & 31\\
+\hline
+n_y & 28 & 48 & 24 & 100\\
+\hline
+\end{array}
+\]
+$\bar x =35.7$ mg, $s^2_x=54.51$ mg$^2$\\
+$\bar y =2.46$ horas, $s^2_y=0.5184$ horas$^2$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

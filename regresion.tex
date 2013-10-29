@@ -1,0 +1,1772 @@
+% Author Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\newproblem{reg-1}{gen}{}
+% ENUNCIADO
+{Dada la siguiente tabla de correlación:
+\begin{center}
+\begin{tabular}{|c||c|c|c|}
+\hline
+$X\setminus Y$ & 1 & 2 & 3 \\ \hline\hline
+$\left[ -2,2\right) $ & 3 & 6 & 1 \\ \hline
+$\left[ 2,6\right) $ & 4 & 7 & 3 \\ \hline
+$\left[ 6,10\right) $ & 5 & 3 & 0 \\ \hline
+\end{tabular}
+\end{center}
+
+Determinar:
+\begin{enumerate}
+\item  Las distribuciones marginales. Media, Moda y Mediana.
+\item  Rectas de Regresión.
+\item  Coeficiente de correlación lineal. Interpretar el resultado.
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-2}{med}{}
+%ENUNCIADO
+{Una compañía de asistencia sanitaria hace un estudio del número de veces que, durante el último trimestre, han acudido sus asegurados a consultas de especialistas, en función de su edad. En la siguiente tabla se reflejan los resultados obtenidos:
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|}
+\hline
+$\mbox{Edad}\setminus \mbox{Cons.}$ & 0 & 1 & 2 & 3 & 4 \\ \hline\hline
+$\left[ 30,40\right) $ & 6 & 2 & 2 & 0 & 0  \\ \hline
+$\left[ 40,50\right) $ & 4 & 3 & 6 & 4 & 1 \\ \hline
+$\left[ 50,60\right) $ & 0 & 2 & 4 & 5 & 3 \\ \hline
+$\left[ 60,70\right) $ & 0 & 0 & 3 & 4 & 5 \\ \hline
+$\left[ 70,80\right) $ & 0 & 0 & 0 & 4 & 6 \\ \hline
+\end{tabular}
+\end{center}
+
+Se pide:
+\begin{enumerate}
+\item Recta de regresión del número de consultas sobre la edad.
+\item Coeficiente de correlación e interpretarlo.
+\item ¿Cuántas consultas se espera que realice una persona de 52 años?¿Es fiable esta predicción?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-3}{far}{}
+%ENUNCIADO
+{Se determina la pérdida de actividad que experimenta un medicamento desde el momento de su fabricación a lo largo del
+tiempo, obteniéndose el siguiente resultado: 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Tiempo (en años) & 1 & 2 & 3 & 4 & 5 \\ \hline
+Actividad restante (\%) & 96 & 84 & 70 & 58 & 52 \\ \hline
+\end{tabular}
+\end{center}
+
+Se desea calcular:
+\begin{enumerate}
+\item  La relación fundamental (recta de regresión) entre actividad y tiempo transcurrido.
+\item  El tiempo en meses que corresponde al 80\% de actividad.
+\item  ¿Cuándo será nula la actividad?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $T$ al tiempo y $A$ a la actividad del fármaco:
+\begin{enumerate}
+\item $\bar t=3$ años, $\bar a=72\%$, $s_t^2=2$ años$^2$, $s_a^2=264\%^2$, $s_{ta}=-22.8$ años$\cdot\%$.\\
+Recta de regresión de actividad sobre tiempo: $a=-11.4t+106.2$.
+\item Recta de regresión de tiempo sobre actividad: $t=-0.086a+9.2182$.\\
+$t(80)=2.3091$ años.
+\item $t(0)=9.2182$ años.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-4}{amb}{}
+%ENUNCIADO
+{Las temperaturas medias mensuales (en $^\circ$C) y las precipitaciones totales mensuales (en mm) durante el año 2001 en Madrid fueron:
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|r|r|}
+\cline{2-13}
+\multicolumn{1}{c|}{} &    Ene &    Feb &    Mar &    Abr &    May &    Jun &    Jul &    Ago &    Sep &    Oct &    Nov &    Dic \\
+\hline
+Temp.               &  $7.2$ &  $8.4$ & $12.2$ & $13.7$ & $16.7$ & $23.3$ & $24.2$ & $25.5$ & $20.4$ & $16.2$ &  $8.1$ &  $4.2$ \\
+\hline
+Prec.                & $73.6$ & $31.7$ & $72.1$ & $20.7$ & $37.1$ & $3.8$ & $3.3$ & $1.5$ & $23.1$ & $67.0$ & $12.4$ & $18.0$ \\
+\hline
+\end{tabular}
+\end{center}
+¿Existe relación lineal entre las precipitaciones y la temperatura?
+De acuerdo a esta relación, ¿qué cantidad de precipitaciones se espera que haya un mes con una temperatura media de 15$^\circ$C?¿Es fiable esta predicción?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-5}{gen}{}
+% ENUNCIADO
+{Se ha realizado un estudio comparativo de las puntuaciones obtenidas por los alumnos en un test de ingreso en la
+universidad ($X$), y el número de asignaturas aprobadas en el primer curso ($Y$). Los resultados obtenidos se expresan en
+la siguiente tabla:
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|}
+\hline
+$X\setminus Y$ & 0 & 1 & 2 & 3 & 4 \\ \hline\hline
+$\left[ 0,10\right) $ & 2 & 2 & 1 & 0 & 0 \\ \hline
+$\left[ 10,20\right) $ & 1 & 1 & 2 & 2 & 0 \\ \hline
+$\left[ 20,30\right) $ & 0 & 1 & 3 & 4 & 1 \\ \hline
+$\left[ 30,40\right) $ & 0 & 0 & 2 & 2 & 6 \\ \hline
+\end{tabular}
+\end{center}
+
+Se desea calcular:
+\begin{enumerate}
+\item Recta de regresión de $X$ sobre $Y.$
+\item Coeficiente de correlación e interpretación del mismo.
+\item Si la universidad en cuestión sólo contara con alumnos que al menos logren aprobar dos asignaturas, ¿qué número
+de preguntas respondidas correctamente exigirá en el test?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $\bar x=23$ puntos, $\bar y=2.4$ asignaturas, $s_x^2=116$ puntos$^2$, $s_y^2=1.5733$ asignaturas$^2$,
+$s_x=10.7703$ puntos, $s_y=1.2453$ asignaturas y $s_{xy}=9.8$ puntos$\cdot$asignaturas.\\
+Recta de regresión de $X$ sobre $Y$: $x=6.2288y+8.0508$.
+\item $r=0.73$, lo que quiere decir que hay buena relación lineal entre las puntuaciones y las asignaturas aprobadas y
+además es creciente (a mayor puntuación en el test, más asignaturas aprobadas).
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-6}{nut}{*}
+%ENUNCIADO
+{En una población se ha realizado un estudio sobre el nivel de colesterol en sangre ($X$) y la tensión arterial máxima
+($Y$) obteniendo. Para ello se ha tomado una muestra de 80 individuos que ha dado lugar a la siguiente tabla de
+frecuencias:
+\[
+\begin{array}{|c||c|c|c||c|}
+\hline
+X\setminus Y & [110,130) & [130,150) & [150,170) & n_x \\
+\hline\hline
+[170,190)   &           &     4     &           & 12\\
+\hline
+[190,210)   &    10     &    12     &     4     &   \\
+\hline
+[210,230)   &     7     &           &     8     &   \\
+\hline
+[230,250)   &     1     &           &           & 18\\
+\hline\hline
+n_y          &           &    30     &    24    &    \\
+\hline
+\end{array}
+\]
+Se pide:
+\begin{enumerate}
+\item Completar la tabla.
+\item Recta de regresión del nivel de colesterol sobre la tensión.
+\item Coeficiente de determinación e interpretación.
+\item La tensión arterial máxima esperada para una persona cuyo nivel de colesterol es 270.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Tabla de frecuencias
+\[
+\begin{array}{|c||c|c|c||c|}
+\hline
+X\setminus Y & [110,130) & [130,150) & [150,170) & n_x \\
+\hline\hline
+[170,190)   &     8     &     4     &     0     & 12 \\
+\hline
+[190,210)   &    10     &    12     &     4     & 26 \\
+\hline
+[210,230)   &     7     &     9     &     8     & 24 \\
+\hline
+[230,250)   &     1     &     5     &    12     & 18 \\
+\hline\hline
+n_y          &   26     &    30     &    24     & 80 \\
+\hline
+\end{array}
+\]
+\item $\bar x=212$ mg/dl, $\bar y=139.5$ mmHg, $s_x^2=396$ (mg/dl)$^2$, $s_y^2=249.75$ mmHg$^2$ y $s_{xy}=161$
+mg/dl$\cdot$mmHg.
+\item $r^2=0.261$, que quiere decir que hay poca relación lineal entre el nivel de colesterol y la tensión ya que la
+recta de regresión anterior sólo explica el $26.1$\% de la variabilidad del colesterol.
+\item Recta de regresión de la tensión arterial sobre el colesterol: $y=0.407x+53.308$.\\
+$y(270)=163.198$ mmHg.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-7}{nut}{*}
+%ENUNCIADO
+{En un centro dietético se está probando una nueva dieta de adelgazamiento en una muestra de 12 individuos. Para cada
+uno de ellos se ha medido el número de días que lleva con la dieta y el número de kilos perdidos desde entonces,
+obteniéndose los siguientes resultados:
+\begin{center}
+(33 , 3.9), (51 , 5.9), (30 , 3.2), (55 , 6.0), (38 , 4.9), (62 , 6.2),\\
+(35 , 4.5), (60 , 6.1), (44 , 5.6), (69 , 6.2), (47 , 5.8), (40 , 5.3)
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Dibujar el diagrama de dispersión. Según la nube de puntos, ¿qué tipo de modelo explicaría mejor la relación
+entre los días de dieta y los kilos perdidos? 
+\item Dibujar el diagrama de dispersión tomando una escala logarítmica para los días de dieta.
+\item Calcular el modelo lineal y el logarítmico de los kilos perdidos con respecto a los días de dieta.\\
+Nota: Utilizar los datos muestrales sin agrupar.
+\item Utilizar el mejor de los modelos anteriores para predecir en número de kilos perdidos tras 40 días de dieta y
+tras 100 días.
+¿Son fiables estas predicciones?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a los días de dieta, $Y$ a los Kg perdidos y $Z=\log X$.
+\begin{enumerate}[start=3]
+\item $\bar x=47$ días, $\bar y=5.3$ Kg, $s_x^2=143.833$ días$^2$, $s_y^2=0.885$ Kg$^2$, $s_{xy}=9.942$ días$\cdot$Kg.
+Modelo lineal: $y=0.069x+2.051$.\\ 
+$\bar z=3.82$ $\log$días, $s_z^2=0.07$ $\log^2$días, $s_{yz}=0.22$ $\log$días$\cdot$Kg.\\
+Modelo logarítmico: $y=3.4\log y-7.67$. 
+\item Modelo lineal: $r^2=0.78$, modelo logarítmico: $r^2=0.86$.\\
+Predicciones con el modelo logarítmico: $y(40)=4.86$ Kg y $y(100)=7.98$ Kg. Las predicciones son fiables ya que el
+coeficiente de determinación es alto.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-8}{far}{*}
+%ENUNCIADO
+{Al realizar un estudio sobre la dosificación de un cierto medicamento, se trataron 6 pacientes con dosis diarias de 2
+mg, 7 pacientes con 3 mg y otros 7 pacientes con 4 mg. De los pacientes tratados con 2 mg, 2 curaron al cabo de 5 días,
+y 4 al cabo de 6 días. De los pacientes tratados con 3 mg diarios, 2 curaron al cabo de 3 días, 4 al cabo de 5 días y 1
+al cabo de 6 días. Y de los pacientes tratados con 4 mg diarios, 5 curaron al cabo de 3 días y 2 al cabo de 5 días.
+
+Se pide:
+\begin{enumerate}
+\item Dar el coeficiente de correlación e interpretación.
+\item Determinar el tiempo esperado de curación para una dosis de 5 mg diarios.
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a la dosis e $Y$ al tiempo de curación:
+\begin{enumerate}
+\item $\bar x=3.05$ mg, $\bar y=4.55$ días, $s_x^2=0.648$ mg$^2$, $s_y^2=1.448$ días$^2$, $s_x=0.805$ mg, $s_y=1.203$
+días y $s_{xy}=-0.678$ mg$\cdot$días.\\
+$r=-0.7$, que quiere decir que hay buena relación lineal entre la dosis y el tiempo de curación, y además es
+decreciente (a mayor dosis, menor tiempo de curación).
+\item Recta de regresión del tiempo de curación sobre la dosis: $y=-1.046x+7.741$.\\
+$y(5)=2.511$ días.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-9}{nut}{*}
+%ENUNCIADO
+{Después de tomar un litro de vino se ha medido la concentración de alcohol en la sangre en distintos instantes,
+obteniendo:
+\[
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Tiempo después (minutos) & 30 & 60 & 90 & 120 & 150 & 180 \\ \hline
+Concentración (gramos/litro) & 1.6 & 1.7 & 1.5 & 1.1 & 0.7 & 0.2 \\
+\hline
+\end{tabular}
+\]
+
+Se pide:
+\begin{enumerate}
+\item Calcular la recta de regresión de la concentración en función del tiempo.
+\item ¿Qué concentración de alcohol habrá a los 100 minutos?
+\item Si la concentración máxima de alcohol en la sangre que permite la ley para poder conducir es 0.8 g/l, ¿cuánto tiempo habrá que esperar después de tomarse un litro de vino para poder conducir sin infringir la ley?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-10}{gen}{}
+%ENUNCIADO
+{Se consideran dos variables aleatorias $X$ e $Y$ tales que:
+\begin{itemize}
+\item[--] La recta de regresión de $Y$ sobre $X$ viene dada por la ecuación: $y-x-2=0$.
+\item[--] La recta de regresión de $X$ sobre $Y$ viene dada por la ecuación: $y-4x+22=0$.
+\end{itemize}
+Calcular:
+\begin{enumerate}
+\item  Valores de $\overline{x}$ e $\overline{y}$.
+\item  Coeficiente de correlación lineal.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $\bar x=8$ y $\bar y=10$.
+\item $r=0.5$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-11}{gen}{}
+%ENUNCIADO
+{En el ajuste rectilíneo a una distribución bidimensional se sabe que $\overline{x}=2$, $\overline{y}=1$, y el coeficiente de correlación lineal es 0 ($r=0$).
+\begin{enumerate}
+\item  Si $x=10$, ¿cuál será el valor interpolado para $y$?.
+\item  Si $y=5$, ¿cuál será el valor interpolado para $x$?.
+\item  Dibuja las rectas de regresión de $Y$ sobre$X$, y la de $X$ sobre $Y$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $y(10)=1$.
+\item $x(5)=2$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-12}{gen}{*}
+%ENUNCIADO
+{En un estudio para relacionar la longitud de la línea de la vida de la mano izquierda y la duración de la vida de una
+persona se han obtenido datos de 50 personas con los siguientes resultados ($X$=longitud de la línea en cm, $Y$=edad al
+morir en años):
+\[ 
+\sum y=3333 \quad \sum y^2=231933 \quad \sum x=459.9 \quad \sum x^2=4308.57 \quad \sum xy=30949. 
+\]
+A la vista de estos resultados, ¿cuanto vivirá, por termino medio, una persona con una línea de longitud 7.5 cm?
+¿Es fiable esta estimación?  }
+%SOLUCIÓN
+{$\bar x=9.198$ cm, $\bar y=66.66$ años, $s_x^2=1.568$ cm$^2$, $s_y^2=195.104$ años$^2$ y $s_{xy}=6.393$
+cm$\cdot$años.\\
+Recta de regresión de la edad al morir sobre la longitud de la línea de la vida: $y=4.077x+29.158$.\\
+$y(7.5)=59.736$ años.\\
+$r^2=0.13$, lo que quiere decir que casi no hay relación lineal entre las variables y la predicción anterior no es
+fiable.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-13}{gen}{*}
+%ENUNCIADO
+{En el estudio de regresión lineal con dos variables $X$ e $Y$ se sabe que $\overline{x}=30$, $\overline{y}=70$ y el
+coeficiente de correlación lineal es $0.8$.
+También se sabe que para $x=42$ el valor que predice la recta de regresión para $y$ es 78.
+
+Se pide:
+\begin{enumerate}
+\item Calcular el valor de $x$ que se predice cuando $y=74$.
+\item Explicar razonadamente en cuál de las dos variables es más representativa la media.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item Recta de regresión de $X$ sobre $Y$: $x=0.96x-37.2$.\\
+$x(74)=33.84$.
+\item $cv_x=0.0408\sqrt{s_{xy}}>cv_y=0.0146\sqrt{s_{xy}}$ y por tanto es más representativa la media de $Y$ pues tiene
+menor dispersión relativa.
+\end{enumerate}
+}
+%RESOLUCIÓNl
+{}
+
+
+\newproblem{reg-14}{gen}{*}
+%ENUNCIADO
+{Se han medido dos variables $S$ y $T$ en 10 individuos, obteniéndose los siguientes resultados:
+\begin{center}
+(-1.5 , 2.25), (0.8 , 0.64), (-0.2 , 0.04), (-0.8 , 0.64), (0.4 , 0.16),\\
+(0.2 , 0.04), (-2.1 , 4.41), (-0.4 , 0.16), (1.5 , 2.25), (2.1 ,
+4.41).
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Calcular la covarianza de $S$ y $T$.
+\item ¿Se puede afirmar que $S$ y $T$ son independientes?
+Justificar la respuesta.
+\item ¿Qué valor predice la correspondiente recta de regresión para $t=2$?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $\bar s=0$, $\bar t=1.5$ y $s_{st}=0$.
+\item No podemos afirmar que $S$ y $T$ son independientes, sólo se puede afirmar que no hay relación lineal.
+\item $s(2)=0$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-15}{amb}{}
+%ENUNCIADO
+{En un experimento se ha medido el número de bacterias por unidad de volumen en un cultivo, cada hora transcurrida,
+obteniendo los siguientes resultados: 
+\begin{center}
+\begin{tabular}{c|ccccccccc}
+Horas & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8  \\
+\hline
+Nº Bacterias & 25 & 28 & 47 & 65 & 86 & 121 & 190 & 290 & 362
+\end{tabular}
+\end{center}
+
+Se pide:
+\begin{enumerate}
+\item Dibujar el diagrama de dispersión.
+Según este diagrama, ¿qué tipo de modelo explicaría mejor la relación entre le número de bacterias y las horas
+transcurridas?
+\item Dibujar el diagrama de dispersión tomando una escala logarítmica para el número de bacterias.
+\item Según el modelo anterior, ¿Cuántas bacterias tendríamos al cabo de 3 horas y media?
+¿Y al cabo de 10 horas?
+¿Son fiables estas predicciones?
+\item ¿Cuánto tiempo tendría que transcurrir para que en el cultivo hubiese 100 bacterias?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a las horas, $Y$ a las bacterias y $Z$ al logaritmo neperiano de las bacterias:
+\begin{enumerate}[start=3]
+\item $\bar x=4$ horas, $\bar z=4.5149$ log(bacterias), $s_x^2=6.6667$ horas$^2$, $s_z^2=0.8361$ log$^2$(bacterias) y
+$s_{xz}=2.3466$ horas$\cdot$log(bacterias).\\
+Modelo lineal del logaritmo de las bacterias sobre las horas: $z=0.3520x+3.1070$.\\
+Modelo exponencial de las bacterias sobre las horas: $y=e^{0.3520x+3.1070}$.\\
+$y(3.5)=76.6254$ bacterias y $y(10)=755.0986$ bacterias.
+\item Modelo lineal de las horas sobre el logaritmo de las bacterias: $x=2.8218z-8.7403$.\\
+Modelo logarítmico de las horas sobre las bacterias: $x=2.8218\log y-8.7403$.\\
+$x(100)=4.25$ horas.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-16}{amb}{}
+%ENUNCIADO
+{Para evaluar la percepción de los ciudadanos sobre la contaminación atmosférica, se ha realizado un estudio en el que se ha medido en 12 ciudades la concentración media de CO (en mg/m$^3$ diarios), y la percepción mediana en la calidad el aire (en una muestra de individuos de tamaño fijo), medida en la escala MM=Muy Mala, M=Mala, A=Aceptable, B=Buena y MB=Muy Buena.
+Los resultados obtenidos fueron:
+\begin{center}
+($12.8$ , A), ($11.6$ , A), ($9.8$ , B), ($10.3$ , MB), ($15.7$ , MM), ($18.2$ , M),\\
+($11.8$ , B), ($16.7$ , M), ($14.5$ , M), ($12.1$ , A), ($19.4$ , MM), ($7.9$ , MB)
+\end{center}
+¿Existe relación entre la percepción de los habitantes de estas ciudades y la concentración de monóxido de carbono en la atmósfera de las mismas?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-17}{med}{}
+%ENUNCIADO
+{En un estudio sobre la influencia del tabaco en los embarazos se ha medido en una muestra de 20 madres el número medio de cigarrillos diarios que fumaban las madres y el peso del recién nacido, obteniendo los siguientes resultados
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Cigarrillos &  2  &  3  & 10  &  8  & 12  &  6  &  6  &  5  &  4  &  9  & 14  &  3  &  7  & 8 &  2  \\
+\hline
+Peso (kg)  & 3.1 & 3.3 & 2.5 & 3.3 & 2.6 & 3.1 & 3.0 & 3.4 & 3.4 & 2.7 & 2.5 & 3.7 & 3.1 & 3 & 3.6 \\
+\hline
+\end{tabular}
+\end{center}
+
+Se pide:
+\begin{enumerate}
+\item Construir el modelo de regresión logarítmico del peso sobre el número de cigarrillos.
+\item Según este modelo, ¿cuanto pesará el recién nacido si la madre fumaba 15 cigarrillos diários?
+Es fiable esta predicción.
+\item ¿Es mejor el modelo lineal a la hora de hacer predicciones?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-18}{med}{*}
+%ENUNCIADO
+{La tabla siguiente contiene los datos de las presiones sistólicas de 15 individuos en función de la edad de estos.
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+\text{Edad} (x) & 20 & 30 & 40 & 50 & 60 \\
+\hline
+& 121 & 131 & 132 & 136 & 134\\
+\text{Sistólica} (y) & 130 & 125 & 129 & 128 & 142 \\
+& 125 & 128 & 131 & 134 & 137\\
+\hline
+\end{array}
+\]
+
+\begin{enumerate}
+\item ¿Qué porcentaje de la varianza de la presión sistólica se explica, mediante un modelo de regresión lineal, por la
+varianza de la edad? 
+\item ¿Qué edad le correspondería a un individuo que presenta una presión sistólica de 133?
+¿Es fiable esta predicción?
+Razona la respuesta. 
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $\bar x=40$ años, $\bar y=130.867$ mmHg, $s_x^2=200$ años$^2$, $s_y^2=26.295$ mmHg$^2$ y $s_{xy}=58.667$
+años$\cdot$mmHg.\\
+$r^2=0.654$, luego el modelo lineal explica el $65.4\%$ de la varianza de la presión sistólica.
+\item Recta de regresión de la edad sobre la presión sistólica: $x=2.231y-251.978$.\\
+$x(133)=44.745$ años. La predicción es bastante fiable pues el coeficiente de determinación es alto.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-19}{qui}{*}
+%ENUNCIADO
+{Se ha realizado un estudio de regresión para ver la relación que existe entre la velocidad de transformación de una determinada sustancia química en una reacción y la temperatura a la que se realiza dicha reacción (manteniendo las cantidades de reactivos constantes).
+Según una recta de regresión, a 10 ºC le correspondería una velocidad de 5 gr/min, y a 30 ºC le correspondería una velocidad de 15 gr/min.
+Y según la otra recta, a una velocidad de 8 gr/min le correspondería una temperatura de 17 ºC, y a una velocidad de 16 gr/min le correspondería una temperatura de \mbox{31 ºC}. Se pide:
+\begin{enumerate}
+\item Calcular las ecuaciones de las rectas de regresión.
+\item Calcular las medias de ambas variables.
+\item Calcular el coeficiente de determinación. ¿Podemos decir que las predicciones del enunciado son fiables? Justificar la respuesta.
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-20}{amb}{*}
+%ENUNCIADO
+{En un estudio ambiental de una comunidad autónoma se afirma que el número de hectáreas quemadas en los últimos 6 años está relacionado con la cantidad de precipitación media caída en la comunidad, en litros por metro cuadrado. Los datos que han manejado son:
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{Año} & \multicolumn{1}{c|}{Hectáreas quemadas} & \multicolumn{1}{c|}{Precipitación (l/m$^2$)} \\
+\hline
+\multicolumn{1}{|c|}{2000} & \multicolumn{1}{c|}{1250} & \multicolumn{1}{c|}{420} \\
+\hline
+\multicolumn{1}{|c|}{2001} & \multicolumn{1}{c|}{1400} & \multicolumn{1}{c|}{380} \\
+\hline
+\multicolumn{1}{|c|}{2002} & \multicolumn{1}{c|}{850} & \multicolumn{1}{c|}{460} \\
+\hline
+\multicolumn{1}{|c|}{2003} & \multicolumn{1}{c|}{1650} & \multicolumn{1}{c|}{370} \\
+\hline
+\multicolumn{1}{|c|}{2004} & \multicolumn{1}{c|}{900} & \multicolumn{1}{c|}{410} \\
+\hline
+\multicolumn{1}{|c|}{2005} & \multicolumn{1}{c|}{1700} & \multicolumn{1}{c|}{310} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Calcular la recta de regresión del número de hectáreas quemadas en función de la precipitación media anual.
+\item ¿Es el modelo lineal un buen modelo de ajuste para la nube de puntos? Justificar la respuesta.
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-21}{far}{}
+%ENUNCIADO
+{Se desea comprobar si el número de ventas de un fármaco depende del descuento que se aplique sobre él.
+Para ello se ha medido el número de ventas en farmacias que aplican distintos descuentos obteniendo la siguiente muestra:
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline Descuento (\%) & 20 & 16 & 15 & 10 & 12 & 11 & 16 & 8 & 18 & 12 & 12 & 10 & 15 & 14 \\
+\hline Ventas & 98 & 46 & 40 & 15 & 21 & 19 & 50 & 8 & 71 & 24 & 21 & 16 & 39 & 32 \\
+\hline
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Construir los modelos exponencial y logarítmico.
+\item ¿Cuál de ellos expresa mejor la relación entre el descuento y las ventas?
+\item ¿Qué descuento tendremos que aplicar si queremos vender al menos 50 fármacos?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-22}{amb}{*}
+% ENUNCIADO
+{Para ver si un aditivo para la gasolina mejora la combustión aumentando la emisión de dióxido de carbono, se ha hecho un
+estudio en el que se ha medido la cantidad de aditivo añadida a cada litro de gasolina y el porcentaje de CO$_2$ emitido
+por un mismo motor, obteniendo la siguiente muestra: \[
+\begin{array}{|l|rrrrrrrr|}
+\hline
+\mbox{Aditivo (cl/l)} &  0.2 &  0.4 &  0.6 &  0.8 &  1.0 &  1.2 &  1.4 &  1.6 \\
+\hline
+\mbox{CO$_2$ (\%)}         & 11.2 & 12.0 & 12.7 & 13.3 & 13.5 & 13.7 & 13.8 & 13.9 \\
+\hline
+\end{array}
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular el modelo de regresión lineal y logarítmico del CO$_2$ sobre el aditivo.
+¿Cuál de los dos modelos es mejor?
+\item Según el mejor de los modelos anteriores, ¿cuánto CO$_2$ se producirá para $0.5$ cl de aditivo? ¿y para 2 cl?
+¿Son fiables estas predicciones?
+\item La normativa sobre emisión de gases exige que el porcentaje mínimo de CO$_2$ en la combustión debe superar al menos el $12.5\%$.
+¿Cuánto aditivo es necesario para garantizar esto?
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-23}{amb}{*}
+%ENUNCIADO
+{La siguiente tabla muestra los datos de emisiones de CO$_2$ y CH$_4$ (en Kg/hab) y el producto interior bruto per cápita (en miles US\$) de varios países en el último año:
+\[
+\begin{array}{|l|r|r|r|}
+\hline
+\mbox{País} & \mbox{CO}_2 & \mbox{CH}_4 & \mbox{PIB}\\
+\hline\hline
+\mbox{Austria}     & 7.60 & 0.97 & 38.40\\ \hline
+\mbox{España}      & 6.73 & 0.81	& 30.12\\ \hline
+\mbox{Francia}     & 5.71 & 0.94	& 33.19\\ \hline
+\mbox{EEUU}        &19.40 & 1.72	&	45.84\\ \hline
+\mbox{Alemania}    & 9.80 & 0.83	& 34.18\\ \hline
+\mbox{Canadá}      &15.60 & 3.08	& 38.43\\ \hline
+\mbox{Italia}      & 7.29 & 0.58	& 30.44\\ \hline
+\mbox{Japón}       &	9.44 & 0.16	& 33.58\\ \hline
+\mbox{Australia}   &17.48 & 6.36	& 36.26\\ \hline
+\mbox{Reino Unido} & 8.99 & 0.76	& 35.13\\ \hline
+\end{array}
+\qquad
+\begin{array}{|l|r|r|r|}
+\hline
+\mbox{País} & \mbox{CO}_2 & \mbox{CH}_4 & \mbox{PIB}\\
+\hline\hline
+\mbox{Bolivia}     & 1.05 & 3.44	& 40.13\\ \hline
+\mbox{Niger}       &	0.1	 & 0.12	&	 0.67\\ \hline
+\mbox{Senegal}     &	0.35 & 0.76 &  1.69\\ \hline
+\mbox{Pakistán}    & 0.65 & 0.59	&  2.59\\ \hline
+\mbox{Filipinas}   &	0.83 & 0.46	&  3.38\\ \hline
+\mbox{Perú}        & 0.94 & 0.75	&  7.80\\ \hline
+\mbox{Túnez}      & 2.17 & 0.48	&  7.47\\ \hline
+\mbox{Nepal}       & 0.13 & 0.90	&  1.21\\ \hline
+\mbox{Nicaragua}   & 0.7	 & 0.32	&  2.62\\ \hline
+\mbox{Mauritania}  & 0.97 & 0.85	&  2.01\\ \hline
+\end{array}
+\]
+Utilizando los datos sin agrupar, calcular el modelo de regresión logarítmico que explique las emisiones de CO$_2$ en función del PIB y utilizarlo para predecir las emisiones de un país con 10 mil US\$ de PIB.
+¿Es fiable la predicción?
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-24}{med}{*}
+%ENUNCIADO
+{En un banco de sangre se mantiene el plasma a 0ºF.
+Cuando se necesita para una transfusión se calienta en un horno a una temperatura constante de 120ºF.
+En un experimento se ha medido la temperatura del plasma a distintos instantes desde el comienzo del calentamiento.
+Los resultados son: 
+\begin{center}
+\begin{tabular}{|lrrrrrrrr|}
+\hline
+Tiempo (min)	& 5 & 8 & 15 & 25 & 30 & 37 & 45 & 60\\
+Temperatura (ºF) & 25 & 50 & 86 & 102 & 110 & 114 & 118 & 120\\
+\hline
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Dibujar el diagrama de dispersión. ¿Qué modelo expliaría la relación entre la temperatura y el tiempo?
+\item ¿Qué transformación de escala tendríamos que realizar en las variables para tener una nube de puntos con una
+tendencia lineal?
+Hacer la representación gráfica. 
+\item Construir el modelo de regresión logarítmico de la temperatura sobre el tiempo.
+\item Según el modelo, ¿qué temperatura habrá a los 15 minutos?
+¿Es fiable la predicción?
+Justificar la respuesta.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-25}{far}{*}
+%ENUNCIADO
+{La concentración de un fármaco en sangre, $C$ en mg/dl, es función del tiempo, $t$ en horas, y viene dada por la
+siguiente tabla: 
+\[
+\begin{array}{|l|r|r|r|r|r|r|r|}
+\hline
+\text{t} & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+\hline
+\text{C} & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
+\hline
+\end{array}
+\]
+\begin{enumerate}
+\item Según el modelo exponencial, ¿qué concentración de fármaco habría a las $4.8$ horas?
+¿Es fiable la predicción?
+Justificar adecuadamente la respuesta.
+\item Según el modelo lineal, ¿qué tiempo tendría que transcurrir para que la concentración de fármaco fuese de 100 mg/dl?
+¿Es fiable la predicción?
+Justificar adecuadamente la respuesta.
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $T$ al tiempo, $C$ a la concentración y $Z$ al logaritmo de la concentración:
+\begin{enumerate}
+\item $\bar t=5$ horas, $\bar z=4.1639$ $\log$(mg/dl), $s_t^2=4$ horas$^2$, $s_z^2=0.3785$ $\log^2$(mg/dl),
+$s_{tz}=1.2291$ horas$\cdot\log$(mg/dl).\\
+Modelo exponencial de $C$ sobre $T$: $c=e^{0.3073x+2.6275}$.\\
+$c(4.8)= 60.498$ mg/dl y es bastante fiable ya que $r^2= 0.999$.
+\item $\bar c=77.2857$ mg/dl, $s_c^2=2160.7755$ (mg/dl)$^2$, $s_{tc}=89$ horas(mg/dl).\\
+Modelo lineal de $T$ sobre $C$: $t=0.0412c+1.8167$.\\
+$t(100) = 5.9356$ y también es fiable ya que $r^2= 0.9165$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{En el primer apartado de este problema debemos trabajar con el modelo exponencial de la concentración en función del
+tiempo, por lo que vamos a tener que calcular la recta de regresión de $z=\ln C$ en función de $t$. Además, en el
+segundo apartado debemos trabajar con el modelo lineal de $t$ en función de $C$. Por lo tanto, la tabla con los
+sumatorios precisos es:
+\[
+\begin{array}{|l|r|r|r|r|r|r|r|}
+\hline
+t_i & c_i & t_i^2 & c_i^2 & t_i \cdot c_i & z_i=\ln_i & z_i^2 & t_i \cdot z_i \\
+\hline
+2 & 25 & 4 & 625 & 50 & 3.219 & 10.362 & 6.438 \\
+\hline
+3 & 36 & 9 & 1296 & 108 & 3.584 & 12.845 & 10.752 \\
+\hline
+4 & 48 & 16 & 2304 & 192 & 3.871 & 14.985 & 15.484 \\
+\hline
+5 & 64 & 25 & 4096 & 320 & 4.159 & 17.297 & 20.795 \\
+\hline
+6 & 86 & 36 & 7396 & 516 & 4.454 & 19.838 & 26.724 \\
+\hline
+7 & 114 & 49 & 12996 & 798 & 4.736 & 22.430 & 33.152 \\
+\hline
+8 & 168 & 64 & 28224 & 1344 & 5.124 & 26.255 & 40.992 \\
+\hline
+\sum= 35 & 541 & 203 & 56937 & 3328 & 29.147 & 124.012 & 154.337 \\
+\hline
+\end{array}
+\]
+
+\begin{enumerate}
+\item Para el modelo exponencial de la concentración en función del tiempo tenemos en cuenta que:
+\[
+C = a \cdot e^{bt}  \Leftrightarrow \ln C = \ln \left( {a \cdot e^{bt} } \right) = \ln a + bt
+\]
+Por lo tanto, si $z=\ln C$, entonces:
+\[
+z=\ln a +bt
+\]
+Y el modelo exponencial se transforma en un modelo lineal de $z$ en función de $t$.
+
+Por otra parte, sabemos que la recta de regresión de $z$ en función de $t$ viene dada por:
+\[
+z-\bar z = \frac{s_{tz}}{s_t^2}(t-\bar t)
+\]
+Y teniendo en cuenta los sumatorios obtenidos:
+\begin{align*}
+\bar t &= \frac{\sum t_i}{n} = \frac{35}{7} = 5,\\
+\bar z &= \frac{\sum z_i}{n} = \frac{29.147}{7} = 4.164,\\
+s_t ^2  &= \frac{\sum t_i^2}{n}-\bar t^2 = \frac{203}{7}-5^2 = 4,\\
+s_z ^2  &= \frac{\sum z_i^2}{n}-\bar z^2 = \frac{124.012}{7}-4.164^2 = 0.38,\\
+s_{tz}  &= \frac{\sum t_i z_i}{n}-\bar t \cdot \bar z = \frac{154.337}{7}-5 \cdot 4.164 = 1.228.
+\end{align*}
+
+Donde la media de $t$ viene dada en horas, su varianza en horas al cuadrado, la media de $z$ no tiene unidades ($z$ es
+un logaritmo neperiano), tampoco las tiene su varianza, y la covarianza tiene las unidades de $t$, es decir horas. 
+
+Con todo ello, la ecuación de la recta de regresión de $z$ en función $t$ vale:
+\[
+z-4.164 = \frac{1.228}{4}(t-5)\Leftrightarrow z=2.629+0.307\cdot t
+\]
+
+Por lo tanto, teniendo en cuenta que:
+\[
+z=\ln a +b \cdot t=2.629+0.307 \cdot t
+\]
+obtenemos fácilmente que $b= 0.307$, y para $a$ despejamos tomando exponenciales:
+\[
+\ln a= 2.629\Leftrightarrow a=e^{2.629} =13.860.
+\]
+Con todo ello, cuando $t_0=4.8$ horas, el valor obtenido para $C_0$ (en mg/dl) vale:
+\[
+C(4.8)=13.860 e^{0.307 \cdot 4.8}=60.498 \text{ mg/dl}.
+\]
+
+Para ver si es fiable o no la predicción, calculamos el coeficiente de determinación (o el coeficiente de correlación):
+\[
+r^2  = \frac{{s_{tz} ^2 }}{{s_t ^2 s_z ^2 }} = \frac{{1.228^2 }}{{4 \cdot 0.377}} = 0.999,
+\]
+luego, mediante el modelo exponencial estamos explicando un $99.9\%$ de la variabilidad de la nube de puntos, y el
+modelo exponencial es muy bueno. Por lo tanto, si el modelo es muy bueno y además la predicción la realizamos en
+$t_0=4.8$, que está dentro del rango en el que hemos calculado el modelo, sin duda la predicción también será muy
+fiable.
+
+\item Para este nuevo apartado debemos predecir el tiempo que debe transcurrir para que la concentración sea de 100
+mg/dl mediante un modelo lineal. Por lo tanto necesitamos la recta de regresión del tiempo en función de la concentración:
+\[
+t-\bar t = \frac{s_{tC}}{s_C^2}(C-\bar C)
+\]
+Mediante los sumatorios obtenidos en la tabla del comienzo, calculamos:
+\begin{align*}
+\bar C &= \frac{\sum C_i}{n} = \frac{541}{7} = 77.286,\\
+s_C ^2 &= \frac{\sum z_i ^2}{n}-\bar z^2 = \frac{56937}{7}-77.286^2 = 2160.731,\\
+s_{tC} &= \frac{\sum t_i C_i}{n}-\bar t \cdot \bar C = \frac{3328}{7}-5 \cdot 77.286 = 90.000.
+\end{align*}
+Donde la media de $C$ viene dada en mg/dl, su varianza en (mg/dl)$^2$, y la covarianza en horas$\cdot$(mg/dl).
+
+Sustituyendo todo en la ecuación de la recta obtenemos:
+\[
+t-5 = \frac{90.000}{2160.731}(C-77.286)\Leftrightarrow t=0.0417 \cdot C+ 1.781
+\]
+
+Por lo tanto, si $C_0= 100$ entonces $t_0=5.951$ horas.
+Para ver si la predicción es adecuada, de nuevo calculamos el coeficiente de determinación:
+\[
+r^2 = \frac{s_{tC}^2}{s_t ^2 s_C ^2} = \frac{90.000^2}{4 \cdot 2160.731} = 0.937.
+\]
+Lo cual nos confirma que el modelo lineal, aunque peor que el exponencial, sigue siendo un muy buen modelo.
+Si a eso unimos que estamos realizando la predicción dentro del rango de concentraciones en las que lo hemos calculado,
+concluimos que sí que será fiable. 
+\end{enumerate}
+}
+
+
+\newproblem{reg-26}{fis}{}
+%ENUNCIADO
+{La actividad de una sustancia radiactiva en función del tiempo (en número de desintegraciones por segundo)
+viene dada por la siguiente tabla:
+\[
+\begin{array}{|l|r|r|r|r|r|r|r|r|}
+\hline
+t\text{ (horas)} & 0 & 10 & 20 & 30 & 40 & 50 & 60 & 70 \\
+\hline
+A\text{ ($10^7$ desintegraciones/s)} & 25.9 & 8.16 & 2.57 & 0.81 & 0.25 & 0.08 & 0.03 & 0.01\\
+\hline
+\end{array}
+\]
+
+\begin{enumerate}
+\item Representar los datos de la actividad en función del tiempo.
+A la vista de la representación, ¿qué modelo de regresión explicaría mejor la relación entre la actividad y el tiempo
+transcurrido?
+\item Representar los datos de la actividad en función del tiempo en papel semilogarítmico (con escala logarítmica en
+el eje de ordenadas).
+\item Representar el logaritmo neperiano de la actividad en función del tiempo. ¿Qué modelo de regresión se utilizaría
+para ajustar la nube de puntos obtenida?
+\item Calcular la ecuación de la recta de regresión del logarítmo neperiaro de la actividad en función del tiempo.
+\item Teniendo en cuenta que, en teoría, la actividad de una sustancia radiactiva en función del tiempo viene dada por
+la ecuación:
+\[
+A(t) = A_0 e^{ - \lambda t}
+\]
+donde $A_0$ es la actividad inicial y $\lambda$ es la llamada constante de desintegración, propia de cada sustancia
+radiactiva, utilizar la pendiente de la ecuación de la recta obtenida en el apartado anterior para calcular la
+constante de desintegración radiactiva de la sustancia con la que se han generado los datos.
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ al tiempo e $Y$ al logaritmo de la actividad
+\begin{enumerate}[start=4]
+\item $\bar x=35$, $\bar y=-0.7421$, $s_x^2=525$, $s_y^2=6.6664$ y $s_{xy}=-59.1434$.\\
+Recta de regresión de $Y$ sobre $X$: $y=-0.1127x+3.2008$.
+\item $\lambda=0.1127$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-27}{fis}{}
+%ENUNCIADO
+{Para oscilaciones de pequeña amplitud, el periodo $T$ de oscilación de un péndulo simple viene dado por:
+\[
+T = 2\pi \sqrt {\frac{L}{g}}
+\]
+donde $L$ es la longitud del péndulo y $g$ la aceleración de la gravedad.
+Para comprobar que dicha ley es cierta, se mide $T$ para varias longitudes del péndulo, obteniéndose la siguiente tabla:
+\[
+\begin{array}{|l|r|r|r|r|r|}
+\hline
+L\text{ (cm)} & 52.5 & 68.0 & 99.0 & 116.0 & 146.0 \\
+\hline
+T\text{ (seg)} & 1.449 & 1.639 & 1.999 & 2.153 & 2.408\\
+\hline
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item Representar los datos del periodo de oscilación frente a la longitud del péndulo.
+¿Sería adecuado un modelo lineal para ajustar la nube de puntos?
+\item Representar los datos del periodo de oscilación frente a la longitud en papel logarítmico (con escala logarítmica
+tanto en el eje de abcisas como en el de ordenadas).
+¿Qué modelo de regresión sería adecuado para ajustar la nube de puntos obtenida?
+\item Tomar logaritmos neperianos tanto del periodo de oscilación como de la longitud y representar en una gráfica los
+logaritmos obtenidos.
+¿Qué modelo de regresión sería adecuado para ajustar la nube de puntos obtenida?
+\item Calcular la ecuación de la recta de regresión que mejor ajusta la nube de puntos del apartado anterior.
+\item Teniendo en cuenta el valor del término independiente de la recta obtenida en el apartado anterior, calcular el
+valor de $g$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ al logaritmo del la longitud e $Y$ al logaritmo del periodo:
+\begin{enumerate}[start=4]
+\item $\bar x=4.5025$ $\log$cm, $\bar y=0.6407$ $\log$s, $s_x^2=0.1353$ $\log^2$cm, $s_y^2=0.0339$ $\log^2$s, $s_{xy}=0.0677$ $\log$cm\cdot$\log$s.\\
+Recta de regresión de $Y$ sobre $X$: $y=0.5006x-1.6132$.
+\item $g=994,4145$ cm/s$^2$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-28}{far}{}
+%ENUNCIADO
+{En análisis colorimétrico, es frecuente utilizar la fracción de luz que absorbe una determinada sustancia disuelta
+como una medida de la concentración con la que dicha sustancia está presente en la disolución, siempre y cuando se
+utilice luz monocromática y la misma longitud recorrida por la luz en cada una de las mediciones.
+Si llamamos $I_0$ a la intensidad de luz incidente, $I$ a la intensidad de luz transmitida y $C$ a la concentración de
+la sustancia analizada, en un experimento de análisis colorimétrico realizado con Mn y una longitud de onda de 525 nm,
+se han obtenido los siguientes datos, donde la concentración de Mn viene dada en mg por cada 100 ml de disolución:
+\[
+\begin{array}{|l|r|r|r|r|}
+\hline
+C & 1.00 & 2.00 & 3.00 & 4.00\\
+\hline
+I/I_0 & 0.418 & 0.149 & 0.058 & 0.026\\
+\hline
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item Representar los datos considerando $I/I_0$ en función de función de $C$.
+A la vista de la nube de puntos, ¿qué modelo de regresión sería el más adecuado para expresar la relación entre las
+variables?
+\item Representar los datos pero en papel semilogarítmico.
+\item Calcular la ecuación de la recta de regresión del logaritmo neperiano de $I/I_0$ frente a $C$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $C$ a la concentración e $Z$ al logaritmo neperiano de $I/I_0$.
+\begin{enumerate}[start=3]
+\item $\bar c=2.5$ mg/100ml, $\bar z=-2.3183$, $s_c^2=1.25$ (mg/100ml)$^2$, $s_z^2=1.0788$ y $s_{cz}=-1.1595$.\\
+Recta de regresión de $Z$ sobre $C$: $z=-0.9276c+0.0007$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-29}{psi}{}
+%ENUNCIADO
+{Se han recogido por medio de unos cuestionarios los niveles de estrés y energía de 14 mujeres durante un año. A partir
+de las respuestas del cuestionario se han asignado puntuaciones a cada una de ellas de manera que a mayor puntuación
+mayor grado de estrés y energía. Los datos recogidos son:
+\[
+\begin{array}{rcccccccccccccc}
+\hline
+\mbox{Edad}   & 21 & 31 & 19 & 21 & 30 & 20 & 22 & 23 & 45 & 24 & 26 & 19 & 25 & 21\\
+\mbox{Estrés} & 25 & 19 & 20 & 19 & 24 &  6 & 29 & 25 & 49 &  0 & 10 & 25 & 13 & 23\\
+\mbox{Energía}& 25 & 20 & 45 & 60 & 50 & 50 & 10 & 60 & 40 & 60 & 50 & 60 & 85 & 50\\
+\hline
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item Dibujar un diagrama de dispersión que refleje la relación entre el estrés y la energía.
+\item ¿Existe relación lineal entre el estrés y la energía?
+¿Y entre el estrés y la edad?
+Justificar la respuesta.
+\item ¿Qué efecto tendría sobre el coeficiente de correlación lineal de la edad y el estrés la eliminación del individuo
+de 45 años? Justificar la respuesta.
+\item Calcular el coeficiente de correlación de Spearman entre estrés y energía e interpretarlo.
+¿Coinciden las conclusiones con las que se deducen del coeficiente de correlación lineal? 
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a la edad, $Y$ al estrés y $Z$ a la energía:
+\begin{enumerate}[start=2]
+\item $r^2_{yz}=0.14$, lo que indica que casi no hay relación entre el estrés y la energía y $r^2_{xy}=0.31$ lo que
+indica que hay una ligera relación entre el estrés y la edad.
+\item El coeficiente de correlación lineal disminuye hasta valer casi 0, lo que indica que la relación lineal entre el
+estrés y la edad del apartado anterior se debe a este dato atípico, así que, realmente no hay relación entre estrés y
+edad.
+\item $r_s=-0.41$ lo que indica que hay una ligera relación decreciente entre energía y estrés. 
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+\newproblem{reg-30}{psi}{}
+%ENUNCIADO
+{Para comprobar el efecto de la herencia genética sobre la inteligencia se desarrolló un estudio en el que se midió el
+coeficiente intelectual de varias parejas de gemelos, obteniendo los siguientes resultados: 
+\[
+(128, 132)\ (116, 112)\ (86, 98)\ (65, 81)\ (104,96)\ (111,111)\ (101, 105)\ (72,75)
+\]
+Calcular el coeficiente de determinación lineal e interpretarlo.
+¿Tiene sentido calcular el coeficiente de correlación?
+}
+%SOLUCIÓN
+{Llamando $X$ al coeficiente intelectual del primer hermano e $Y$ al del segundo: $\bar x=97.875$, $\bar y=101.25$,
+$s_x^2=418.3594$, $s_y^2=288.4375$, $s_{xy}=326.5313$ y $r^2=0.8836$, lo que indica que existe bastante relación
+lineal entre el coeficiente intelectual de los gemelos. No tiene sentido el coeficiente de correlación lineal porque es
+indiferente el orden en que tomemos a los gemelos.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-31}{psi}{}
+%ENUNCIADO
+{En un estudio sobre la búsqueda visual se realiza un prueba que consiste en presentarle a un sujeto una matriz de $n$
+símbolos y pedirle que pulse rápidamente un botón si entre los símbolos se encuentra uno concreto, u otro botón
+diferente si no aparece dicho símbolo.
+El tiempo de respuesta de cada participante (en centésimas de segundo) y el número de símbolos de cada matriz aparecen
+en la siguiente tabla:
+\[
+\begin{array}{|l|c|ccccccccc|}
+\hline
+\mbox{Matrices con} & n & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
+\cline{2-11}
+\mbox{el símbolo} & T & 22 & 24 & 23 & 31 & 33 & 45 & 42 & 46 & 50\\
+\hline
+\mbox{Matrices sin} & n & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & \\
+\cline{2-11}
+\mbox{el símbolo} & T & 25 & 24 & 32 & 35 & 43 & 49 & 52 & 56 &\\
+\hline
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item Construir la recta de regresión del tiempo de respuesta sobre el número de símbolos para las matrices con el
+símbolo y también para las matrices sin el símbolo.
+\item ¿En qué matrices, las que tienen el símbolo o las que no, explica mejor el tiempo de respuesta el número de símbolos?
+Justificar la respuesta.
+\item Según los modelos anteriores, ¿cuánto tiempo tardará en responder una persona elegida al azar en una matriz de 20
+símbolos que contenga al símbolo?
+¿Y si no lo contuviese? 
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ al número de símbolos e $Y$ al tiempo de respuesta:
+\begin{enumerate}
+\item Matrices con el símbolo: $\bar x=8$ símbolos, $\bar y=35.1111$ seg, $s_x^2=6.6667$ símbolos$^2$, $s_y^2=104.4321$
+seg$^2$, $s_{xy}=25.4446$ símbolos$\cdot$seg.\\
+Recta de regresión del tiempo sobre el número de símbolos: $y=3.8333x+4.4444$.
+Matrices sin el símbolo: $\bar x=7.5$ símbolos, $\bar y=39.5$ seg, $s_x^2=5.25$ símbolos$^2$, $s_y^2=132.25$
+seg$^2$, $s_{xy}=26$ símbolos$\cdot$seg.\\
+Recta de regresión del tiempo sobre el número de símbolos: $y=4.9525x+2.3571$.
+\item $r^2=0.9292$ en las matrices con el símbolo y $r^2=0.9736$ en las matrices sin el símbolo, así que el número de
+símbolos explica un poco mejor el tiempo de respuesta en las matrices sin el símbolo.
+\item $y(20)=81.11$ seg si la matriz contiene el símbolo y $y(20)=101.4$ seg si la matriz no contiene el símbolo.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-32}{gen}{}
+%ENUNCIADO
+{Se ha realizado un estudio para averiguar la relación entre la edad y la fuerza física. Para ello se ha medido la edad
+de 16 participantes y el máximo peso (en Kg) que eran capaces de levantar. Los resultados obtenidos fueron: 
+\[
+\begin{array}{|l|cccccccccccccccc|}
+\hline
+\mbox{Edad} & 10 & 12 & 15 & 18 & 21 & 23 & 24 & 26 & 28 & 30 & 31 & 34 & 36 & 38 & 41 & 44\\ 
+\hline 
+\mbox{Peso} & 12 & 25 & 36 & 46 & 54 & 60 & 61 & 60 & 59 & 56 & 54 & 52 & 50 & 50 & 48 & 46\\
+\hline
+\end{array} 
+\]
+Construir un modelo de regresión que explique la relación entre la fuerza física y el peso e interpretarlo. 
+}
+%SOLUCIÓN
+{Llamando $X$ a la edad e $Y$ al peso levantado, se construyen dos rectas de regresión, una para edades menores de
+25 y otra para mayores:
+\begin{itemize}
+\item[--] Menores de 25: $\bar x=15.5714$ años, $\bar y=42$ Kg, $s_x^2=25.3878$ años$^2$, $s_y^2=295.7143$ Kg$^2$,
+$s_{xy}=85.7143$ años$\cdot$Kg.\\
+Recta de regresión del peso sobre la edad: $y=3.3762x-17.3248$.
+\item[--] Mayores de 25: $\bar x=35.2222$ años, $\bar y=52.7778$ Kg, $s_x^2=32.6173$ años$^2$, $s_y^2=20.8395$ Kg$^2$,
+$s_{xy}=-25.5062$ años$\cdot$Kg.\\
+Recta de regresión del peso sobre la edad: $y=-0.7820x+79.5390$.
+\end{itemize}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-33}{psi}{}
+%ENUNCIADO
+{Para evaluar la capacidad de aprendizaje en la realización de una tarea, se ha medido el tiempo que tarda en
+realizarse una tarea en sucesivas repeticiones de la misma. Los resultados obtenidos son:
+\[
+\begin{array}{lcccccccccc}
+\hline
+\mbox{Repetición} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+\mbox{Tiempo (min)} & 80 & 65 & 56 & 50 & 48 & 43 & 41 & 38 & 37 & 35 \\
+\hline
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item Dibujar el diagrama de dispersión.
+\item En vista del diagrama de dispersión, construir el modelo de regresión más adecuado del tiempo en función de las
+repeticiones.
+\item ¿Qué porcentaje de la variabilidad del tiempo explican las repeticiones?
+\item ¿Cuanto tiempo tardará por término medio en la 5 repetición de la tarea?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a las repeticiones, $Y$ al tiempo y $Z$ al logaritmo neperiano del tiempo, se tien:
+\begin{enumerate}[start=2]
+\item $\bar x=5.5$ repeticiones, $\bar z= 3.8644$ ln(min), $s_x^2=8.25$ repeticiones$^2$, $s_z^2=0.0637$ ln$^2$(min) y
+$s_{xz}=-0.7014$ repeticiones$\cdot$ln(min).\\
+Recta de regresión del logaritmo del tiempo sobre las repeticiones: $z=-0.085x+4.3320$.\\
+Modelo exponencial del tiempo sobre las repeticiones: $y=e^{-0.085x+4.3320}$.
+\item $R^2=0.9364$, es decir, un $93.64\%$.
+\item $y(5)=49.74$ min.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-34}{psi}{}
+%ENUNCIADO
+{En un estudio se ha preguntado a un grupo de personas sobre su ideología política $X$ (izquierda, centro o derecha) y
+su opinión sobre la subida o bajada de impuestos $Y$, obteniendo la siguiente tabla de frecuencias:
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+$X\backslash Y$ & Bajada & Mantenimiento & Subida \\
+\hline
+Izquierda & 2 & 6 & 8 \\
+\hline
+Centro & 3 & 4 & 3 \\
+\hline
+Derecha & 6 & 5 & 3 \\
+\hline
+\end{tabular}
+\end{center}
+¿Se puede concluir que existe relación entre la ideología y la opinión sobre la subida o bajada de impuestos?
+Justificar la respuesta.
+}
+%SOLUCIÓN
+{$\chi^2=4.4$ y $C=0.49$ lo que indica que existe bastante relación entre las variables.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-35}{psi}{}
+%ENUNCIADO
+{Un estudio sobre 100 personas concluye que 26 personas son fumadores y bebedores habituales, 12 son bebedores pero no
+fumadores, 18 son fumadores pero no bebedores y 44 no beben ni fuman habitualmente. Según estos datos, ¿podemos decir
+que existe relación entre el tabaco y la bebida? Justificar la respuesta. 
+}
+%SOLUCIÓN
+{$\chi^2=14.83$ y $C=0.36$ lo que indica que hay una relación moderada entre los hábitos de fumar y beber.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-36}{psi}{}
+%ENUNCIADO
+{En un estudio en el que participaron las 8 universidades de una región se ha valorado la excelencia docente e
+investigadora, estableciendo los siguientes rankings (de mejor a peor):
+\begin{center}
+\begin{tabular}{lcccccccc}
+Ranking docencia & 3 & 4 & 8 & 5 & 2 & 1 & 6 & 7\\
+Ranking investigación & 6 & 5 & 4 & 3 & 7 & 8 & 1 & 2\\
+\end{tabular}
+\end{center}
+¿Se puede decir que existe relación entre la excelencia docente e investigadora? Justificar la respuesta.
+}
+%SOLUCIÓN
+{$r_s=-0.83$, lo que indica una fuerte relación inversa entre la excelencia docente y la excelencia investigadora.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-37}{fis}{*}
+% ENUNCIADO
+{En un grupo de pacientes se analiza el efecto de una sustancia dopante en el tiempo de respuesta a un determinado estímulo. Para ello, se
+suministra en sucesivas dosis, de 0 a 70 mg, la misma cantidad de dopante a todos los miembros del grupo, y se anota el tiempo medio de
+respuesta al estímulo, expresado en centésimas de segundo.
+\[
+\begin{array}{l|r|r|r|r|r|r|r|r}
+X \text{ (mg)} & 0 & 10 & 20 & 30 & 40 & 50 & 60 & 70 \\
+\hline
+Y\ (10^{-2}\text{s}) & 28 & 46 & 62 & 81 & 100 & 132 & 195 & 302 \\
+\end{array}
+\]
+
+\begin{enumerate}
+\item Representar la nube de puntos. A la vista de la representación, ¿crees que el modelo lineal es el que mejor explica el tipo de
+relación entre las variables?
+
+\item Calcular la recta de regresión del tiempo en función de la cantidad de dopante, y utilizarla para predecir el tiempo de reacción medio
+para una cantidad de dopante de 25 mg.
+
+\item Hacer la misma predicción del apartado anterior con el modelo exponencial. ¿Qué predicción es mejor?
+
+\item Si para el estímulo estudiado los tiempos de reacción superiores a un segundo se consideran peligrosos para la salud, ¿a partir de qué
+nivel debería regularse, e incluso prohibirse, la administración de la sustancia dopante?
+
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}[start=2]
+\item Recta de regresión de $Y$ sobre $X$: $y=3.44x-2.25$. $y(25)=83.82$ centésimas de segundo.
+\item Recta de regresión de $X$ sobre $Y$: $x=0.25y+5.57$. $x(100)=30.46$ mg.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{\begin{enumerate}
+\item El diagrama de dispersión de $Y$ sobre $X$ es el siguiente
+\[
+\includegraphics[scale=0.5]{dispersion}\qquad
+\]
+A la vista del diagrama se puede decir que el modelo lineal no es el que mejor se ajustaría a la nube de puntos, sino posiblemente el exponencial.
+
+\item La recta de regresión de $Y$ sobre $X$, tiene ecuación
+\[
+y=\bar y+\frac{s_{xy}}{s_{x}^2}(x-\bar x).
+\]
+Calculamos primero los estadísticos que necesitamos en la ecuación:
+\begin{align*}
+\bar x & = \frac{\sum x_{i}}{n}=\frac{0+10+\cdots+70}{8}=\frac{280}{8}=35,  \\
+s_{x}^2 & = \frac{\sum x_{i}^2}{n}-\bar x^2 = \frac{0^2+10^2+\cdots+70^2}{8}-35^2=\frac{14000}{8}-35^2=7261.6875,  \\
+s_{x} & = \sqrt{7261.6875}=22.91,  \\
+\bar y & = \frac{\sum y_{j}}{n}=\frac{28+46+\cdots+302}{8}= \frac{946}{8}=118.25,  \\
+s_{y}^2 & = \frac{\sum y_{j}^2}{n}-\bar y^2 = \frac{28^2+16^2+\cdots+302^2}{8}-118.25^2=\frac{169958}{8}-13983.0625=7261.6875,  \\
+s_{y} & = \sqrt{7261.6875}=85.22,  \\
+s_{xy} & = \frac{\sum x_{i}y_{j}}{N}-\bar x\bar y = \frac{0\cdot 28+10\cdot 46+\cdots +70\cdot 302}{8}-35\cdot 118.25 =\\
+& = \frac{47570}{8}-4138.75=1807.5.  \\
+\end{align*}
+Sustituyendo en la ecuación anterior estos estadísticos calculados obtenemos la recta de regresión de $Y$ sobre $X$.
+\[
+y=118.25+\frac{1807.5}{525}(x-35)=3.44x-2.25.
+\]
+Según esta recta, el tiempo de reacción medio para una cantidad dopante de 25 mg sería
+\[
+y(25)=3.44\cdot 25-2.25=83.82 \textrm{ centésimas de segundo}.
+\]
+
+\item Para ver la cantidad dopante que le corresponde 1 segundo de tiempo de reacción, necesitamos utilizar la recta de regresión de $X$ sobre $Y$. La ecuación de esta recta es
+\[
+x=\bar x+\frac{s_{xy}}{s_{y}^2}(y-\bar y)= 35+\frac{1807.5}{7261.6875}(y-118.25)=0.25y+5.57.
+\]
+Y ana vez que tenemos la recta de regresión, para estimar la dosis correspondiente a 1 segundo, hacemos la predicción para $y=100$ centésimas de segundo (ya que las unidades de $X$ son centésimas de segundo $10^{-2}$ s). Sustituyendo en la ecuación anterior tenemos
+\[ x(100)=0.25\cdot 100+5.57=30.46 \textrm{ mg}. \]
+Como la relación entre $X$ e $Y$ es creciente ($s_{xy}>0$), a partir de $30.46$ mg el tiempo de reacción sería superior a un segundo, y por tanto, peligroso para la salud.
+\end{enumerate}
+}
+
+
+\newproblem{reg-38}{fis}{*}
+% ENUNCIADO
+{La artrosis reumatoide es una enfermedad reumática que aparece con frecuencia en las personas mayores. Uno de los índices más utilizados
+para ver el grado de actividad de la enfermedad es el RADAI (Rheumatoid Arthritis Disease Activity Index), que mide el grado de actividad en
+una escala de 0 (mínima actividad) a 3 (máxima actividad). Para ver de qué manera influye la edad en el grado de actividad de la enfermedad
+se ha seleccionado un grupo de personas mayores y se ha medido el índice RADAI en ellos, obteniendo la siguiente tabla de frecuencias:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ RADAI$\backslash$Edad & 40-50 & 50-60 & 60-70 & 70-80 \\
+\hline
+         0-1          &   8   &   6   &   2   &   1   \\
+\hline
+         1-2          &   4   &   7   &   5   &   2   \\
+\hline
+         2-3          &   0   &   2   &   6   &   7   \\
+\hline
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Estudiar si existe relación lineal entre la edad y el RADAI.
+\item Calcular la recta de regresión del RADAI sobre la edad. Según la recta, ¿cuánto aumentaría el grado de actividad de la enfermedad por
+cada año que pasa?
+\item Si se considera que los pacientes don un RADAI de 2 o superior necesitan ayuda en sus actividades diarias, ¿a qué edad se empezaría a
+necesitar esta ayuda?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a la variable que mide la edad e $Y$ a la que mide el RADAI.
+\begin{enumerate}
+\item $r=0.59$ que indica una relación lineal moderada. 
+\item Recta de regresión de $Y$ sobre $X$: $y=0.0442x-1.1575$. Cada año que pase la actividad de la enfermedad aumentará $0.0442$ puntos en
+el RADAI.
+\item A los $63.4$ años.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{Llamemos $X$ a la variable que mide la edad e $Y$ a la que mide el RADAI.
+\begin{enumerate}
+\item Para ver si existe relación lineal entre $X$ e $Y$, podemos calcular el
+coeficiente de correlación lineal, pero para ello necesitamos la media y
+desviación típica de cada variable y la covarianza. Antes de calcular estos
+estadísticos, obtenemos las distribuciones marginales de cada variable a
+partir de la tabla:
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+ Y\backslash X & 40-50 & 50-60 & 60-70 & 70-80 & n_y \\
+\hline
+         0-1          &   8   &   6   &   2   &   1  & 17 \\
+\hline
+         1-2          &   4   &   7   &   5   &   2  & 18 \\
+\hline
+         2-3          &   0   &   2   &   6   &   7  & 15 \\
+\hline
+         n_x        &  12   &  15   &  13   &  10  & 50 \\
+\hline
+\end{array}
+\]
+
+A partir de aquí calculamos los estadísticos anteriores:
+\begin{align*}
+\overline{x} &=
+\frac{\sum_{i}^{}x_{i}n_{i}}{n} = \frac{45\cdot 12+55\cdot 15+65\cdot
+13+75\cdot 10}{50} = \frac{2960}{50} = 59.2,  \\
+\overline{y} &=
+\frac{\sum_{j}^{}y_{j}n_{j}}{n} = \frac{0.5\cdot 17+1.5\cdot 18+2.5\cdot
+15}{50} = \frac{73}{50} = 1.46,  \\
+s_{x}^{2} &= \frac{\sum_{i}^{}x_{i}^2n_{i}}{n}-\overline{x}^2 =
+\frac{45^2\cdot 12+55^2\cdot 15+65^2\cdot
+13+75\cdot 10}{50}-59.2^2 = \\
+&= \frac{180850}{50}-3504.64 = 112.36,  \\
+s_{x} &= \sqrt{112.36} = 10.6,  \\
+s_{y}^{2} &= \frac{\sum_{j}^{}y_{j}^2n_{j}}{n}-\overline{y}^2 =
+\frac{0.5^2\cdot 17+1.5^2\cdot 18+2.5^2\cdot
+15}{50}-1.46^2 =\\
+&= \frac{138.5}{50}-2.1316 = 0.6384,  \\
+s_{y} &= \sqrt{0.6384} = 0.8,  \\
+s_{xy} &=
+\frac{\sum_{ij}^{}x_{i}y_{j}n_{ij}}{n}-\overline{x}\overline{y} =
+\frac{45\cdot 0.5\cdot 8+55\cdot 1.5\cdot 4+ \cdots +75\cdot 2.5\cdot
+7}{50}-59.2\cdot 1.46 =\\
+&= \frac{4570}{50}-86.432 = 4.968.
+\end{align*}
+
+Con estos datos, el coeficiente de correlación lineal es
+\[
+r=\frac{s_{xy}}{s_xs_y}=\frac{4.968}{10.6\cdot 0.8}=0.59,
+\]
+que indica que existe relación lineal aunque no demasiado fuerte, sino más bien
+moderada.
+
+\item La recta de regresión de $Y$ sobre $X$ es
+\[
+ y=\overline{y}+\frac{s_{xy}}{s_{x}^{2}}(x-\overline{x})=1.46+\frac{4.968}{112.36}(x-59.2)=
+ 0.0442x-1.1575.
+\]
+El aumento del grado de actividad del RADAI por cada año que pasa nos lo da el
+coeficiente de regresión de $Y$ sobre $X$, que es la pendiente de la recta de
+regresión que hemos calculado, es decir, 0.0442 por cada año.
+
+\item Para predecir a qué edad se empezaría a necesitar ayuda, necesitamos
+calcular la recta de regresión de $X$ sobre $Y$, que tiene ecuación
+\[
+ x=\overline{x}+\frac{s_{xy}}{s_{y}^{2}}(y-\overline{y})=5.92+\frac{4.968}{0.6384}(y-1.46)=
+ 7.782y+47.83.
+\]
+Sustituyendo $y$ por 2 en esta ecuación tenemos
+\[
+x(2)=7.782\cdot 2+47.83=63.4 \textrm{ años}.
+\]
+\end{enumerate}}
+
+
+
+
+\newproblem{reg-39}{fis}{*}
+% ENUNCIADO
+{En un equipo de baloncesto se ha introducido un programa de estiramientos para ver si se consigue reducir el número de lesiones. Durante
+toda una temporada cada jugador realizó ejercicios de estiramiento durante un número fijo de minutos en cada entrenamiento. Al finalizar la
+temporada se midió el número de lesiones y se obtuvieron los resultados de la siguiente tabla:
+\begin{center}
+\begin{tabular}{r|r|r|r|r|r|r|r|r}
+Minutos de estiramiento & 0 & 30 & 10 & 15 & 5 & 25 & 35 & 40 \\ \hline
+Número de lesiones      & 4 & 1  & 2  & 2  & 3 & 1  & 0  & 1  \\
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Calcular la recta de regresión del número de lesiones con respecto al tiempo de estiramiento. ¿Cual es la disminución de lesiones
+esperada por cada minuto de estiramiento?
+\item ¿Cuántos minutos de estiramientos debe realizar un jugador para no tener ninguna lesión? ¿Es fiable esta predicción?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a la variable que mide el tiempo de estiramiento, e $Y$ a la que mide el número de lesiones en cada jugador:
+\begin{enumerate}
+\item Recta de regresión de $Y$ sobre $X$: $y-0.08x+3.35$. Por cada minuto más de estiramiento habrá $0.08$ lesiones menos.
+\item Para no tener ninguna lesión habrá que estirar al menos $38.26$ minutos. $r=-0.91$, luego la predicción es bastante fiable.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{Llamemos $X$ a la variable que mide el tiempo de estiramiento, e $Y$ a la que
+mide el número de lesiones en cada jugador.
+\begin{enumerate}
+\item La recta de regresión de $Y$ sobre $X$, tiene ecuación
+\[
+y=\overline{y}+\frac{s_{xy}}{s_{x}^2}(x-\overline{x}).
+\]
+Calculamos primero los estadísticos que necesitamos en la ecuación:
+\begin{align*}
+\overline{x} & = \frac{\sum x_{i}}{N}=\frac{0+30+\cdots+40}{8}=\frac{160}{8}=20,  \\
+s_{x}^2 & = \frac{\sum x_{i}^2}{N}-\overline{x}^2 =
+\frac{0^2+30^2+\cdots+40^2}{8}-20^2=\frac{4700}{8}-20^2=187.5,  \\
+s_{x} & = \sqrt{187.5}=13.69,  \\
+\overline{y} & = \frac{\sum y_{j}}{N}=\frac{4+1+\cdots+1}{8}=
+\frac{14}{8}=1.75,  \\
+s_{y}^2 & = \frac{\sum y_{j}^2}{N}-\overline{y}^2 =
+\frac{4^2+1^2+\cdots+1^2}{8}-1.75^2=\frac{36}{8}-1.75^2=1.4375,  \\
+s_{y} & = \sqrt{1.4375}=1.2,  \\
+s_{xy} & = \frac{\sum x_{i}y_{j}}{N}-\overline{x}\overline{y} =
+\frac{0\cdot 4+30\cdot 1+\cdots +40\cdot 1}{8}
+-20\cdot 1.75 =\\
+& = \frac{160}{8}-20\cdot 1.75=-15.  \\
+\end{align*}
+Sustituyendo en la ecuación anterior estos estadísticos calculados obtenemos la
+recta de regresión de $Y$ sobre $X$.
+\[
+y=1.75-\frac{15}{187.5}(x-20)=-0.08x+3.35.
+\]
+
+El incremento que experimenta la variable $Y$ por cada unidad que se
+incrementa la variable $X$ según la recta de regresión, es su pendiente o
+coeficiente de regresión de $Y$ sobre $X$, que en este caso es $-0.08$. Así,
+pues, por cada minuto más de estiramiento se espera tener $0.08$ lesiones
+menos.
+
+\item Para predecir el número de minutos que debería estirar un jugador que
+quiere tener 0 lesiones, debemos calcular antes la recta de regresión de
+tiempo de estiramiento sobre número de lesiones. La ecuación de esta recta
+es
+\[
+x=\overline{x}+\frac{s_{xy}}{s_{y}^2}(y-\overline{y})=
+20-\frac{15}{1.4375}(y-1.75)=-10.43y+38.26.
+\]
+
+Una vez que tenemos la recta de regresión, para estimar el valor de $X$ para $y=0$, basta con sustituir $y$ por $0$ en esta ecuación y
+obtenemos \[ x(0)=-10.43\cdot 0+38.26=38.26. \]
+
+Por último, para ver si esta estimación es fiable, calculamos el coeficiente de
+correlación lineal
+\[
+r=\frac{s_{xy}}{s_{x}s_{y}}=\frac{-15}{13.69\cdot 1.2}=-0.91.
+\]
+Como el coeficiente de correlación lineal está próximo a -1, el modelo lineal es un
+buen modelo y por tanto sus predicciones serán fiables.
+\end{enumerate}
+}
+
+
+\newproblem{reg-40}{gen}{*}
+% ENUNCIADO
+{Un profesor está interesado en analizar la relación existente entre la nota que esperan obtener los alumnos en los exámenes de su
+asignatura con la que de verdad obtienen una vez corregidos dichos exámenes. La tabla muestra la nota esperada y la obtenida para 10 alumnos
+diferentes: 
+\[
+\begin{array}{ccc}
+\hline
+\text{Alumno} & \text{Nota esperada} & \text{Nota obtenida} \\
+\hline \hline
+   1    &      3.0      &      5.1      \\
+\hline
+   2    &      6.0      &      4.8      \\
+\hline
+   3    &      7.0      &      6.0      \\
+\hline
+   4    &      8.0      &      4.2      \\
+\hline
+   5    &      3.0      &      5.2      \\
+\hline
+   6    &      9.0      &      7.5      \\
+\hline
+   7    &      2.0      &      3.6      \\
+\hline
+   8    &      5.0      &      3.0      \\
+\hline
+   9    &      8.0      &      6.5      \\
+\hline
+   10   &      2.0      &      0.8      \\
+\hline
+\end{array}
+\]
+
+\begin{enumerate}
+\item Calcular la recta de regresión de la nota obtenida en función de la nota esperada.
+\item Calcular el coeficiente de correlación lineal e interpretarlo.
+\item ¿Cuál es la nota que esperaba obtener un alumno que en realidad saca un 4.0?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a la nota esperada e $Y$ a la nota real obtenida:
+\begin{enumerate}
+\item Recta de regresión de $Y$ sobre $X$: $y=0.485\,x+2.0994$.
+\item $r=0.6786,$ lo que indica una relación creciente moderada.
+\item $x(4)=4.6639$ puntos.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{Llamemos $X$ a la nota esperada e $Y$ a la nota real obtenida.
+\begin{enumerate}
+\item La ecuación de la recta de regresión de $Y$ sobre $X$ es
+\[
+y=\bar y+\frac{s_{xy}}{s_{x}^2}(x-\bar x).
+\]
+Calculamos primero los estadísticos que necesitamos en la ecuación:
+\begin{align*}
+\bar x &= \frac{\sum x_{i}}{n}=\frac{53}{10}=5.3,  \\
+s_{x}^2 &= \frac{\sum x_{i}^2}{n}-\bar x^2 = \frac{345}{10}-5.3^2=6.41,  \\
+s_{x} &=\sqrt{6.41}=2.5318,\\
+\bar y &= \frac{\sum y_{j}}{n}=\frac{46.7}{10}=4.67,  \\
+s_{y}^2 &= \frac{\sum y_{j}^2}{n}-\bar y^2 =
+\frac{250.83}{10}-4.67^2=3.2741,  \\
+s_{y}&=\sqrt{3.2741}=1.8094,\\
+s_{xy} &= \frac{\sum x_{i}y_{j}}{n}-\bar x\bar y = \frac{278.6}{10}-5.3\cdot 4.67 =3.109.  \\
+\end{align*}
+Sustituyendo en la ecuación anterior estos estadísticos calculados obtenemos la recta de regresión de $Y$ sobre $X$.
+\[
+y=4.67+\frac{3.109}{6.41}(x-5.3)=0.485\,x+2.0994.
+\]
+
+\item El coeficiente de correlación lineal es
+\[
+r=\frac{s_{xy}}{s_{x}s_{y}}=\frac{3.109}{2.5318\cdot 1.8094}=0.6786,
+\]
+y según este valor, podemos decir que existe una dependencia creciente moderada.
+
+\item Para predecir la nota esperada por un alumno que saca un 4, necesitamos la recta de regresión de $X$ sobre $Y$. La ecuación de esta
+recta es
+\[
+x=\bar x+\frac{s_{xy}}{s_{y}^2}(y-\bar y)= 5.3+\frac{3.109}{3.2741}(y-4.67)=0.9496\,y+0.8655.
+\]
+Sustituyendo $y$ por 4 en esta ecuación obtenemos la predicción deseada
+\[
+x(4)=0.9496\cdot 4+0.8655=4.6639.
+\]
+\end{enumerate}
+}
+
+
+\newproblem{reg-41}{fis}{*}
+% ENUNCIADO
+{Los investigadores están estudiando la correlación entre obesidad y la respuesta individual al dolor. La obesidad se mide como porcentaje
+sobre el peso ideal ($x$). La respuesta al dolor se mide utilizando el umbral de reflejo de flexión nociceptiva ($y$), que es una medida de
+sensación de punzada. Se obtuvieron los siguientes resultados:
+\[
+\begin{array}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+x & 89 & 90 & 75 & 30 & 51 & 75 & 62 & 45 & 90 & 20\\
+\hline
+y & 10 & 12 & 4 & 4.5 & 5.5 & 7 & 9 & 8 & 15 & 3\\
+\hline
+\end{array}
+\]
+\begin{enumerate}
+\item Dibujar el diagrama de dispersión. Según la nube de puntos, ¿qué modelo explicaría mejor la relación entre el umbral de reflejo y el
+porcentaje sobre el peso ideal?
+\item Obtener la recta de regresión que mejor exprese la dependencia del umbral de reflejo en función del porcentaje sobre el peso ideal.
+\item Obtener el modelo exponencial que mejor exprese la dependencia del umbral de reflejo en función del porcentaje sobre el peso ideal.
+\item Predecir el porcentaje de sobrepeso que se espera obtener para un umbral de reflejo de 10, ¿Es fiable esta predicción?.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{reg-42}{med}{*}
+%ENUNCIADO
+{Se realiza un estudio para establecer una ecuación mediante la cual se pueda utilizar la concentración de estrona en saliva para predecir
+la concentración del esteroide en plasma libre. Se extrajeron los siguientes datos de 10 varones sanos:
+\[
+\begin{array}{|lrrrrrrrrrr|}
+\hline
+\text{Estrona} & 1.4 & 7.5 & 8.5 & 9.0 & 9.0 & 11 & 13 & 14 & 14.5 & 16\\
+\text{Esteroide} & 30.0 & 25.0 & 31.5 & 27.5 & 39.5 & 38.0 & 43.0 & 49.0 & 55.0 & 48.5\\
+\hline
+\end{array}
+\]
+
+\begin{enumerate}
+\item Comprobar la idoneidad del modelo lineal de regresión. Si el modelo es apropiado, hallar la recta de regresión de la concentración de
+estrona en función de la concentración de esteroide.
+\item Si un individuo presenta una concentración de estrona en saliva de 10, ¿qué concentración de esteroide en plasma libre
+predeciría el modelo de regresión lineal?
+\item Para los dos primeros individuos, calcular los errores que se comenten al utilizar el modelo de regresión lineal para
+predecir la concentración de estrona. Razonar a que se deben estos errores.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{reg-43}{med}{*}
+%ENUNCIADO
+{En una análisis de niños sanos se deseaba establecer si existía relación lineal entre la edad (en años) del niño y el ángulo de Clarke (en
+grados), obteniéndose en una muestra de 7 niños los valores que aparecen a continuación:
+\[
+\begin{array}{|l|r|r|r|r|r|r|r|}
+\hline
+\text{Edad} & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline
+\text{Ángulo de Clarke} & 24 & 26 & 30 & 31 & 34 & 32 & 33\\
+\hline
+\end{array}
+\]
+\begin{enumerate}
+\item Calcular la ecuación de la recta de regresión del Ángulo de Clarke en función de la edad.
+\item ¿Qué tanto por ciento de la variabilidad de la nube de puntos explicamos con el modelo lineal? ¿Se puede considerar un modelo
+bueno?
+\item Calcular el coeficiente de correlación de Spearman e interpretarlo. ¿Está en consonancia con el coeficiente de correlación lineal?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{reg-44}{far}{*}
+%ENUNCIADO
+{Se quiere estudiar la relación entre las concentraciones de dos sustancias $X$ e $Y$ en la sangre.
+Para ello se han medido las concentraciones de estas sustancias en siete individuos, ambas en microgramos por
+decilitro de sangre, obteniendo los siguientes resultados
+\[
+\begin{array}{rrrrrrrr}
+   \hline
+X & 2.1 & 4.9 & 9.8 & 11.7 & 5.9 & 8.4 & 9.2 \\ 
+  Y & 1.3 & 1.5 & 1.7 & 1.8 & 1.5 & 1.7 & 1.7 \\ 
+   \hline
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item ¿Existe relación lineal entre $Y$ y $X$?
+\item ¿Existe relación potencial entre $Y$ y $X$?
+\item Utilizar el mejor de los modelos anteriores para predecir la concentración de $Y$ para $x=8$ $\mu$gr/dl. ¿Es fiable la predicción?
+Justificar la respuesta.	
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item Modelo lineal: $r^2=0.9696$, luego existe una relación lineal muy fuerte.
+\item Modelo potencial: $r^2=0.9688$, luego también existe una relación potencial muy fuerte pero un poco menor que la lineal.
+\item $y(8)=1.6296$ $\mu$gr/dl.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{Para el modelo lineal se tiene
+\begin{enumerate}
+\item Para ver si existe relación lineal entre $Y$ y $X$ se calcula el coeficiente de determinación lineal:
+\begin{align*}
+\bar x &= \frac{\sum x_i}{n} = \frac{2.1+\cdots+9.2}{7} = \frac{52}{7} = 7.4286 \text{ $\mu$gr/dl},\\
+s_x^2 &= \frac{\sum x_i^2}{n}-\bar x^2 = \frac{2.1^2+\cdots+9.2^2}{7} -7.4286^2= \frac{451.36}{7}-55.1841 = 9.2963 \text{ $(\mu$gr/dl)$^2$},\\
+\bar y &= \frac{\sum y_j}{n} = \frac{1.3+\cdots+1.7}{7} = \frac{11.2}{7} = 1.6 \text{ $\mu$gr/dl},\\
+s_y^2 &= \frac{\sum y_j^2}{n}-\bar y^2 = \frac{1.3^2+\cdots+1.7^2}{7} -1.6^2= \frac{18.1}{7}-2.56 = 0.0257 \text{ $(\mu$gr/dl)$^2$},\\
+s_{xy} &= \frac{\sum x_iy_j}{n}-\bar x\bar y = \frac{2.1\cdot1.3+\cdots+9.2\cdot1.7}{7}-7.4286\cdot1.6 = \frac{86.57}{7}-11.8858 = 0.4814 \text{ $(\mu$gr/dl)$^2$},\\
+r^2 &= \frac{s_{xy}^2}{s_x^2 s_y^2} = \frac{0.4814^2}{9.2963\cdot 0.0257} = 0.9696.
+\end{align*}
+Como el coeficiente de determinación lineal está muy próximo a 1, podemos concluir que existe una relación lineal muy fuerte entre $X$ e $Y$.
+
+\item Del mismo modo, para ver si existe relación potencial entre $Y$ y $X$ se calcula el coeficiente de determinación potencial.
+Teniendo en cuenta que la ecuación del modelo potencial $y=ax^b$ se puede convertir en lineal aplicando el logarítmo tanto a $X$ como a $Y$, 
+$\ln y = \ln a + b\ln x$, el coeficiente de determinación potencial entre $X$ y $Y$ es el mismo que el coeficiente de determinación lineal entre $\ln(X)$ y $\ln(Y)$.
+Así pues, para calcularlo primero construimos las variables $U=\ln(X)$ y $V=\ln(Y)$:
+\[
+\begin{array}{rrrrrrrr}
+   \hline
+U = \ln X & 0.7419 & 1.5892 & 2.2824 & 2.4596 & 1.7750 & 2.1282 & 2.2192 \\ 
+  V = \ln Y & 0.2624 & 0.4055 & 0.5306 & 0.5878 & 0.4055 & 0.5306 & 0.5306 \\ 
+   \hline
+\end{array}\]
+
+Y el coeficiente de determinación potencial vale:
+\begin{align*}
+\bar u &= \frac{\sum u_i}{n} = \frac{0.7419+\cdots+2.2192}{7} = \frac{13.1955}{7} = 1.8851 \text{ $\ln(\mu$gr/dl)},\\
+s_u^2 &= \frac{\sum u_i^2}{n}-\bar u^2 = \frac{0.7419^2+\cdots+2.2192^2}{7} -1.8851^2= \frac{26.9397}{7}-3.5536 = 0.295 \text{ $\ln^2(\mu$gr/dl)},\\
+\bar v &= \frac{\sum v_j}{n} = \frac{0.2624+\cdots+0.5306}{7} = \frac{3.253}{7} = 0.4647 \text{ $\ln(\mu$gr/dl)},\\
+s_v^2 &= \frac{\sum v_j^2}{n}-\bar v^2 = \frac{0.2624^2+\cdots+0.5306^2}{7} -0.4647^2= \frac{1.5878}{7}-0.2159 = 0.0109 \text{ $\ln^2(\mu$gr/dl)},\\
+s_{uv} &= \frac{\sum u_iv_j}{n}-\bar u\bar v = \frac{0.7419\cdot0.2624+\cdots+2.2192\cdot0.5306}{7}-1.8851\cdot0.4647 =\\
+&= \frac{6.5224}{7}-0.876 = 0.0557 \text{ $\ln^2(\mu$gr/dl)},\\
+r^2 &= \frac{s_{uv}^2}{s_u^2 s_v^2} = \frac{0.0557^2}{0.295\cdot 0.0109} = 0.9688.
+\end{align*}
+
+Así pues, el modelo potencial también es muy buen modelo para explicar la relación entre $Y$ y $X$ aunque es un poco mejor el lineal.
+
+\item Como el modelo lineal es un poco mejor que el potencial, hay que hacer la predicción con el modelo lineal. Para ello se calcula la recta
+de regresión de $Y$ sobre $X$, que tiene ecuación
+\[
+y = \bar y +\frac{s_{xy}}{s_x^2}(x-\bar x) = 1.6 + \frac{0.4814}{9.2963}(x-7.4286) = 0.0518x+1.2153.
+\]
+
+Finalmente, la concentración de $Y$ para $x=8$ $\mu$gr/dl será
+\[
+y = 0.0518\cdot 8+1.2153 = 1.6296 \text{ $\mu$gr/dl}.
+\]
+\end{enumerate}
+}
