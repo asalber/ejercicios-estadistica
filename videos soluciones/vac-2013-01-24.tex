@@ -1,0 +1,132 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Variables Aleatorias Continuas}\\
+Titulaciones: & \structure{Todas}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\large
+En una población se sabe que las estaturas de los hombres y de las mujeres siguen una distribución
+normal con la misma desviación típica y que la media de los hombres es 5 cm mayor que la de las mujeres. 
+También se sabe que el 75\% de los hombres miden menos de 178 cm y que el 10\% de las mujeres miden más de $176.8$ cm. 
+Se pide:
+\begin{enumerate}
+\item Calcular las medias y las desviaciones típicas de las distribuciones de estaturas de los hombres y de las mujeres.
+\item Calcular la probabilidad de que un hombre mida entre 170 y 180 cm.
+\item Calcular el percentil 90 de la estatura de los hombres. 
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.55\textwidth}
+\begin{enumerate}
+\item Calcular las medias y las desviaciones típicas de las distribuciones de estaturas de los hombres y de las mujeres.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.45\textwidth}
+\structure{Datos}\\
+$H=$ Estatura hombres $\sim N(\mu_h,\sigma_h)$\\
+$M=$ Estatura mujeres $\sim N(\mu_m,\sigma_m)$\\
+La estatura media de los hombres es $5$ cm mayor que la de las mujeres\\[5mm]
+La estatura de los hombres y las mujeres tienen la misma desviación típica\\[5mm]
+El $75\%$ de los hombres miden menos de $178$ cm\\[5mm]
+El $10\%$ de las mujeres miden más de $176.8$ cm
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Calcular la probabilidad de que un hombre mida entre 170 y 180 cm.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$H=$ Estatura hombres \\
+$H \sim N(173.83,\,6.23)$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Calcular el percentil 90 de la estatura de los hombres. 
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$H=$ Estatura hombres\\
+$H\sim N(173.83,\,6.23)$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

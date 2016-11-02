@@ -1,0 +1,115 @@
+% Autor: Alfredo Sánchez Alberca (asalber@gmail.com)
+
+\documentclass[a4paper,titlepage,dvips]{article}
+%===============================================
+%PAQUETES
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{macros}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{probsoln-alf}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-all,pst-math,pst-plot,pst-infixplot,pst-xkey,pstricks-add}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfauthor={Alfredo S\'anchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de Estad\'istica}} 
+\usepackage{url}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}} \rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Matemática Aplicada y Estadística}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+\makeatletter
+\let\savees@listquot\es@listquot
+\def\es@listquot{\protect\savees@listquot}
+\makeatletter
+
+\reversemarginpar
+\showshortanswers
+\showanswers
+%\PSNrandseed{2007}
+
+
+\begin{document}
+\sloppy
+
+\begin{titlepage}
+\vspace*{5cm}
+\begin{center}
+{\huge \bf COMPENDIO DE EJERCICIOS DE ESTADÍSTICA\par}
+\vspace{0.5cm}
+{\large \noindent \textbf{Autores}: \\
+Santiago Angulo Díaz-Parreño (\url{sangulo@ceu.es})\\
+José Miguel Cárdenas Rebollo (\url{cardenas@ceu.es})\\
+Anselmo Romero Limón (\url{arlimon@ceu.es})\\
+Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+}
+
+\vspace{1cm}
+ \includegraphics[scale=0.3]{img/logo_uspceu_01}
+\end{center}
+\end{titlepage}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\newpage
+
+\section{Estadística Descriptiva}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{descriptiva}
+\end{enumerate}
+
+\section{Regresión}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{regresion}
+\end{enumerate}
+
+\section{Probabilidad}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{probabilidad}
+\end{enumerate}
+
+\section{Variables Aleatorias Discretas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{variables_aleatorias_discretas}
+\end{enumerate}
+
+\section{Variables Aleatorias Continuas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{variables_aleatorias_continuas}
+\end{enumerate}
+
+\section{Intervalos de Confianza}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{estimacion}
+\end{enumerate}
+
+\section{Contraste de Hipótesis}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{contrastes}
+\end{enumerate}
+
+%\section{Análisis de la Varianza de 1 Factor}
+%\begin{enumerate}[leftmargin=*]
+%\selectallproblems{anova_1_factor}
+%\end{enumerate}
+%
+%\section{Contrastes de la Chi-cuadrado}
+%\begin{enumerate}[leftmargin=*]
+%\selectallproblems{chi_cuadrado}
+%\end{enumerate}
+
+
+\vspace{2cm}
+
+\textsc{Nota}: Los problemas marcados con una estrella ($\bigstar$) son problemas de exámenes de otros años.
+\end{document}

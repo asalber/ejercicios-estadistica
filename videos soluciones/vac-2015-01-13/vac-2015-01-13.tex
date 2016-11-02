@@ -1,0 +1,145 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+
+% GENERAL PACKAGES
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification \usepackage[T1]{fontenc} \usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-all,pst-math,pst-plot,pst-infixplot,pst-xkey,pstricks-add}
+% \usepackage{url}
+\usepackage{textcomp}
+\usepackage[spanish]{babel}
+
+% COLORS
+\definecolor{blueceu}{RGB}{0,164,227} 
+\definecolor{greenceu}{RGB}{194,205,24} 
+\definecolor{redceu}{RGB}{238,50,36} 
+\definecolor{purpleceu}{RGB}{169,78,145} 
+\definecolor{greyceu}{RGB}{117,117,97} 
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246} 
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+% FONTS
+\usepackage{mathpazo} % Palatino
+
+% CONFIGURATION
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+% ---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\vspace{1.5cm}
+	
+	\begin{center}
+		\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+		\bigskip
+		
+		\large
+		\begin{tabular}{rl}
+			Temas: & \structure{Variables Aleatorias Continuas: Distribución Normal} \\
+			Titulaciones: & \structure{Ciencias biosanitarias}
+		\end{tabular}
+		
+		\bigskip
+		Alfredo Sánchez Alberca\\
+		\url{asalber@ceu.es}\\
+		\url{http://aprendeconalf.es}\\
+		
+		\includegraphics[scale=0.2]{../img/logo_uspceu}
+		
+		\biskip
+		\includegraphics[scale=0.07]{../img/cc-logo}
+		\includegraphics[scale=0.2]{../img/cc-by}
+		\includegraphics[scale=0.2]{../img/cc-e}
+		\includegraphics[scale=0.2]{../img/cc-c}
+	\end{center}
+\end{frame}
+	
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\large
+En un estudio realizado a 720 niños de 8 años se observó que 324 tenían un peso superior a $27.2$ kg y que 216
+tenían un peso entre $24.6$ y $27.2$ kg.
+Suponiendo que el peso de los niños de 8 años sigue una distribución normal, se pide:
+\begin{enumerate}
+  \item Calcular la media y la desviación típica del peso de los niños de 8 años.
+  \item ¿Cuántos niños de 8 años tendrán un peso comprendido entre 24 y 28 kg?
+  \item Si un niño de 8 años pesa $28.5$ kg, ¿cuánto debe adelgazar para situarse por debajo del percentil 60 del peso?
+\end{enumerate}
+\end{frame}
+	
+	
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.75\textwidth}
+En un estudio realizado a 720 niños de 8 años se observó que 324 tenían un peso superior a $27.2$ kg y que 216
+tenían un peso entre $24.6$ y $27.2$ kg.
+Suponiendo que el peso de los niños de 8 años sigue una distribución normal, se pide:
+\begin{enumerate}
+  \item Calcular la media y la desviación típica del peso de los niños de 8 años.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.25\textwidth}
+\structure{Datos}\\
+$X\equiv$ Peso del niño\\
+$n=720$ niños\\
+$X\sim N(\mu,\sigma)$
+\end{column}
+\end{columns} 
+\end{frame}
+	
+	
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.75\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item ¿Cuántos niños de 8 años tendrán un peso comprendido entre 24 y 28 kg?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.25\textwidth}
+\structure{Datos}\\
+$X\equiv$ Peso del niño\\
+$n=720$ niños\\
+$X\sim N(26.78\,,\,3.25)$
+\end{column}
+\end{columns} 
+\end{frame}	
+	
+	
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.75\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Si un niño de 8 años pesa $28.5$ kg, ¿cuánto debe adelgazar para situarse por debajo del percentil 60 del peso?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.25\textwidth}
+\structure{Datos}\\
+$X\equiv$ Peso del niño\\
+$n=720$ niños\\
+$X\sim N(26.78\,,\,3.25)$
+\end{column}
+\end{columns} 
+\end{frame}	
+	
+	
+\end{document}

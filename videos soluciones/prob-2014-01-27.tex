@@ -1,0 +1,115 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Probabilidad: Tests diagnósticos}\\
+Titulaciones: & \structure{Medicina}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\large
+Un test para la detección precoz de una enfermedad da positivo en el 90\% de los casos en los que existe
+la enfermedad y también da positivo en el 2\% de los casos en los que no existe. 
+Suponiendo que la prevalencia de la enfermedad es del 5\%, ¿cuál es la probabilidad de que un individuo en el que test
+da positivo realmente padezca la enfermedad? ¿Diagnosticarías la enfermedad?
+
+Si pasados unos días se le repite el test al mismo individuo y vuelve a dar positivo, ¿qué diagnosticarías ahora?
+Justificar la respuesta. 
+Supóngase que el segundo test es independiente del primero. 
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+Un test para la detección precoz de una enfermedad da positivo en el 90\% de los casos en los que existe
+la enfermedad y también da positivo en el 2\% de los casos en los que no existe. 
+Suponiendo que la prevalencia de la enfermedad es del 5\%, ¿cuál es la probabilidad de que un individuo en el que test
+da positivo realmente padezca la enfermedad? ¿Diagnosticarías la enfermedad?
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$E=$ Tener la enfermedad\\
+$+=$ Resultado del test positivo\\
+$90\%$ de + en los enfermos\\[5mm]
+$2\%$ de + en los sanos \\[5mm]
+$5\%$ de prevalencia de la enfermedad
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+Si pasados unos días se le repite el test al mismo individuo y vuelve a dar positivo, ¿qué diagnosticarías ahora?
+Justificar la respuesta.\\ 
+Supóngase que el segundo test es independiente del primero. 
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$E=$ Tener la enfermedad\\
+$+=$ Resultado del test positivo\\
+$P(+/E)=0.9$\\
+$P(+/\overline E)=0.02$\\
+$P(E/+)=0.7031$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

@@ -67,11 +67,11 @@ Actividad restante (\%) & 96 & 84 & 70 & 58 & 52 \\ \hline
 \end{tabular}
 \end{center}
 
-Se desea calcular:
+Se pide:
 \begin{enumerate}
-\item  La relación fundamental (recta de regresión) entre actividad y tiempo transcurrido.
-\item  El tiempo en meses que corresponde al 80\% de actividad.
-\item  ¿Cuándo será nula la actividad?
+\item Calcular la recta de regresión de la actividad sobre el tiempo transcurrido.
+\item Según el modelo lineal, ¿cuánto tiempo debe pasar para que la actividad del fármaco sea del 80\%? 
+¿Cuándo será nula la actividad?
 \end{enumerate}
 }
 %SOLUCIÓN
@@ -80,8 +80,7 @@ Se desea calcular:
 \item $\bar t=3$ años, $\bar a=72\%$, $s_t^2=2$ años$^2$, $s_a^2=264\%^2$, $s_{ta}=-22.8$ años$\cdot\%$.\\
 Recta de regresión de actividad sobre tiempo: $a=-11.4t+106.2$.
 \item Recta de regresión de tiempo sobre actividad: $t=-0.086a+9.2182$.\\
-$t(80)=2.3091$ años.
-\item $t(0)=9.2182$ años.
+$t(80)=2.3091$ años y $t(0)=9.2182$ años.
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -152,9 +151,7 @@ además es creciente (a mayor puntuación en el test, más asignaturas aprobadas
 
 \newproblem{reg-6}{nut}{*}
 %ENUNCIADO
-{En una población se ha realizado un estudio sobre el nivel de colesterol en sangre ($X$) y la tensión arterial máxima
-($Y$) obteniendo. Para ello se ha tomado una muestra de 80 individuos que ha dado lugar a la siguiente tabla de
-frecuencias:
+{La tabla siguiente representa la distribución bidimensional de frecuencias de una muestra de 80 personas en un estudio sobre la relación entre el nivel de colesterol en sangre ($X$) en mg/dl y la tensión arterial máxima ($Y$) en mmHg.
 \[
 \begin{array}{|c||c|c|c||c|}
 \hline
@@ -175,10 +172,14 @@ n_y          &           &    30     &    24    &    \\
 Se pide:
 \begin{enumerate}
 \item Completar la tabla.
-\item Recta de regresión del nivel de colesterol sobre la tensión.
-\item Coeficiente de determinación e interpretación.
-\item La tensión arterial máxima esperada para una persona cuyo nivel de colesterol es 270.
+\item Calcular la recta de regresión del nivel de colesterol sobre la tensión.
+\item Usar el modelo lineal para predecir el colesterol esperado para una persona con una tensión arterial de 160 mmHg.
+\item Según el modelo lineal, ¿cuál es la tensión arterial máxima esperada para una persona cuyo nivel de colesterol es 270 mg/dl.
 \end{enumerate}
+
+Usar las siguientes sumas:
+$\sum x_i=16960$ mg/dl, $\sum y_j=11160$ mmHg, $\sum x_i^2=3627200$ (mg/dl)$^2$, $\sum y_j^2=1576800$ mmHg$^2$ y
+$\sum x_iy_j=2378800$ mg/dl$\cdot$mmHg.
 }
 %SOLUCIÓN
 {
@@ -202,11 +203,10 @@ n_y          &   26     &    30     &    24     & 80 \\
 \end{array}
 \]
 \item $\bar x=212$ mg/dl, $\bar y=139.5$ mmHg, $s_x^2=396$ (mg/dl)$^2$, $s_y^2=249.75$ mmHg$^2$ y $s_{xy}=161$
-mg/dl$\cdot$mmHg.
-\item $r^2=0.261$, que quiere decir que hay poca relación lineal entre el nivel de colesterol y la tensión ya que la
-recta de regresión anterior sólo explica el $26.1$\% de la variabilidad del colesterol.
-\item Recta de regresión de la tensión arterial sobre el colesterol: $y=0.407x+53.308$.\\
-$y(270)=163.198$ mmHg.
+mg/dl$\cdot$mmHg. Recta de regresión del nivel de colesterol sobre la tensión arterial: $x=122.0721+0.6446y$. 
+\item  $x(160)=225.2152$ mg/dl.
+\item Recta de regresión de la tensión arterial sobre el colesterol: $y=0.4066x+53.3081$.\\
+$y(270)=163.0808$ mmHg.
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -250,7 +250,32 @@ coeficiente de determinación es alto.
 {}
 
 
-\newproblem{reg-8}{far}{*}
+\newproblem{reg-8a}{far}{*}
+%ENUNCIADO
+{Al realizar un estudio sobre la dosificación de un cierto medicamento, se trataron 6 pacientes con dosis diarias de 2
+mg, 7 pacientes con 3 mg y otros 7 pacientes con 4 mg. De los pacientes tratados con 2 mg, 2 curaron al cabo de 5 días,
+y 4 al cabo de 6 días. De los pacientes tratados con 3 mg diarios, 2 curaron al cabo de 3 días, 4 al cabo de 5 días y 1
+al cabo de 6 días. Y de los pacientes tratados con 4 mg diarios, 5 curaron al cabo de 3 días y 2 al cabo de 5 días.
+
+Se pide:
+\begin{enumerate}
+\item Construir la tabla de la distribución conjunta de frecuencias.
+\item Obtener las distribuciones de frecuencias marginales y calcular los principales estadísticos para cada variable. 
+\item Calcular la covarianza e interpretarla. 
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ a la dosis e $Y$ al tiempo de curación:
+\begin{enumerate}[start=3]
+\item $\bar x=3.05$ mg, $\bar y=4.55$ días, $s_x^2=0.648$ mg$^2$, $s_y^2=1.448$ días$^2$, $s_x=0.805$ mg, $s_y=1.203$
+días y $s_{xy}=-0.678$ mg$\cdot$días, lo que indica que hay una relación lineal decreciente. 
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{reg-8b}{far}{*}
 %ENUNCIADO
 {Al realizar un estudio sobre la dosificación de un cierto medicamento, se trataron 6 pacientes con dosis diarias de 2
 mg, 7 pacientes con 3 mg y otros 7 pacientes con 4 mg. De los pacientes tratados con 2 mg, 2 curaron al cabo de 5 días,
@@ -313,7 +338,7 @@ Se pide:
 \end{itemize}
 Calcular:
 \begin{enumerate}
-\item  Valores de $\overline{x}$ e $\overline{y}$.
+\item  Valores de $\bar x$ e $\bar y$.
 \item  Coeficiente de correlación lineal.
 \end{enumerate}
 }
@@ -330,7 +355,7 @@ Calcular:
 
 \newproblem{reg-11}{gen}{}
 %ENUNCIADO
-{En el ajuste rectilíneo a una distribución bidimensional se sabe que $\overline{x}=2$, $\overline{y}=1$, y el coeficiente de correlación lineal es 0 ($r=0$).
+{En el ajuste rectilíneo a una distribución bidimensional se sabe que $\bar x=2$, $\bar y=1$, y el coeficiente de correlación lineal es 0 ($r=0$).
 \begin{enumerate}
 \item  Si $x=10$, ¿cuál será el valor interpolado para $y$?.
 \item  Si $y=5$, ¿cuál será el valor interpolado para $x$?.
@@ -1116,27 +1141,35 @@ símbolos explica un poco mejor el tiempo de respuesta en las matrices sin el s�
 %ENUNCIADO
 {Se ha realizado un estudio para averiguar la relación entre la edad y la fuerza física. Para ello se ha medido la edad
 de 16 participantes y el máximo peso (en Kg) que eran capaces de levantar. Los resultados obtenidos fueron: 
-\[
-\begin{array}{|l|cccccccccccccccc|}
-\hline
-\mbox{Edad} & 10 & 12 & 15 & 18 & 21 & 23 & 24 & 26 & 28 & 30 & 31 & 34 & 36 & 38 & 41 & 44\\ 
-\hline 
-\mbox{Peso} & 12 & 25 & 36 & 46 & 54 & 60 & 61 & 60 & 59 & 56 & 54 & 52 & 50 & 50 & 48 & 46\\
-\hline
-\end{array} 
-\]
-Construir un modelo de regresión que explique la relación entre la fuerza física y el peso e interpretarlo. 
+\begin{center}
+\resizebox{0.7\textwidth}{!}{\input{img/regresion/diagrama_dispersion_fuerza_edad}}
+\end{center}
+Se pide: 
+\begin{enumerate}
+\item Calcular el coeficiente de determinación lineal de la muestra completa.
+\item Calcular el coeficiente de determinación lineal de la muestra de personas menores de 25 años.
+\item Calcular el coeficiente de determinación lineal de la muestra de personas mayores de 25 años.
+\item ¿Para qué grupo de edades es más fuerte la relación lineal entre la fuerza física y la edad?
+\end{enumerate}
+
+Usar las siguientes sumas ($X$=Edad e $Y=$Peso máximo levantado).
+\begin{itemize}[label=--]
+\item Muestra total: $\sum x_i=431$ años, $\sum y_j=769$ kg, $\sum x_i^2=13173$ años$^2$, $\sum y_j^2=39675$
+kg$^2$ y $\sum x_iy_j=21792$ años$\cdot$kg.
+\item Muestra menores de 25 años: $\sum x_i=123$ años, $\sum y_j=294$ kg, $\sum x_i^2=2339$ años$^2$, $\sum y_j^2=14418$
+kg$^2$ and $\sum x_iy_j=5766$ años$\cdot$kg.
+\item Muestra mayores de 25 años: $\sum x_i=308$ años, $\sum y_j=475$ kg, $\sum x_i^2=10834$ años$^2$, $\sum y_j^2=25257$
+kg$^2$ y $\sum x_iy_j=16026$ años$\cdot$kg.
+\end{itemize}
 }
 %SOLUCIÓN
-{Llamando $X$ a la edad e $Y$ al peso levantado, se construyen dos rectas de regresión, una para edades menores de
-25 y otra para mayores:
+{Llamando $X$ a la edad e $Y$ al peso levantado.
 \begin{itemize}
-\item[--] Menores de 25: $\bar x=15.5714$ años, $\bar y=42$ Kg, $s_x^2=25.3878$ años$^2$, $s_y^2=295.7143$ Kg$^2$,
-$s_{xy}=85.7143$ años$\cdot$Kg.\\
-Recta de regresión del peso sobre la edad: $y=3.3762x-17.3248$.
-\item[--] Mayores de 25: $\bar x=35.2222$ años, $\bar y=52.7778$ Kg, $s_x^2=32.6173$ años$^2$, $s_y^2=20.8395$ Kg$^2$,
-$s_{xy}=-25.5062$ años$\cdot$Kg.\\
-Recta de regresión del peso sobre la edad: $y=-0.7820x+79.5390$.
+\item  $\bar{x}=26.9375 años, $s_x^2=97.6836$ años$^2$, $\bar{y}=48.0625$ kg, $s_y^2=169.6836$ kg$^2$, $s_{xy}=67.3164$ años$\cdot$⋅kg y $r^2=0.2734$. 
+\item $\bar x=15.5714$ años, $\bar y=42$ kg, $s_x^2=25.3878$ años$^2$, $s_y^2=295.7143$ kg$^2$, $s_{xy}=85.7143$ años$\cdot$kg y $r^2=0.9786$.
+\item $\bar x=35.2222$ años, $\bar y=52.7778$ kg, $s_x^2=32.6173$ años$^2$, $s_y^2=20.8395$ kg$^2$,
+$s_{xy}=-25.5062$ años$\cdot$kg y $r^2=0.9571$.
+\item La relación lineal entre la edad y la fuerza física es un poco más fuerte en los menores de 25 años.
 \end{itemize}
 }
 %RESOLUCIÓN
@@ -1435,22 +1468,30 @@ x(2)=7.782\cdot 2+47.83=63.4 \textrm{ años}.
 toda una temporada cada jugador realizó ejercicios de estiramiento durante un número fijo de minutos en cada entrenamiento. Al finalizar la
 temporada se midió el número de lesiones y se obtuvieron los resultados de la siguiente tabla:
 \begin{center}
-\begin{tabular}{r|r|r|r|r|r|r|r|r}
-Minutos de estiramiento & 0 & 30 & 10 & 15 & 5 & 25 & 35 & 40 \\ \hline
-Número de lesiones      & 4 & 1  & 2  & 2  & 3 & 1  & 0  & 1  \\
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Minutos de estiramiento & 0 & 30 & 10 & 15 & 5 & 25 & 35 & 40\\
+Lesiones & 4 & 1 & 2 & 2 & 3 & 1 & 0 & 1\\
+\bottomrule
 \end{tabular}
 \end{center}
 Se pide:
 \begin{enumerate}
-\item Calcular la recta de regresión del número de lesiones con respecto al tiempo de estiramiento. ¿Cual es la disminución de lesiones
-esperada por cada minuto de estiramiento?
-\item ¿Cuántos minutos de estiramientos debe realizar un jugador para no tener ninguna lesión? ¿Es fiable esta predicción?
+\item Calcular la recta de regresión del número de lesiones con respecto al tiempo de estiramiento. 
+\item ¿Cual es la disminución de lesiones esperada por cada minuto de estiramiento?
+\item ¿Cuántos minutos de estiramiento debe realizar un jugador para no tener ninguna lesión?
+¿Es fiable esta predicción?
 \end{enumerate}
+
+Usar las siguientes sumas ($X$=Número de minutos de estiramiento, e $Y$=Número de lesiones):
+$\sum x_i = 160$ minutos, $\sum y_j=14$ lesiones, $\sum x_i^2= 4700$ minutos$^2$, $\sum y_j^2=36$ lesiones$^2$ y $\sum
+x_iy_j=160$  minutos$\cdot$lesiones.
 }
 %SOLUCIÓN
 {Llamando $X$ a la variable que mide el tiempo de estiramiento, e $Y$ a la que mide el número de lesiones en cada jugador:
 \begin{enumerate}
-\item Recta de regresión de $Y$ sobre $X$: $y-0.08x+3.35$. Por cada minuto más de estiramiento habrá $0.08$ lesiones menos.
+\item Recta de regresión de $Y$ sobre $X$: $y-0.08x+3.35$. 
+\item Por cada minuto más de estiramiento habrá $0.08$ lesiones menos.
 \item Para no tener ninguna lesión habrá que estirar al menos $38.26$ minutos. $r=-0.91$, luego la predicción es bastante fiable.
 \end{enumerate}
 }
@@ -1770,3 +1811,16 @@ y = 0.0518\cdot 8+1.2153 = 1.6296 \text{ $\mu$gr/dl}.
 \]
 \end{enumerate}
 }
+
+
+\newproblem*{reg-45}{far}{*}
+%ENUNCIADO
+{Dar ejemplos de:
+\begin{enumerate}
+\item Dos variables no relacionadas. 
+\item Dos variables relacionadas de manera creciente. 
+\item Dos variables relacionadas de manera decreciente. 
+\end{enumerate}
+}
+
+

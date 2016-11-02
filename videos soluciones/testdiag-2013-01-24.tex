@@ -1,0 +1,143 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Test diagnósticos}\\
+Titulaciones: & \structure{Ciencias de la Salud}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\large
+Para detectar el parásito del paludismo existe un test de respuesta inmediata que produce un 2\% de falsos
+positivos y un 4\% de falsos negativos. 
+En una determinada región de África se sabe que hay un 32\% de personas con paludismo. 
+Se pide:
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que el test de un diagnóstico acertado?
+\item ¿Cuál es el poder predictivo negativo del test?
+\item ¿Cuánto debería valer la sensibilidad del test para que el poder predictivo negativo fuese de al menos el 99\%?
+\end{enumerate} 
+Nota: Un falso positivo se produce cuando el test da positivo al aplicarlo a una persona sana. Un falso negativo se
+produce cuando el test da negativo al aplicarlo a una persona enferma. El poder predictivo negativo es el porcentaje de
+personas sanas entre las que han dado negativo en el test.
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que el test de un diagnóstico acertado?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$E=$ Tener paludismo\\
+$+=$ Resultado del test positivo\\
+$-=$ Resultado del test negativo\\
+2\% de falsos positivos\\[7mm]
+4\% de falsos negativos\\[7mm]
+32\% de personas con paludismo
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item ¿Cuál es el poder predictivo negativo del test?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$E=$ Tener paludismo\\
+$+=$ Resultado del test positivo\\
+$-=$ Resultado del test negativo\\
+$P(+|\overline{E})=0.02$\\
+$P(-|E) = 0.04$\\
+$P(E)=0.32$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item ¿Cuánto debería valer la sensibilidad del test para que el poder predictivo negativo fuese de al menos el 99\%?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$E=$ Tener paludismo\\
+$+=$ Resultado del test positivo\\
+$-=$ Resultado del test negativo\\
+$P(+|\overline{E})=0.02$\\
+$P(-|E) = 0.04$\\
+$P(E)=0.32$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

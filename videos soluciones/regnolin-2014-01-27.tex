@@ -1,0 +1,161 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Regresión no lineal}\\
+Titulaciones: & \structure{Química}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\large
+En un estudio se ha medido el calor liberado en una reacción química en distintos instantes
+desde el comienzo de la reacción, obteniendo los siguientes datos:
+\[
+\begin{array}{lrrrrr}
+\hline
+\textrm{Tiempo en minutos} & 2.5 & 3.7 & 4.1 & 5.3 & 6.2 \\
+\textrm{Calor en calorías} & 15.9 & 44.5 & 65.6 & 206.5 & 498.7\\
+\hline
+\end{array}
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular el modelo de regresión lineal del calor sobre el tiempo. 
+Según este modelo ¿Cuándo cambiarán las calorías por cada minuto que pase?
+\item Calcular el modelo de regresión exponencial del calor sobre el tiempo.
+\item Utilizando el mejor de los dos modelos anteriores, predecir el calor generado a los 5 minutos de la reacción. ¿Es
+fiable la predicción? Justificar la respuesta. 
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\item Calcular el modelo de regresión lineal del calor sobre el tiempo. 
+Según este modelo ¿Cuándo cambiarán las calorías por cada minuto que pase?
+\[
+\begin{array}{lrrrrr}
+\hline
+X & 2.5 & 3.7 & 4.1 & 5.3 & 6.2 \\
+Y & 15.9 & 44.5 & 65.6 & 206.5 & 498.7\\
+\hline
+\end{array}
+\]
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$X=$ Tiempo en minutos\\
+$Y=$ Calor liberado en calorías
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\item[2.] Calcular el modelo de regresión exponencial del calor sobre el tiempo.
+\[
+\begin{array}{lrrrrr}
+\hline
+X & 2.5 & 3.7 & 4.1 & 5.3 & 6.2 \\
+Y & 15.9 & 44.5 & 65.6 & 206.5 & 498.7\\
+\hline
+\end{array}
+\]
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$X=$ Tiempo en minutos\\
+$Y=$ Calor liberado en calorías\\
+$\bar x = 4.36$ min\\
+$s_x^2=1.6464$ min$^2$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\item[3.] Utilizando el mejor de los dos modelos anteriores, predecir el calor generado a los 5 minutos de la reacción. ¿Es
+fiable la predicción? Justificar la respuesta. 
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$X=$ Tiempo en minutos\\
+$Y=$ Calor liberado en calorías\\
+$Z=\log(Y)$\\
+$s_x^2=1.6464$ min$^2$\\
+$s_y^2=31940.3344$ cal$^2$\\
+$s_z^2=1.4427 \log^2(\mbox{cal})$\\
+$s_{xy}=207.1436$ min$\cdot$cal\\
+$s_{xz}=1.5405$ min$\cdot\log(\mbox{cal})$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

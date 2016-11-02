@@ -1,0 +1,128 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Variables aleatorias}\\
+Titulaciones: & \structure{Farmacia, Biotecnología}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\large
+Cierta normativa obliga a que los envases de un fármaco no tengan menos de 120 mg  de principio activo.
+La máquina dosificadora de un laboratorio produce estos envases siguiendo una distribución normal de mediana 123 mg y
+desviación típica 2 mg.
+Se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que un envase del fármaco elegido al azar cumpla la normativa.
+\item ¿Entre qué cantidades estará el contenido del 90\% central de los envases producidos en el laboratorio? 
+\item ¿Qué cantidad debiera imponer otra normativa para que resulte ser cumplida por el 95\% de los envases producidos
+en este laboratorio? 
+\end{enumerate} 
+\end{frame}
+
+\newgeometry{top=.0cm, left=.0cm, right=.1cm}
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\item Calcular la probabilidad de que un envase del fármaco elegido al azar cumpla la normativa.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$X=$ Cantidad de principio activo de un envase $\sim N(123,2)$\\
+Contenido mínimo de 120 mg según normativa
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\item[2.] ¿Entre qué cantidades estará el contenido del 90\% central de los envases producidos en el laboratorio? 
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$X=$ Cantidad de principio activo de un envase $\sim N(123,2)$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\item[3.]¿Qué cantidad debiera imponer otra normativa para que resulte ser cumplida por el 95\% de los envases producidos
+en este laboratorio? 
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$X=$ Cantidad de principio activo de un envase $\sim N(123,2)$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

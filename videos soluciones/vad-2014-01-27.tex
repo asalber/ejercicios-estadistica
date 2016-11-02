@@ -1,0 +1,133 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=0.5cm, text margin right=0.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Variables aleatorias}\\
+Titulaciones: & \structure{Farmacia}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\large
+Una farmacia recibe una media de 4 visitas por guardia nocturna que realiza. Se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que en una guardia nocturna reciba más de 3 visitas.
+\item Si la farmacia tiene que hacer guardias nocturnas de un fin de semana semana completo (sábado y domingo), ¿qué
+probabilidad hay de que reciba al menos 6 visitas a lo largo del fin de semana?
+\item ¿Qué probabilidad hay de que en 10 guardias nocturnas que realice haya al menos 7 noches en las que reciba más de
+3 visitas? ¿Cuántas noches se espera que tenga más de 3 visitas?
+\end{enumerate} 
+\end{frame}
+
+
+\newgeometry{top=0cm, left=.0cm, right=.15cm}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\item Calcular la probabilidad de que en una guardia nocturna reciba más de 3 visitas.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+Media de 4 visitas por guardia\\
+$X$= Número de visitas en una guardia
+
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+\begin{enumerate}
+\item[2.] Si la farmacia tiene que hacer guardias nocturnas de un fin de semana semana completo (sábado y domingo), ¿qué
+probabilidad hay de que reciba al menos 6 visitas a lo largo del fin de semana?
+\end{enumerate}
+
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+Media de 4 visitas por guardia\\
+$Y$= Número de visitas en un fin de semana
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.59\textwidth}
+\begin{enumerate}
+\item[3.]¿Qué probabilidad hay de que en 10 guardias nocturnas que realice haya al menos 7 noches en las que reciba más de
+3 visitas? ¿Cuántas noches se espera que tenga más de 3 visitas? 
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$X$= Número de visitas en una guardia $\sim P(4)$\\
+$P(X>3)=0.5665$\\
+$Z$= Número de guardias con más de 3 visitas en una muestra de 10 guardias
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

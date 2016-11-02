@@ -1,0 +1,362 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+
+% GENERAL PACKAGES
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification \usepackage[T1]{fontenc} \usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-all,pst-math,pst-plot,pst-infixplot,pst-xkey,pstricks-add}
+% \usepackage{url}
+\usepackage{textcomp}
+\usepackage[spanish]{babel}
+
+% COLORS
+\definecolor{blueceu}{RGB}{0,164,227} 
+\definecolor{greenceu}{RGB}{194,205,24} 
+\definecolor{redceu}{RGB}{238,50,36} 
+\definecolor{purpleceu}{RGB}{169,78,145} 
+\definecolor{greyceu}{RGB}{117,117,97} 
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246} 
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+% FONTS
+\usepackage{mathpazo} % Palatino
+
+% CONFIGURATION
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+% ---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\vspace{1.5cm}
+	
+	\begin{center}
+		\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+		\bigskip
+		
+		\large
+		\begin{tabular}{rl}
+			Temas: & \structure{Probabilidad} \\
+			Titulaciones: & \structure{Medicina y Farmacia}
+		\end{tabular}
+		
+		\bigskip
+		Alfredo Sánchez Alberca\\
+		\url{asalber@ceu.es}\\
+		\url{http://aprendeconalf.es}\\
+		
+		\includegraphics[scale=0.2]{../img/logo_uspceu}
+		
+		\biskip
+		\includegraphics[scale=0.07]{../img/cc-logo}
+		\includegraphics[scale=0.2]{../img/cc-by}
+		\includegraphics[scale=0.2]{../img/cc-e}
+		\includegraphics[scale=0.2]{../img/cc-c}
+	\end{center}
+\end{frame}
+	
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\large
+	Un laboratorio farmacéutico está probando un nuevo medicamento y se están estudiando los efectos secundarios que
+	provoca.
+	Se sabe que la probabilidad de que el medicamento provoque mareos es de $0.20$ y de que provoque náuseas es de $0.50$. 
+	También se sabe que la probabilidad de que provoque solo mareos es $0.15$.
+	\begin{enumerate}
+		\item ¿Qué probabilidad hay de que el medicamento provoque algún efecto secundario?
+		\item ¿Qué probabilidad hay de que el medicamento provoque los dos efectos secundarios?
+		\item ¿Qué probabilidad hay de que el medicamento provoque solo náuseas?
+		\item ¿Qué probabilidad hay de que el medicamento provoque náuseas si ha provocado mareos?
+		\item ¿Son independientes los efectos secundarios?
+	\end{enumerate}
+\end{frame}
+	
+	
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			Un laboratorio farmacéutico está probando un nuevo medicamento y se están estudiando los efectos secundarios que
+			provoca.
+			Se sabe que la probabilidad de que el medicamento provoque mareos es de $0.20$ y de que provoque náuseas es de $0.50$. 
+			También se sabe que la probabilidad de que provoque solo mareos es $0.15$.
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\structure{Datos}\\
+			$M \equiv$ Provocar mareos\\
+			$N \equiv$ Provocar náuseas\\
+			$P(M)=0.2$\\
+			$P(N)=0.5$\\
+			$P(M\cap \overline N)=0.15$
+		\end{column}
+	\end{columns}
+\end{frame}
+	
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.5\textwidth}
+			\begin{enumerate}
+				\item ¿Qué probabilidad hay de que el medicamento provoque algún efecto secundario?
+			\end{enumerate}		
+		\end{column}
+		\begin{column}[T]{0.5\textwidth}
+			\structure{Datos}\\
+			\scalebox{0.7}{
+			\begin{center}
+				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
+					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
+					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.25$}}{\pstree{\TR{$(M,N)$}}{\TR{$0.05$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.75$}}{\pstree{\TR{$(M,\overline N)$}}{\TR{$0.15$}}}
+					}
+					\pstree{\TR{$\overline M$}\taput{\scriptsize $0.8$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.5625$}}{\pstree{\TR{$(\overline M,N)$}}{\TR{$0.45$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.4375$}}{\pstree{\TR{$(\overline M,\overline
+						N)$}}{\TR{$0.35$}}} }
+					\pstree[linestyle=none]{\Tp[edge=none]}{\Tp}
+				}
+			\end{center}
+		}
+		\begin{center}
+			\psset{unit=1}
+			\begin{pspicture}(-1,-1.5)(4,1.5)
+			\psset{fillstyle=solid}
+			\pscustom[fillcolor=white]{\psframe(-1,-1.5)(4,1.5)}
+			\pscustom[fillcolor=yellow]{%
+			\psarc(1,0){1}{60}{-60}
+			\psarcn(2,0){1}{240}{120}}
+			\pscustom[fillcolor=yellow]{%
+			\psarc(2,0){1}{240}{120}
+			\psarcn(1,0){1}{60}{-60}}
+			\pscustom[fillcolor=yellow]{%
+			\psarc(1,0){1}{-60}{60}
+			\psarc(2,0){1}{120}{240}}
+			\rput(-0.7,1.8){$E$}
+			\rput(-0.5,1.2){\scriptsize$\overline M\cap \overline N$}
+			\rput(-0.5,0.8){\scriptsize $0.35$}
+			\rput(0.5,0.2){\scriptsize $M\cap\overline N$}
+			\rput(0.5,-0.2){\scriptsize $0.15$}
+			\rput(1.5,0.2){\scriptsize $M\cap N$}
+			\rput(1.5,-0.2){\scriptsize $0.05$}
+			\rput(2.5,0.2){\scriptsize$\overline M\cap N$}
+			\rput(2.5,-0.2){\scriptsize$0.45$}
+			\end{pspicture}
+		\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.5\textwidth}
+			\begin{enumerate}
+  \setcounter{enumi}{1}
+				\item ¿Qué probabilidad hay de que el medicamento provoque los dos efectos secundarios?
+			\end{enumerate}		
+		\end{column}
+		\begin{column}[T]{0.5\textwidth}
+			\structure{Datos}\\
+			\scalebox{0.7}{
+			\begin{center}
+				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
+					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
+					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.25$}}{\pstree{\TR{$(M,N)$}}{\TR{$0.05$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.75$}}{\pstree{\TR{$(M,\overline N)$}}{\TR{$0.15$}}}
+					}
+					\pstree{\TR{$\overline M$}\taput{\scriptsize $0.8$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.5625$}}{\pstree{\TR{$(\overline M,N)$}}{\TR{$0.45$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.4375$}}{\pstree{\TR{$(\overline M,\overline
+						N)$}}{\TR{$0.35$}}} }
+					\pstree[linestyle=none]{\Tp[edge=none]}{\Tp}
+				}
+			\end{center}
+		}
+		\begin{center}
+			\psset{unit=1}
+			\begin{pspicture}(-1,-1.5)(4,1.5)
+			\psset{fillstyle=solid}
+			\pscustom[fillcolor=white]{\psframe(-1,-1.5)(4,1.5)}
+			\pscustom[fillstyle=none]{%
+				\psarc(1,0){1}{60}{-60}
+				\psarcn(2,0){1}{240}{120}}
+			\pscustom[fillstyle=none]{%
+				\psarc(2,0){1}{240}{120}
+				\psarcn(1,0){1}{60}{-60}}
+			\pscustom[fillcolor=yellow]{%
+				\psarc(1,0){1}{-60}{60}
+				\psarc(2,0){1}{120}{240}}
+			\rput(-0.7,1.8){$E$}
+			\rput(-0.5,1.2){\scriptsize$\overline M\cap \overline N$}
+			\rput(-0.5,0.8){\scriptsize $0.35$}
+			\rput(0.5,0.2){\scriptsize $M\cap\overline N$}
+			\rput(0.5,-0.2){\scriptsize $0.15$}
+			\rput(1.5,0.2){\scriptsize $M\cap N$}
+			\rput(1.5,-0.2){\scriptsize $0.05$}
+			\rput(2.5,0.2){\scriptsize$\overline M\cap N$}
+			\rput(2.5,-0.2){\scriptsize$0.45$}
+			\end{pspicture}
+		\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.5\textwidth}
+			\begin{enumerate}
+  \setcounter{enumi}{2}
+				\item ¿Qué probabilidad hay de que el medicamento provoque solo náuseas?
+			\end{enumerate}		
+		\end{column}
+		\begin{column}[T]{0.5\textwidth}
+			\structure{Datos}\\
+			\scalebox{0.7}{
+			\begin{center}
+				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
+					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
+					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.25$}}{\pstree{\TR{$(M,N)$}}{\TR{$0.05$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.75$}}{\pstree{\TR{$(M,\overline N)$}}{\TR{$0.15$}}}
+					}
+					\pstree{\TR{$\overline M$}\taput{\scriptsize $0.8$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.5625$}}{\pstree{\TR{$(\overline M,N)$}}{\TR{$0.45$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.4375$}}{\pstree{\TR{$(\overline M,\overline
+						N)$}}{\TR{$0.35$}}} }
+					\pstree[linestyle=none]{\Tp[edge=none]}{\Tp}
+				}
+			\end{center}
+		}
+		\begin{center}
+			\psset{unit=1}
+			\begin{pspicture}(-1,-1.5)(4,1.5)
+			\psset{fillstyle=solid}
+			\pscustom[fillcolor=white]{\psframe(-1,-1.5)(4,1.5)}
+			\pscustom[fillcolor=yellow]{%
+				\psarc(2,0){1}{240}{120}
+				\psarcn(1,0){1}{60}{-60}}
+			\pscustom[fillstyle=none]{%
+				\psarc(1,0){1}{60}{-60}
+				\psarcn(2,0){1}{240}{120}}
+			\pscustom[fillstyle=none]{%
+				\psarc(1,0){1}{-60}{60}
+				\psarc(2,0){1}{120}{240}}
+			\rput(-0.7,1.8){$E$}
+			\rput(-0.5,1.2){\scriptsize$\overline M\cap \overline N$}
+			\rput(-0.5,0.8){\scriptsize $0.35$}
+			\rput(0.5,0.2){\scriptsize $M\cap\overline N$}
+			\rput(0.5,-0.2){\scriptsize $0.15$}
+			\rput(1.5,0.2){\scriptsize $M\cap N$}
+			\rput(1.5,-0.2){\scriptsize $0.05$}
+			\rput(2.5,0.2){\scriptsize$\overline M\cap N$}
+			\rput(2.5,-0.2){\scriptsize$0.45$}
+			\end{pspicture}
+		\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.5\textwidth}
+			\begin{enumerate}
+  \setcounter{enumi}{3}
+				\item ¿Qué probabilidad hay de que el medicamento provoque náuseas si ha provocado mareos?
+			\end{enumerate}		
+		\end{column}
+		\begin{column}[T]{0.5\textwidth}
+			\structure{Datos}\\
+			\scalebox{0.7}{
+			\begin{center}
+				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
+					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
+					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.25$}}{\pstree{\TR{$(M,N)$}}{\TR{$0.05$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.75$}}{\pstree{\TR{$(M,\overline N)$}}{\TR{$0.15$}}}
+					}
+					\pstree{\TR{$\overline M$}\taput{\scriptsize $0.8$}}{
+						\pstree[linestyle=none]{\TR{$N$}\taput{\scriptsize $0.5625$}}{\pstree{\TR{$(\overline M,N)$}}{\TR{$0.45$}}}
+						\pstree[linestyle=none]{\TR{$\overline N$}\taput{\scriptsize $0.4375$}}{\pstree{\TR{$(\overline M,\overline
+						N)$}}{\TR{$0.35$}}} }
+					\pstree[linestyle=none]{\Tp[edge=none]}{\Tp}
+				}
+			\end{center}
+		}
+		\begin{center}
+			\psset{unit=1}
+			\begin{pspicture}(-1,-1.5)(4,1.5)
+			\psset{fillstyle=solid}
+			\pscustom[fillcolor=white]{\psframe(-1,-1.5)(4,1.5)}
+			\pscustom{%
+				\psarc(1,0){1}{60}{-60}
+				\psarcn(2,0){1}{240}{120}}
+			\pscustom{%
+				\psarc(2,0){1}{240}{120}
+				\psarcn(1,0){1}{60}{-60}}
+			\pscustom{%
+				\psarc(1,0){1}{-60}{60}
+				\psarc(2,0){1}{120}{240}}
+			\rput(-0.7,1.8){$E$}
+			\rput(-0.5,1.2){\scriptsize$\overline M\cap \overline N$}
+			\rput(-0.5,0.8){\scriptsize $0.35$}
+			\rput(0.5,0.2){\scriptsize $M\cap\overline N$}
+			\rput(0.5,-0.2){\scriptsize $0.15$}
+			\rput(1.5,0.2){\scriptsize $M\cap N$}
+			\rput(1.5,-0.2){\scriptsize $0.05$}
+			\rput(2.5,0.2){\scriptsize$\overline M\cap N$}
+			\rput(2.5,-0.2){\scriptsize$0.45$}
+			\end{pspicture}
+		\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.75\textwidth}
+			\begin{enumerate}
+  \setcounter{enumi}{4}
+				\item ¿Son independientes los efectos secundarios?
+			\end{enumerate}		
+		\end{column}
+		\begin{column}[T]{0.25\textwidth}
+			\structure{Datos}\\
+			$P(M)=0.2$\\
+			$P(N)=0.5$\\
+			$P(M\cap N)=0.05$
+		\end{column}
+	\end{columns}
+\end{frame}
+	
+\end{document}

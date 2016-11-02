@@ -1,0 +1,194 @@
+% Author Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\documentclass[a4paper,titlepage,dvips]{article}
+%===============================================
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{macros}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{probsoln-alf}
+%\usepackage{times}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfauthor={Alfredo Sánchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de Estad\'istica} } 
+\usepackage{url}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}}
+\rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Matemática Aplicada y Estadística}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+
+\makeatletter
+\let\savees@listquot\es@listquot
+\def\es@listquot{\protect\savees@listquot}
+\makeatletter
+
+\reversemarginpar
+\showshortanswers
+%\showanswers 
+\PSNrandseed{2007}
+
+
+\begin{document}
+\sloppy
+
+\title{\vskip 2cm
+\shadowbox{\Huge \textbf{\textsf{\quad \textcolor[rgb]{0.00,0.00,0.50}{EJERCICIOS DE ESTADÍSTICA}\quad}}}\\
+   \vskip 1cm
+   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Asignatura: Matemáticas}}}\\
+   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Curso: 1º de Grado en Farmacia}}}
+   }
+\author{
+   Eduardo López Ramírez (\url{elopez@ceu.es})
+   \and
+   José Rojo Montijano (\url{jrojo.eps@ceu.es})
+   \and
+   Anselmo Romero Limón (\url{arlimon@ceu.es})
+   \and
+   Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+}
+\date{Curso 2014-2015\\[1cm]
+\includegraphics[scale=0.3]{img/logo_uspceu_01}}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\input{descriptiva}
+\input{regresion}
+\input{probabilidad}
+\input{variables_aleatorias_discretas}
+\input{variables_aleatorias_continuas}
+\input{estimacion}
+
+\section{Estadística Descriptiva}
+\begin{enumerate}[leftmargin=*]
+\item \useproblem{des-3}
+\item \useproblem{des-2}
+\item \useproblem{des-10}
+\item \useproblem{des-16}
+\item \useproblem{des-23}
+\item \useproblem{des-19}
+\item \useproblem{des-20}
+\item \useproblem{des-24}
+\item \useproblem{des-26}
+\item \useproblem{des-37}
+\item \useproblem{des-29}
+\item \useproblem{des-47}
+\item \useproblem{des-48}
+\item \useproblem{des-18}
+\item \useproblem{des-54}
+\item \useproblem{des-55}
+\item \useproblem{des-56}
+\end{enumerate}
+
+\section{Regresión y Correlación}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{reg-5}
+\item \useproblem{reg-8}
+\item \useproblem{reg-3}
+\item \useproblem{reg-6}
+\item \useproblem{reg-12}
+\item \useproblem{reg-10}
+\item \useproblem{reg-11}
+\item \useproblem{reg-13}
+\item \useproblem{reg-7}
+\item \useproblem{reg-14}
+\item \useproblem{reg-15}
+\item \useproblem{reg-18}
+\item \useproblem{reg-24}
+\item \useproblem{reg-25}
+\item \useproblem{reg-26}
+\item \useproblem{reg-27}
+\item \useproblem{reg-28}
+\item \useproblem{reg-44}
+\end{enumerate}
+
+\section{Probabilidad}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{pro-31}
+\item \useproblem{pro-33}
+\item \useproblem{pro-1}
+\item \useproblem{pro-2}
+\item \useproblem{pro-3}
+\item \useproblem{pro-5}
+\item \useproblem{pro-8}
+\item \useproblem{pro-10}
+\item \useproblem{pro-11}
+\item \useproblem{pro-12}
+\item \useproblem{pro-15}
+\item \useproblem{pro-16}
+\item \useproblem{pro-17}
+\item \useproblem{pro-19}
+\item \useproblem{pro-20}
+\item \useproblem{pro-25}
+\item \useproblem{pro-37}
+\item \useproblem{pro-44}
+\item \useproblem{pro-45}
+\end{enumerate}
+
+\section{Variables Aleatorias}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{vad-1}
+\item \useproblem{vad-2}
+\item \useproblem{vad-3}
+\item \useproblem{vad-5}
+\item \useproblem{vad-7}
+\item \useproblem{vad-11}
+\item \useproblem{vad-13}
+\item \useproblem{vad-15}
+\item \useproblem{vad-18}
+\item \useproblem{vad-22}
+\item \useproblem{vad-23}
+\item \useproblem{vad-27}
+\item \useproblem{vad-28}
+\item \useproblem{vad-30}
+\item \useproblem{vac-1}
+\item \useproblem{vac-2}
+\item \useproblem{vac-4}
+\item \useproblem{vac-6}
+\item \useproblem{vac-7}
+\item \useproblem{vac-11}
+\item \useproblem{vac-13}
+\item \useproblem{vac-17}
+\item \useproblem{vac-18}
+\item \useproblem{vac-23}
+\item \useproblem{vac-31}
+\item \useproblem{vac-35}
+\item \useproblem{vac-36}
+\end{enumerate}
+
+\section{Estimación de parámetros}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{ico-1}
+\item \useproblem{ico-2}
+\item \useproblem{ico-3}
+\item \useproblem{ico-4}
+\item \useproblem{ico-7}
+\item \useproblem{ico-13}
+\item \useproblem{ico-14}
+\item \useproblem{ico-16}
+\item \useproblem{ico-21}
+\item \useproblem{ico-19}
+\item \useproblem{ico-23}
+\item \useproblem{ico-22}
+\item \useproblem{ico-27}
+\item \useproblem{ico-29}
+\end{enumerate}
+
+\vspace{2cm}
+
+\textsc{Nota}: Los problemas marcados con una estrella ($\bigstar$) son problemas de
+exámenes de otros años.
+\end{document}
