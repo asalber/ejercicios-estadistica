@@ -1,5 +1,51 @@
-/ejercicios_estadistica_farmacia_2012-2013.pdf
-/ejercicios_estadistica_farmacia_2013-2014.pdf
-/vad-2015-01-13.pdf
-/ejercicios_estadistica_farmacia_2016-2017.pdf
-/ejercicios_estadistica_farmacia_2016-2017.synctex.gz
+## Core xelatex files
+*.aux
+*.log
+*.out
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.snm
+*.vrb
+
+# hyperref
+*.brf
+
+# listings
+*.lol
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
+#Others
+*.sh
+/tmp/
+
+
