@@ -41,7 +41,7 @@ x-\frac{x^2}{4} & \text{si $0\leq x\leq 2$,}\\
 %ENUNCIADO
 {La función de densidad de la variable aleatoria continua $X$ viene dada por la gráfica siguiente:
 \begin{center}
-\includegraphics[scale=0.8]{img/vac-2}
+\scalebox{0.6}{\input{img/variables_aleatorias_continuas/funcion_densidad_1}}
 \end{center}
 Calcular:
 \begin{enumerate}
@@ -240,12 +240,18 @@ calcular $P(\left| X-2\right| <3)$.
 {Se sabe que el nivel de colesterol en varones de más de 30 años sigue una distribución normal, de media 220 mg/dl y desviación típica 30 mg/dl. Realizando un estudio sobre 20000 varones mayores de 30 años,
 \begin{enumerate}
 \item ¿Cuántos se espera que tengan su nivel de colesterol entre 210 y 240 mg/dl?
-\item ¿Cuántos se espera que tengan su nivel de colesterol por encima de 250 mg/dl?
-\item ¿Cuál será el nivel de colesterol, por encima del cual se espera que esté el 20\% de la población?
+\item Si un nivel de colesterol por encima de 250 mg/dl puede provocar trombosis, ¿cuántos tienen riesgo de trombosis?
+\item ¿Cuál será el nivel de colesterol por encima del cual está el 20\% de la población?
 \end{enumerate}
 }
 %SOLUCIÓN
-{}
+{
+\begin{enumerate}
+\item $P(210\leq X\leq 240)=0.3781\rightarrow 7561.3$  varones. 
+\item $P(X>250)=0.1587\rightarrow 3173.1$ varones. 
+\item $P_{80}=245.2486$ mg/dl. 
+\end{enumerate}
+}
 %RESOLUCIÓN
 {}
 
@@ -255,10 +261,9 @@ calcular $P(\left| X-2\right| <3)$.
 {Entre los diabéticos, el nivel de glucosa en la sangre en ayunas, puede suponerse de distribución aproximadamente
 normal, con media 106 mg/100 ml y desviación típica 8 mg/100 ml.
 \begin{enumerate}
-\item Hallar $P(X\leq 120 \text{ mg}/ 100 \text{ ml})$.
+\item Calcular la probabilidad de que una persona diabética elegida al azar tenga un nivel de glucosa inferior a  120mg/100ml.
 \item ¿Qué porcentaje de diabéticos tendrá niveles entre 90 y 120 mg/100 ml?
-\item Encontrar un valor que tenga la propiedad de que el 25\% de los diabéticos tenga un nivel de glucosa $X$ por
-debajo de dicho valor.
+\item Calcular e interpretar el primer cuartil del nivel de glucosa. 
 \end{enumerate}
 }
 %SOLUCIÓN
@@ -349,7 +354,8 @@ Suponiendo que la tensión arterial máxima sigue una distribución normal, se p
 {Un grupo de 100 alumnos realiza un examen. Una vez corregido, el profesor observa que la nota media es $4.2$ y que 32 alumnos han tenido una calificación superior a $5$. Suponiendo que las notas siguen una distribución normal, ¿cuántos alumnos habrán obtenido una calificación superior a $7$?
 }
 %SOLUCIÓN
-{}
+{$P(X>7)=0.0508\rightarrow 5.1$ alumnos.
+}
 %RESOLUCIÓN
 {}
 
@@ -832,6 +838,121 @@ detectar la enfermedad se realiza un test diagnóstico que da positivo cuando el
 \item $P(+/E)=0.8944$ y $P(-/\overline E)=0.9962$.
 \item $P(E)=0.0465$.
 \item $P(E\cap +)+P(\overline E\cap -)= 0.0416 + 0.9498 = 0.99143$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vac-37}{gen}{*}
+%ENUNCIADO
+{Sea $Z$ una variable aleatoria continua que sigue un modelo de distribución normal estándar $N(0,1)$.
+Calcular las siguientes probabilidades utilizando la tabla de la función de distribución.
+\begin{enumerate}
+\item $P(Z<1.24)$
+\item $P(Z>-0.68)$
+\item $P(-1.35\leq Z\leq 0.44)$
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $P(Z<1.24)=0.8925$.
+\item $P(Z>-0.68)=0.7517$.
+\item $P(-1.35\leq Z\leq 0.44)=0.5815$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vac-38}{gen}{*}
+%ENUNCIADO
+{Sea $Z$ una variable aleatoria continua con distribución normal estándar.
+Determinar el valor de $x$ en los siguientes casos utilizando la tabla de la función de distribución.
+\begin{enumerate}
+\item $P(Z<x)=0.6406$.
+\item $P(Z>x)=0.0606$.
+\item $P(0\leq Z\leq x)=0.4783$.
+\item $P(-1.5\leq Z\leq x)=0.2313$.
+\item $P(-x\leq Z\leq x)=0.5467$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $x=0.3601$. 
+\item $x=1.5498$. 
+\item $x=2.0198$.
+\item $x=−0.5299$. 
+\item $x=0.7499$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vac-39}{gen}{*}
+%ENUNCIADO
+{Sea $X$ una variable aleatoria continua con distribución normal $N(10,2)$.
+\begin{enumerate}
+\item Calcular $P(X\leq 10)$.
+\item Calcular $P(8\leq X\leq 14)$.
+\item Calcular el rango intercuartílico. 
+\item Calcular el tercer decil. 
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $P(X\leq 10)=0.5$.
+\item $P(8\leq X\leq 14)=0.8186$. 
+\item $RI=2.698$.
+\item $D_3=8.9512$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{vac-40}{nut}{*}
+%ENUNCIADO
+{Un estudio trata de determinar el efecto de una dieta baja en grasas sobre el tiempo de vida de un tipo de ratas. 
+Las ratas se dividieron en dos grupos, uno con una dieta normal y el otro con una dieta baja en grasas. 
+Se supone que el tiempo de vida sigue un modelo de distribución normal con igual varianza pero con distintas medias. 
+Si el 20\% de las ratas con dieta normal vivieron más de 12 meses, el 5\% vivieron menos de 8 meses y el 85\% de las ratas con dieta baja en grasas vivieron más de 11 meses, 
+\begin{enumerate}
+\item ¿Cuál es la media y la desviación típica del tiempo de vida de las ratas con una dieta baja en grasas?
+\item Si en el experimento había un 40\% de ratas con dieta normal y un 60\% de ratas con dieta baja en grasas, ¿cuál es la probabilidad de que una rata elegida al azar muera antes de 9 meses?
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $X$ al tiempo de vida de las ratas. 
+\begin{enumerate}
+\item $\mu=10.6461$ meses y $s=1.6087$ meses. 
+\item $P(X<9)=0.068$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{vac-41}{med}{*}
+%ENUNCIADO
+{Un test diagnóstico para detectar el dopaje en atletas da un resultado positivo cuando la concentración de una determinada sustancia en sangre es mayor de 4 $\mu$g/ml.
+Si la distribución de la concentración de a sustancia en sangre en atletas dopados sigue un modelo de distribución normal con media $4.5$
+$\mu$g/ml y desviación típica $0.2$ $\mu$g/ml, y en atletas no dopados sigue un modelo de distribución normal con media $3$ $\mu$g/ml y desviación típica $0.3$ $\mu$g/ml, 
+\begin{enumerate}
+\item ¿cuál es la sensibilidad y la especificidad del test?
+\item Si hay un $10\%$ de atelas dopados en una competición, ¿cuál es el valor predictivo positivo del test? 
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $D$ al suceso aleatorio consistente en estar dopado, $X$ a la concentración de la sustancia en atletas dopados e $Y$ a la concentración de la sustancia en atletas no dopados.
+\begin{enumerate}
+\item Sensibilidad $P(+|D)=P(X>4)=0.9938$ y especificidad $P(-|\bar D)=P(Y<4)=0.9996$.
+\item VPP $P(D|+)=0.9961$.
 \end{enumerate}
 }
 %RESOLUCIÓN

@@ -226,24 +226,23 @@ Se pide:
 \begin{enumerate}
 \item Dibujar el diagrama de dispersión. Según la nube de puntos, ¿qué tipo de modelo explicaría mejor la relación
 entre los días de dieta y los kilos perdidos? 
-\item Dibujar el diagrama de dispersión tomando una escala logarítmica para los días de dieta.
-\item Calcular el modelo lineal y el logarítmico de los kilos perdidos con respecto a los días de dieta.\\
-Nota: Utilizar los datos muestrales sin agrupar.
-\item Utilizar el mejor de los modelos anteriores para predecir en número de kilos perdidos tras 40 días de dieta y
-tras 100 días.
+\item Calcular el modelo lineal y el logarítmico de los kilos perdidos con respecto a los días de dieta.
+\item Utilizar el mejor de los modelos anteriores para predecir en número de kilos perdidos tras 40 días de dieta y tras 100 días.
 ¿Son fiables estas predicciones?
 \end{enumerate}
+Usar las siguientes sumas ($X$=Días de dieta e $Y$=Peso perdido): $\sum x_i=564$ días, $\sum \log(x_i)=45.8086$
+$\log(\mbox{días})$, $\sum y_j=63.6$ kg, $\sum x_i^2=28234$ días$^2$, $\sum \log(x_i)^2=175.6603$ $\log(\mbox{días})^2$, $\sum y_j^2=347.7$ kg$^2$, $\sum x_iy_j=3108.5$ días$\cdot$kg, $\sum \log(x_i)y_j=245.4738$ $\log(\mbox{días})\cdot$kg.
 }
 %SOLUCIÓN
-{Llamando $X$ a los días de dieta, $Y$ a los Kg perdidos y $Z=\log X$.
-\begin{enumerate}[start=3]
-\item $\bar x=47$ días, $\bar y=5.3$ Kg, $s_x^2=143.833$ días$^2$, $s_y^2=0.885$ Kg$^2$, $s_{xy}=9.942$ días$\cdot$Kg.
+{Llamando $X$ a los días de dieta, $Y$ a los kg perdidos y $Z=\log X$.
+\begin{enumerate}[start=2]
+\item $\bar x=47$ días, $\bar y=5.3$ kg, $s_x^2=143.833$ días$^2$, $s_y^2=0.885$ kg$^2$, $s_{xy}=9.942$ días$\cdot$kg.
 Modelo lineal: $y=0.069x+2.051$.\\ 
-$\bar z=3.82$ $\log$días, $s_z^2=0.07$ $\log^2$días, $s_{yz}=0.22$ $\log$días$\cdot$Kg.\\
+$\bar z=3.82$ $\log(\mbox{días})$, $s_z^2=0.07$ $\log^2(\mbox{días})$, $s_{yz}=0.22$ $\log(\mbox{días})\cdot\mbox{kg}$.\\
 Modelo logarítmico: $y=3.4\log y-7.67$. 
 \item Modelo lineal: $r^2=0.78$, modelo logarítmico: $r^2=0.86$.\\
-Predicciones con el modelo logarítmico: $y(40)=4.86$ Kg y $y(100)=7.98$ Kg. Las predicciones son fiables ya que el
-coeficiente de determinación es alto.
+Predicciones con el modelo logarítmico: $y(40)=4.86$ kg y $y(100)=7.98$ kg. 
+Las predicciones son fiables ya que el coeficiente de determinación es alto, aunque la de 100 días no lo es tanto por estar fuera del rango de valores observados en la muestra. 
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -674,7 +673,7 @@ Se pide:
 
 \newproblem{reg-23}{amb}{*}
 %ENUNCIADO
-{La siguiente tabla muestra los datos de emisiones de CO$_2$ y CH$_4$ (en Kg/hab) y el producto interior bruto per cápita (en miles US\$) de varios países en el último año:
+{La siguiente tabla muestra los datos de emisiones de CO$_2$ y CH$_4$ (en kg/hab) y el producto interior bruto per cápita (en miles US\$) de varios países en el último año:
 \[
 \begin{array}{|l|r|r|r|}
 \hline
@@ -753,36 +752,42 @@ Justificar la respuesta.
 
 \newproblem{reg-25}{far}{*}
 %ENUNCIADO
-{La concentración de un fármaco en sangre, $C$ en mg/dl, es función del tiempo, $t$ en horas, y viene dada por la
-siguiente tabla: 
-\[
-\begin{array}{|l|r|r|r|r|r|r|r|}
-\hline
-\text{t} & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
-\hline
-\text{C} & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
-\hline
-\end{array}
-\]
+{La concentración de un fármaco en sangre, $C$ en mg/dl, es función del tiempo, $t$ en horas, y viene dada por la siguiente tabla: 
+\begin{center}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Concentración de fármaco en sangre & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+Horas & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
+\bottomrule
+\end{tabular}
+\end{center}
+Se pide:
 \begin{enumerate}
-\item Según el modelo exponencial, ¿qué concentración de fármaco habría a las $4.8$ horas?
+\item Construir el modelo de regresión lineal de la concentración del fármaco sobre el tiempo.
+\item Construir el modelo de regresión exponencial de la concentración del fármaco sobre el tiempo.
+\item Usar el mejor de los dos modelos anteriores para predecir la concentración de fármaco en sangre que habrá a las $4.8$ horas.
 ¿Es fiable la predicción?
-Justificar adecuadamente la respuesta.
-\item Según el modelo lineal, ¿qué tiempo tendría que transcurrir para que la concentración de fármaco fuese de 100 mg/dl?
-¿Es fiable la predicción?
-Justificar adecuadamente la respuesta.
 \end{enumerate}
+
+Usar las siguientes sumas ($C$=Concentración del fármaco y $T$=tiempo): $\sum c_i=35$ mg/dl, $\sum \log(c_i)=10.6046$
+$\log(\mbox{mg/dl})$, $\sum t_j=541$ horas, $\sum \log(t_j)= 29.147$ $\log(\mbox{horas})$, $\sum c_i^2=203$ (mg/dl)$^2$,
+$\sum \log(c_i)^2=17.5206$ $\log(\mbox{mg/dl})^2$, $\sum t_j^2=56937$ horas$^2$, $\sum \log(t_j)^2=124.0131$
+$\log(\mbox{horas})^2$, $\sum c_it_j=3328$ mg/dl$\cdot$horas, $\sum c_i\log(t_j)=154.3387$
+mg/dl$\cdot\log(\mbox{horas})$, $\sum \log(c_i)t_j=951.6961$ $\log(\mbox{mg/dl})\cdot$horas, $\sum
+\log(c_i)\log(t_j)=46.08046$ $\log(\mbox{mg/dl})\cdot\log(\mbox{horas})$.
 }
 %SOLUCIÓN
 {Llamando $T$ al tiempo, $C$ a la concentración y $Z$ al logaritmo de la concentración:
 \begin{enumerate}
-\item $\bar t=5$ horas, $\bar z=4.1639$ $\log$(mg/dl), $s_t^2=4$ horas$^2$, $s_z^2=0.3785$ $\log^2$(mg/dl),
+\item $\bar t=5$ horas, $\bar c=77.2857$ mg/dl, $s_t^2=4$ horas$^2$,  $x_𝑦^2=2160.7755$ (mg/dl)$^2$, $s_{tc}=89$ horas(mg/dl).\\
+Modelo lineal de $C$ sobre $T$: $c=−33.9643+22.25t$.\\
+$r^2=0.9165$.
+\item  $\bar z=4.1639$ $\log$(mg/dl), $s_z^2=0.3785$ $\log^2$(mg/dl),
 $s_{tz}=1.2291$ horas$\cdot\log$(mg/dl).\\
 Modelo exponencial de $C$ sobre $T$: $c=e^{0.3073x+2.6275}$.\\
-$c(4.8)= 60.498$ mg/dl y es bastante fiable ya que $r^2= 0.999$.
-\item $\bar c=77.2857$ mg/dl, $s_c^2=2160.7755$ (mg/dl)$^2$, $s_{tc}=89$ horas(mg/dl).\\
-Modelo lineal de $T$ sobre $C$: $t=0.0412c+1.8167$.\\
-$t(100) = 5.9356$ y también es fiable ya que $r^2= 0.9165$.
+$r^2=0.9979$.
+\item $c(4.8)= 60.498$ mg/dl y es bastante fiable ya que el coeficiente de determinación es muy alto.
+
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -1140,7 +1145,7 @@ símbolos explica un poco mejor el tiempo de respuesta en las matrices sin el s�
 \newproblem{reg-32}{gen}{}
 %ENUNCIADO
 {Se ha realizado un estudio para averiguar la relación entre la edad y la fuerza física. Para ello se ha medido la edad
-de 16 participantes y el máximo peso (en Kg) que eran capaces de levantar. Los resultados obtenidos fueron: 
+de 16 participantes y el máximo peso (en kg) que eran capaces de levantar. Los resultados obtenidos fueron: 
 \begin{center}
 \resizebox{0.7\textwidth}{!}{\input{img/regresion/diagrama_dispersion_fuerza_edad}}
 \end{center}
@@ -1164,13 +1169,13 @@ kg$^2$ y $\sum x_iy_j=16026$ años$\cdot$kg.
 }
 %SOLUCIÓN
 {Llamando $X$ a la edad e $Y$ al peso levantado.
-\begin{itemize}
+\begin{enumerate}
 \item  $\bar{x}=26.9375 años, $s_x^2=97.6836$ años$^2$, $\bar{y}=48.0625$ kg, $s_y^2=169.6836$ kg$^2$, $s_{xy}=67.3164$ años$\cdot$⋅kg y $r^2=0.2734$. 
 \item $\bar x=15.5714$ años, $\bar y=42$ kg, $s_x^2=25.3878$ años$^2$, $s_y^2=295.7143$ kg$^2$, $s_{xy}=85.7143$ años$\cdot$kg y $r^2=0.9786$.
 \item $\bar x=35.2222$ años, $\bar y=52.7778$ kg, $s_x^2=32.6173$ años$^2$, $s_y^2=20.8395$ kg$^2$,
 $s_{xy}=-25.5062$ años$\cdot$kg y $r^2=0.9571$.
 \item La relación lineal entre la edad y la fuerza física es un poco más fuerte en los menores de 25 años.
-\end{itemize}
+\end{enumerate}
 }
 %RESOLUCIÓN
 {}
@@ -1645,28 +1650,40 @@ x(4)=0.9496\cdot 4+0.8655=4.6639.
 
 \newproblem{reg-41}{fis}{*}
 % ENUNCIADO
-{Los investigadores están estudiando la correlación entre obesidad y la respuesta individual al dolor. La obesidad se mide como porcentaje
-sobre el peso ideal ($x$). La respuesta al dolor se mide utilizando el umbral de reflejo de flexión nociceptiva ($y$), que es una medida de
-sensación de punzada. Se obtuvieron los siguientes resultados:
+{Los investigadores están estudiando la correlación entre obesidad y la respuesta individual al dolor. 
+La obesidad se mide como porcentaje sobre el peso ideal ($x$).
+ La respuesta al dolor se mide utilizando el umbral de reflejo de flexión nociceptiva ($y$), que es una medida de sensación de punzada. Se obtuvieron los siguientes resultados:
 \[
-\begin{array}{|l|l|l|l|l|l|l|l|l|l|l|}
-\hline
+\begin{array}{lrrrrrrrrrr}
+\toprule
 x & 89 & 90 & 75 & 30 & 51 & 75 & 62 & 45 & 90 & 20\\
-\hline
 y & 10 & 12 & 4 & 4.5 & 5.5 & 7 & 9 & 8 & 15 & 3\\
-\hline
+\bottomrule
 \end{array}
 \]
 \begin{enumerate}
-\item Dibujar el diagrama de dispersión. Según la nube de puntos, ¿qué modelo explicaría mejor la relación entre el umbral de reflejo y el
-porcentaje sobre el peso ideal?
-\item Obtener la recta de regresión que mejor exprese la dependencia del umbral de reflejo en función del porcentaje sobre el peso ideal.
-\item Obtener el modelo exponencial que mejor exprese la dependencia del umbral de reflejo en función del porcentaje sobre el peso ideal.
-\item Predecir el porcentaje de sobrepeso que se espera obtener para un umbral de reflejo de 10, ¿Es fiable esta predicción?.
+\item Dibujar el diagrama de dispersión. Según la nube de puntos, ¿qué modelo explicaría mejor la relación entre el umbral de reflejo y el porcentaje sobre el peso ideal?
+\item Según el modelo de regresión más adecuado, ¿qué respuesta al dolor se espera que tenga una persona con una obesidad del 50\%? ¿Es esta predicción fiable?
+\item Según el modelo de regresión más adecuado, ¿cuál es la obesidad esperada de una persona con un umbral reflejo de flexión nociceptiva de 10? ¿Es esta predicción fiable?
 \end{enumerate}
+
+Usar las siguientes sumas: $\sum x_i=627$, $\sum \log(x_i)=40.3858$, $\sum y_j=78$,
+$\sum \log(y_j)=19.4119$, $\sum x_i^2=45141$, $\sum \log(x_i)^2=165.4516$, $\sum y_j^2=738.5$, $\sum
+\log(y_j)^2=40.0458$, $\sum x_iy_j=5538.5$, $\sum x_i\log(y_j)=1306.051$, $\sum \log(x_i)y_j=327.3887$, $\sum
+\log(x_i)\log(y_j)=80.1831$.
 }
 %SOLUCIÓN
 {
+\begin{enumerate}[start=2]
+\item $\bar{x}=62.9$, $s_x^2=588.09$, $\bar{y}=9.22$, $s_y^2=11.0056$ y $s_{xy}=82.0356$.\\
+Recta de regresión de la respuesta al dolor sobre la obesidad: $y=1.3232+0.1255x$. $r^2=0.8422$.\\
+$\overline{\log⁡(x)}=4.0412$, $s_{\log⁡(x)}^2=0.2366$ y $s_{\log⁡(x)y}=1.4973$.
+Modelo logarítmico de la respuesta al dolor sobre la obesidad: $y=−16.3578+6.3293\log⁡(x)$.
+$r^2=0.8611$.\\
+$y(50)=8.4023$.
+\item Modelo exponencial de la obesidad sobre la respuesta al dolor: $x=e^{2.7868+0.1361y}$.\\
+$x(10)=63.2648$.
+\end{enumerate}
 }
 %RESOLUCIÓN
 {

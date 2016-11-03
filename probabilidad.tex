@@ -665,8 +665,13 @@ del experimento que consistiría en sacar dos bolas de cada urna.}
 
 \newproblem*{pro-33}{gen}{}
 %ENUNCIADO
-{Un experimento consiste en seleccionar a una pareja de personas y medir su grupo sanguineo y si son fumadores o no.
-Expresar el espacio muestral en forma de árbol.}
+{Construir el espacio muestral de los siguientes experimentos aleatorios:
+\begin{enumerate}
+\item Seleccionar una persona al azar y medir su sexo y si es fumadora o no. 
+\item Seleccionar una persona al azar y medir su grupo sanguíneo y si es fumadora o no.
+\item Seleccionar una persona al azar y medir su sexo, grupo sanguíneo y se es fumadora o no.
+\end{enumerate}
+}
 %SOLUCIÓN
 {}
 %RESOLUCIÓN
@@ -1212,3 +1217,120 @@ y el número de personas que han estado en la categoría $A$ antes o después de
 \end{enumerate}
 }
 
+
+\newproblem*{pro-46}{gen}{*}
+%ENUNCIADO
+{Dos cajas contienen bolas con diferentes colores. 
+La primera caja contiene 3 bolas blancas y 2 negras, y la segunda caja contiene 2 bolas azules, 1 bola roja y 1 bola verde.
+Construir el espacio muestral de los siguientes experimentos aleatorios:
+\begin{enumerate}
+\item Tomar una bola al azar de cada caja. 
+\item Tomar dos bolas al azar de cada caja. 
+\end{enumerate}
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{pro-47}{gen}{*}
+%ENUNCIADO
+{Las leyes de Morgan establecen que dados dos sucesos aleatorios $A$ y $B$ de un mimo espacio muestral,  $\overline{A\cup B}=\bar A
+\cap \bar B$ y $\overline{A\cap B}=\bar A \cup \bar B$.
+Demostrar ambas igualdades usando diagramas de Venn.
+}
+%SOLUCIÓN
+{}
+%RESOLUCIÓN 
+{}
+
+
+\newproblem{pro-48}{gen}{*}
+%ENUNCIADO
+{Calcular la probabilidad de los siguientes sucesos del experimento aleatorio consistente en lanzar 3 monedas:
+\begin{enumerate}
+\item Obtener exactamente una cara.  
+\item Obtener exactamente dos cruces.
+\item Obtener dos o más caras.
+\item Obtener alguna cruz. 
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $P(\mbox{1 cara})=0.375$. 
+\item $P(\mbox{2 cruces})=0.375$. 
+\item $P(\mbox{2 o más caras})=0.5$. 
+\item $P(\mbox{alguna cruz})=0.875$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{pro-49}{med}{*}
+%ENUNCIADO
+{Para evaluar la efectividad de un test diagnóstico se aplicó el test a una muestra de personas con los siguientes resultados:
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\cline{2-3}
+\multicolumn{1}{l|}{} & Test $+$ & Test $-$ \\
+\hline
+Enfermos & 2020 & 80 \\
+\hline
+Sanos & 140 & 7760 \\
+\hline
+\end{tabular}
+\end{center}
+
+Calcular para este test:
+\begin{enumerate}
+\item La sensibilidad y la especificidad.
+\item Los valores predictivo positivo y negativo.
+\item La probabilidad de un diagnóstico acertado. 
+\end{enumerate}
+}
+%SOLUCIÓN
+{Llamando $E$ y $\bar E$ a los eventos consistentes en estar enfermo y sano respectivamente. 
+\begin{enumerate}
+\item Sensibilidad $P(+|E)=0.9352$ y especificidad $P(-|\bar E)=0.9898$. 
+\item VPP $P(E|+)=0.9619$ y VPN $P(\bar E|-)=0.9823$.
+\item $P((E\cap +)\cup (\bar E\cap -))= 0.978$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{pro-50}{med}{*}
+%ENUNCIADO
+{Se dispone de dos test $A$ y $B$ para diagnosticar una enfermedad.
+El test $A$ tiene una sensibilidad del 98\% y una especificidad del 80\%, mientras que el test $B$ tiene una sensibilidad del 75\% y una especificidad del 99\%.
+\begin{enumerate}
+\item ¿Qué test es mejor para confirmar la enfermedad?
+\item ¿Qué test es mejor para descartar la enfermedad?
+\item A menudo un test se utiliza para descartar una enfermedad rara un gran numero de personas aparentemente sanas. 
+Este tipo de test se conocen como \emph{test de cribado}.
+¿Cuál de los dos test funcionaría mejor como test de cribado?
+¿Cuál es el valor predictivo positivo (VPP) de este test si la prevalencia de la enfermedad es $0.01$?
+¿Y si la prevalencia de la enfermedad es $0.2$?
+\item El valor predictivo positivo de un test de cribado no suele ser alto.
+¿Cómo se pueden combinar ambos test para tener una confianza mayor en el diagnóstico de la enfermedad?
+Calcular la probabilidad a posteriori de tener la enfermedad con la combinación de ambos test si el resultado de ambos test es positivo y la prevalencia de la enfermedad es $0.01$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item El test $B$ ya que tiene una mayor especificidad. 
+\item El test $A$ ya que tiene una mayor sensibilidad. 
+\item El test $A$ funcionará mejor como un test de cribado.\\  
+Para una prevalencia de $0.01$ el VVP es $P(E|+)=0.0472$ y el VPN es $P(\bar E|-)=0.9997$.\\
+Para una prevalencia de $0.2$ el VVP es $P(E|+)=0.5506$ y el VPN es $P(\bar E|-)=0.9938$.
+\item Aplicando primero el test $A$ a todo el mundo y luego el test $B$ a los resultados positivos de $A$.\\
+$P(E|+A\cap +B)=0.7878$. 
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}

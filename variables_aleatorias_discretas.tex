@@ -58,14 +58,16 @@ F(x)=
 \]
 Se pide:
 \begin{enumerate}
-\item  Distribución de probabilidad.
-\item  Obtener:
+\item Distribución de probabilidad.
+\item Calcular la siguientes probabilidades:
 \begin{enumerate}
-\item  $P(X=6)$.
-\item  $P(X=5)$.
-\item  $P(2<X<5.5)$.
-\item  $P(0\leq X<4)$.
+\item $P(X=6)$.
+\item $P(X=5)$.
+\item $P(2<X<5.5)$.
+\item $P(0\leq X<4)$.
 \end{enumerate}
+\item Calcular la media.
+\item Calcular la desviación típica. 
 \end{enumerate}
 }
 %SOLUCIÓN
@@ -81,6 +83,8 @@ f(x) & 1/5 & 11/20 & 1/4\\
 \end{array}
 \]
 \item $P(X=6)=1/4$, $P(X=5)=0$, $P(2<X<5.5)=11/20$ y $P(0\leq X<4)=1/5$.
+\item $\mu=3.9$.
+\item $\sigma=1.6703$.
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -98,7 +102,7 @@ Se pide:
 \item Construir la variable aleatoria que mida el número de ratas vivas y su función de probabilidad.
 \item Calcular la función de distribución.
 \item Calcular $P(X\leq 1)$, $P(X\geq 2)$ y $P(X=1.5)$.
-\item Calcular la media y la desviación típica.
+\item Calcular la media y la desviación típica. ¿Es representativa la media?
 \end{enumerate}
 }
 %SOLUCIÓN
@@ -192,7 +196,7 @@ $P(X\leq 5)=0.9834$.
 {}
 
 
-\newproblem*{vad-8}{med}{}
+\newproblem{vad-8}{med}{}
 %ENUNCIADO
 {Diez individuos entran en contacto con un portador de tuberculosis. La probabilidad de que la enfermedad se contagie del portador a un sujeto cualquiera es $0.10$.
 \begin{enumerate}
@@ -202,7 +206,13 @@ $P(X\leq 5)=0.9834$.
 \end{enumerate}
 }
 %SOLUCIÓN
-{}
+{Llamando $X$ al número de personas contagiadas. 
+\begin{enumerate}
+\item $P(X=0)=0.3487$. 
+\item $P(X\geq 2)=0.2639$.
+\item $\mu=1$.
+\end{enumerate}
+}
 %RESOLUCIÓN
 {}
 
@@ -223,12 +233,13 @@ que 0.1?
 {}
 
 
-\newproblem*{vad-10}{med}{}
+\newproblem{vad-10}{med}{}
 %ENUNCIADO
 {La probabilidad de que al administrar una vacuna dé una determinada reacción es $0.001$. Si se vacunan 2000 personas, ¿Cuál es la probabilidad de que aparezca una reacción adversa?
 }
 %SOLUCIÓN
-{}
+{Llamando $X$ al número de reacciones adversas, $P(X\geq 1)=0.8648$.
+}
 %RESOLUCIÓN
 {}
 
@@ -355,14 +366,16 @@ Se pide:
 {}
 
 
-\newproblem*{vad-19}{med}{*}
+\newproblem{vad-19}{med}{*}
 % ENUNCIADO
 {Se ha comprobado experimentalmente que una de cada 20 billones de células expuestas a un determinado tipo de radiación muta volviéndose
 cancerígena. Sabiendo que el cuerpo humano tiene aproximadamente 1 billón de células por kilogramo de tejido, calcular la probabilidad de
 que una persona de 60 kg expuesta a dicha radiación desarrolle cáncer. Si la radiación ha afectado a 3 personas de 60 kg, ¿cuál es la
 probabilidad de que desarrolle el cáncer más de una? }
 % SOLUCIÓN
-{}
+{Llamando $X$ al número de mutaciones, $P(X>0)=0.9502$.\\ 
+Llamando $Y$ al número de personas que desarrollan el cáncer, $P(Y\geq 1)=0.9999$.
+}
 % RESOLUCIÓN
 {}
 
@@ -920,8 +933,7 @@ menos de 8?
 
 \newproblem{vad-38}{med}{*}
 %ENUNCIADO
-{Supongamos que para la detección de una enfermedad se utiliza un test diagnóstico tal que la probabilidad de positivo con dicho test vale
-0,01, y sus valores predictivos positivo y negativo valen, respectivamente, $0.95$ y $0.98$. Se pide:
+{Un test diagnóstico para una enfermedad devuelve un 1\% de resultados positivos, y sus valores predictivos positivo y negativo valen, respectivamente, $0.95$ y $0.98$. Se pide:
 \begin{enumerate}
 \item ¿Cuál es la prevalencia de la enfermedad?
 \item ¿Cuánto valen la sensibilidad y la especificidad del test?
@@ -931,6 +943,12 @@ menos de 8?
 } 
 %SOLUCIÓN
 {
+\begin{enumerate}
+\item $P(E)=0.0293$.
+\item Sensibilidad $P(+|E)=0.3242$ y especificidad $P(-|\bar E)=0.9995$. 
+\item Llamando $X$ al número de diagnósticos erróneos en 12 individuos enfermos, $P(X\geq 1)=1$. 
+\item Llamando $Y$ al número de diagnósticos acertados en 12 individuos, $P(X=12)=0.7818$. 
+\end{enumerate}
 }
 %RESOLUCIÓN
 {
