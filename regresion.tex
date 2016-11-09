@@ -723,11 +723,11 @@ Cuando se necesita para una transfusión se calienta en un horno a una temperatu
 En un experimento se ha medido la temperatura del plasma a distintos instantes desde el comienzo del calentamiento.
 Los resultados son: 
 \begin{center}
-\begin{tabular}{|lrrrrrrrr|}
-\hline
+\begin{tabular}{lrrrrrrrr}
+\toprule
 Tiempo (min)	& 5 & 8 & 15 & 25 & 30 & 37 & 45 & 60\\
 Temperatura (ºF) & 25 & 50 & 86 & 102 & 110 & 114 & 118 & 120\\
-\hline
+\bottomrule
 \end{tabular}
 \end{center}
 Se pide:
@@ -741,10 +741,17 @@ Hacer la representación gráfica.
 ¿Es fiable la predicción?
 Justificar la respuesta.
 \end{enumerate}
+Usar las siguientes sumas (X=Tiempo e Y=Temperatura): $\sum x_i=225$ min, $\sum \log(x_i)=24.5289$ $\log(\mbox{min})$, $\sum y_j=725$ ºF, $\sum \log⁡(y_j)=35.2051$ $\log(\mbox{ºF})$, $\sum x_i^2=8833$ min$^2$, $\sum \log(x_i)^2=80.4703$ $\log(\mbox{min})^2$, $\sum y_j^2=74345$ ºF$^2$, $\sum \log⁡(y_j)^2=157.1023$ $\log(\mbox{ºF})^2$, $\sum x_iy_j=24393$ min$\cdot$ºF, $\sum x_i\log⁡(y_j)=1048.0142$ min$\cdot \log(\mbox{ºF})$, $\sum \log⁡(x_i)y_j=2431.7096$ $\log(\mbox{min})$ºF, $\sum \log⁡(x_i)\log⁡(y_j)=111.1165$ $\log(\mbox{min})\log(\mbox{ºF})$.
 }
 %SOLUCIÓN
 {
-
+\begin{enumerate}
+\item Un modelo logarítmico.
+\item Aplicar una transformación logarítmica al tiempo, $z=\log(x)$.
+\item $\bar z=28.125$ $\log(\mbox{min})$, $s_z^2=0.6577$ $\log^2(\mbox{min})$, $\bar y=90.625$ ºF, $s_y^2=1080.2344$ ºF$^2$ y $s_{zy}=26.0969$ $\log(\mbox{min})$ºF.\\
+Modelo logarítmico de la temperatura sobre el tiempo: $y=-31.0325+39.6781\log(x)$.
+\item $y(15)=76.4176$ ºF. $r^2=0.9586$, que está muy cerca de 1, por lo que la predicción es fiable.
+\end{enumerate}
 }
 %RESOLUCIÓN
 {}
@@ -923,8 +930,6 @@ A la vista de la representación, ¿qué modelo de regresión explicaría mejor 
 transcurrido?
 \item Representar los datos de la actividad en función del tiempo en papel semilogarítmico (con escala logarítmica en
 el eje de ordenadas).
-\item Representar el logaritmo neperiano de la actividad en función del tiempo. ¿Qué modelo de regresión se utilizaría
-para ajustar la nube de puntos obtenida?
 \item Calcular la ecuación de la recta de regresión del logarítmo neperiaro de la actividad en función del tiempo.
 \item Teniendo en cuenta que, en teoría, la actividad de una sustancia radiactiva en función del tiempo viene dada por
 la ecuación:
@@ -938,7 +943,7 @@ constante de desintegración radiactiva de la sustancia con la que se han genera
 }
 %SOLUCIÓN
 {Llamando $X$ al tiempo e $Y$ al logaritmo de la actividad
-\begin{enumerate}[start=4]
+\begin{enumerate}[start=3]
 \item $\bar x=35$, $\bar y=-0.7421$, $s_x^2=525$, $s_y^2=6.6664$ y $s_{xy}=-59.1434$.\\
 Recta de regresión de $Y$ sobre $X$: $y=-0.1127x+3.2008$.
 \item $\lambda=0.1127$.
