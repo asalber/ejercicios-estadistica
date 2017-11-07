@@ -1,4 +1,5 @@
 % Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = latex
 \documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
 
 % GENERAL PACKAGES
@@ -17,13 +18,13 @@
 \usepackage[spanish]{babel}
 
 % COLORS
-\definecolor{blueceu}{RGB}{0,164,227} 
-\definecolor{greenceu}{RGB}{194,205,24} 
-\definecolor{redceu}{RGB}{238,50,36} 
-\definecolor{purpleceu}{RGB}{169,78,145} 
-\definecolor{greyceu}{RGB}{117,117,97} 
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
 \definecolor{darkgrey}{RGB}{40,40,50}
-\definecolor{softblueceu}{RGB}{193,225,246} 
+\definecolor{softblueceu}{RGB}{193,225,246}
 \setbeamercolor{structure}{fg=blueceu}
 \setbeamercolor{normal text}{fg=darkgrey}
 \hypersetup{colorlinks, urlcolor=purpleceu}
@@ -32,7 +33,7 @@
 \usepackage{mathpazo} % Palatino
 
 % CONFIGURATION
-\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
 \beamertemplatenavigationsymbolsempty % Hide navitation bar
 \usefonttheme[onlymath]{serif} % Math text in serif
 \setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
@@ -43,24 +44,24 @@
 % ---------------------------------------------------------------------SLIDE----
 \begin{frame}[c]
 	\vspace{1.5cm}
-	
+
 	\begin{center}
 		\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
 		\bigskip
-		
+
 		\large
 		\begin{tabular}{rl}
 			Temas: & \structure{Probabilidad} \\
 			Titulaciones: & \structure{Medicina y Farmacia}
 		\end{tabular}
-		
+
 		\bigskip
 		Alfredo Sánchez Alberca\\
 		\url{asalber@ceu.es}\\
 		\url{http://aprendeconalf.es}\\
-		
+
 		\includegraphics[scale=0.2]{../img/logo_uspceu}
-		
+
 		\biskip
 		\includegraphics[scale=0.07]{../img/cc-logo}
 		\includegraphics[scale=0.2]{../img/cc-by}
@@ -68,13 +69,13 @@
 		\includegraphics[scale=0.2]{../img/cc-c}
 	\end{center}
 \end{frame}
-	
+
 %---------------------------------------------------------------------SLIDE----
 \begin{frame}[c]
 	\large
 	Un laboratorio farmacéutico está probando un nuevo medicamento y se están estudiando los efectos secundarios que
 	provoca.
-	Se sabe que la probabilidad de que el medicamento provoque mareos es de $0.20$ y de que provoque náuseas es de $0.50$. 
+	Se sabe que la probabilidad de que el medicamento provoque mareos es de $0.20$ y de que provoque náuseas es de $0.50$.
 	También se sabe que la probabilidad de que provoque solo mareos es $0.15$.
 	\begin{enumerate}
 		\item ¿Qué probabilidad hay de que el medicamento provoque algún efecto secundario?
@@ -84,15 +85,15 @@
 		\item ¿Son independientes los efectos secundarios?
 	\end{enumerate}
 \end{frame}
-	
-	
+
+
 %------------------------------------------------------------------SLIDE----
 \begin{frame}
 	\begin{columns}
 		\begin{column}[T]{0.7\textwidth}
 			Un laboratorio farmacéutico está probando un nuevo medicamento y se están estudiando los efectos secundarios que
 			provoca.
-			Se sabe que la probabilidad de que el medicamento provoque mareos es de $0.20$ y de que provoque náuseas es de $0.50$. 
+			Se sabe que la probabilidad de que el medicamento provoque mareos es de $0.20$ y de que provoque náuseas es de $0.50$.
 			También se sabe que la probabilidad de que provoque solo mareos es $0.15$.
 		\end{column}
 		\begin{column}[T]{0.3\textwidth}
@@ -105,21 +106,21 @@
 		\end{column}
 	\end{columns}
 \end{frame}
-	
+
 %------------------------------------------------------------------SLIDE----
 \begin{frame}
 	\begin{columns}
 		\begin{column}[T]{0.5\textwidth}
 			\begin{enumerate}
 				\item ¿Qué probabilidad hay de que el medicamento provoque algún efecto secundario?
-			\end{enumerate}		
+			\end{enumerate}
 		\end{column}
 		\begin{column}[T]{0.5\textwidth}
 			\structure{Datos}\\
 			\scalebox{0.7}{
 			\begin{center}
 				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
-				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}}
 				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
 					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
 					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
@@ -171,14 +172,14 @@
 			\begin{enumerate}
   \setcounter{enumi}{1}
 				\item ¿Qué probabilidad hay de que el medicamento provoque los dos efectos secundarios?
-			\end{enumerate}		
+			\end{enumerate}
 		\end{column}
 		\begin{column}[T]{0.5\textwidth}
 			\structure{Datos}\\
 			\scalebox{0.7}{
 			\begin{center}
 				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
-				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}}
 				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
 					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
 					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
@@ -230,14 +231,14 @@
 			\begin{enumerate}
   \setcounter{enumi}{2}
 				\item ¿Qué probabilidad hay de que el medicamento provoque solo náuseas?
-			\end{enumerate}		
+			\end{enumerate}
 		\end{column}
 		\begin{column}[T]{0.5\textwidth}
 			\structure{Datos}\\
 			\scalebox{0.7}{
 			\begin{center}
 				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
-				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}}
 				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
 					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
 					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
@@ -289,14 +290,14 @@
 			\begin{enumerate}
   \setcounter{enumi}{3}
 				\item ¿Qué probabilidad hay de que el medicamento provoque náuseas si ha provocado mareos?
-			\end{enumerate}		
+			\end{enumerate}
 		\end{column}
 		\begin{column}[T]{0.5\textwidth}
 			\structure{Datos}\\
 			\scalebox{0.7}{
 			\begin{center}
 				\psset{treesep=0.6cm, levelsep=2cm, tpos=0.7}
-				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}} 
+				\renewcommand{\psedge}[2]{\ncdiag[armA=0.8cm,angleA=180,angleB=0,armB=0cm]{#2}{#1}}
 				\pstree[treemode=R, nodesep=1pt]{\Tp*}{
 					\pstree[linestyle=none]{\TR[edge=none]{Mareos}}{\pstree{\TR{Náuseas}}{\pstree{\TR{$E$}}{\TR{$P$}}}}
 					\pstree{\TR{$M$}\taput{\scriptsize $0.2$}}{
@@ -348,7 +349,7 @@
 			\begin{enumerate}
   \setcounter{enumi}{4}
 				\item ¿Son independientes los efectos secundarios?
-			\end{enumerate}		
+			\end{enumerate}
 		\end{column}
 		\begin{column}[T]{0.25\textwidth}
 			\structure{Datos}\\
@@ -358,5 +359,5 @@
 		\end{column}
 	\end{columns}
 \end{frame}
-	
+
 \end{document}

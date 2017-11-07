@@ -1,0 +1,155 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = xelatex
+\documentclass[aspectratio=149,10pt,t]{beamer}
+%-------------------------------------------------------------------------------
+% GENERAL PACKAGES
+%-------------------------------------------------------------------------------
+% Language
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+% Maths
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246}
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
+% Creative common icons
+\usepackage[scale=1.5]{ccicons}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Variables Aleatorias Continuas: Distribución Normal}\\
+Titulaciones: & \structure{Medicina}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{../img/logo_uspceu}
+
+\bigskip
+{\color{darkgrey}\ccbyncsaeu}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\large
+	Se ha medido la presión arterial sistólica a 8000 individuos de una población se ha observado que 2254 tiene más de 130 mmHg y 3126 tienen entre 110 y 130 mmHg.
+	Suponiendo que la presión arterial sistólica sigue una distribución de probabilidad normal, se pide:
+	\begin{enumerate}
+	  \item Calcular la media y la desviación típica.
+	  \item Si se consideran hipertensas las personas con una presión arterial superior a 140 mmHg, ¿cuántas personas hipertensas hay en la población?
+	  \item Si una analítica sanguínea marca como anormales el 5\% de los individuos con menor presión arterial y el 5\% con mayor presión arterial, ¿entre qué presiones arteriales debe estar la presión de un individuo para que la analítica lo considere normal?
+	\end{enumerate}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			Se ha medido la presión arterial sistólica a 8000 individuos de una población se ha observado que 2254 tiene más de 130 mmHg y 3126 tienen entre 110 y 130 mmHg.
+			Suponiendo que la presión arterial sistólica sigue una distribución de probabilidad normal, se pide:
+			\begin{enumerate}
+			  \item Calcular la media y la desviación típica.
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\structure{Datos}\\
+			$X\equiv$ Presión arterial sistólica\\
+			$X\sim N(\mu,\sigma)$\\
+			$N=8000$
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			\begin{enumerate}
+			  \item[2.] Si se consideran hipertensas las personas con una presión arterial superior a 140 mmHg, ¿cuántas personas hipertensas hay en la población?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\structure{Datos}\\
+			$X\equiv$ Presión arterial sistólica\\
+			$X\sim N(118.7,\,19.42)$\\
+			$N=8000$
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			\begin{enumerate}
+			  \item[3.] Si una analítica sanguínea marca como anormales el 5\% de los individuos con menor presión arterial y el 5\% con mayor presión arterial, ¿entre qué presiones arteriales debe estar la presión de un individuo para que la analítica lo considere normal?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\structure{Datos}\\
+			$X\equiv$ Presión arterial sistólica\\
+			$X\sim N(118.7,\,19.42)$\\
+			$N=8000$
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\end{document}

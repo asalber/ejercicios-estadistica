@@ -1,0 +1,198 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = xelatex
+\documentclass[aspectratio=149,10pt,t]{beamer}
+%-------------------------------------------------------------------------------
+% GENERAL PACKAGES
+%-------------------------------------------------------------------------------
+% Language
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+% Maths
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246}
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
+% Creative common icons
+\usepackage[scale=1.5]{ccicons}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Regresión lineal y no lineal}\\
+Titulaciones: & \structure{Medicina}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{../img/logo_uspceu}
+
+\bigskip
+{\color{darkgrey}\ccbyncsaeu}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	En un estudio se ha medido la reducción en el nivel de colesterol de un grupo de personas hipertensas tras un programa de ejercicios.
+	Los resultados aparecen en la siguiente tabla.
+
+	\medskip
+
+	\resizebox{\textwidth}{!}{
+	$
+	\begin{array}{lrrrrrrrrrr}
+		\toprule
+		\mbox{Minutos de ejercicio} & 96 & 106 & 163 & 207 & 227 & 244 & 261 & 271 & 272 & 301\\
+		\mbox{Reducción de colesterol (mg/dl)} & 4 & 5 & 8 & 13 & 15 & 17 & 22 & 39 & 31 & 45\\
+		\bottomrule
+	\end{array}
+	$
+	}
+
+	\begin{enumerate}
+	  \item ¿Qué modelo de regresión explica mejor la reducción de colesterol en función de los minutos de ejercicio, el lineal o el exponencial? Justificar la respuesta.
+	  \item Según el modelo de regresión lineal, ¿cuánto disminuirá el colesterol por cada minuto más de ejercicio?
+	  \item Según el modelo logarítmico, ¿cuántos minutos de ejercicio se necesitan para reducir el colesterol 100 mg/dl?
+	  ¿Es fiable la predicción?
+	  Justificar la respuesta.
+	\end{enumerate}
+
+	Utilizar las siguientes sumas ($X$=Minutos de ejercicio e $Y$=Reducción de colesterol):\\
+	 $\sum x_i=2148$ min, $\sum x_i^2=507082$ min$^2$,\\
+	 $\sum \log(x_i)=53.0559$ $\log(\mbox{min})$, $\sum \log(x_i)^2=282.9578$ $\log(\mbox{min})^2$, \\
+	 $\sum y_j=199$ mg/dl, $\sum y_j^2=5779$ (mg/dl)$^2$,\\
+	 $\sum \log(y_j)=27.1766$ $\log(\mbox{mg/dl})$, $\sum \log(y_j)^2=80.035$ $\log(\mbox{mg/dl})^2$,\\
+	 $\sum x_iy_j=50750$ min$\cdot$mg/dl, $\sum x_i\log(y_j)=6359.0468$ min$\cdot\log(\mbox{mg/dl})$, $\sum \log(x_i)y_j=1097.978$ $\log(\mbox{min})$mg/dl, $\sum \log(x_i)\log(y_j)=147.0682$ $\log(\mbox{min})\log(\mbox{mg/dl})$.
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.6\textwidth}
+			\begin{enumerate}
+				\item ¿Qué modelo de regresión explica mejor la reducción de colesterol en función de los minutos de ejercicio, el lineal o el exponencial?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.4\textwidth}
+			\structure{Datos}\\
+			$X\equiv$ Minutos de ejercicio\\
+			$Y\equiv$ Reducción del colesterol\\
+			$\sum x_i=2148$ min\\
+			$\sum x_i^2=507082$ min$^2$\\
+	 	 	$\sum \log(x_i)=53.0559$ $\log(\mbox{min})$\\
+			$\sum \log(x_i)^2=282.9578$ $\log(\mbox{min})^2$\\
+	 	 	$\sum y_j=199$ mg/dl\\
+			$\sum y_j^2=5779$ (mg/dl)$^2$\\
+	 	 	$\sum \log(y_j)=27.1766$ $\log(\mbox{mg/dl})$\\
+			$\sum \log(y_j)^2=80.035$ $\log(\mbox{mg/dl})^2$\\
+	 	 	$\sum x_iy_j=50750$ min$\cdot$mg/dl\\
+			$\sum x_i\log(y_j)=6359.0468$ min$\cdot\log(\mbox{mg/dl})$\\
+			$\sum \log(x_i)y_j=1097.978$ $\log(\mbox{min})$mg/dl\\
+			$\sum \log(x_i)\log(y_j)=147.0682$ $\log(\mbox{min})\log(\mbox{mg/dl})$.
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.6\textwidth}
+			\begin{enumerate}
+				\item[2.] Según el modelo de regresión lineal, ¿cuánto disminuirá el colesterol por cada minuto más de ejercicio?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.4\textwidth}
+			\structure{Datos}\\
+			$X\equiv$ Minutos de ejercicio\\
+			$Y\equiv$ Reducción del colesterol\\
+			$\bar x=214.8$ min\\
+			$s_x^2=4569.16$ min$^2$\\
+			$\bar y=19.9$ mmHg\\
+			$s_y^2=181.89$ mmHg$^2$\\
+			$s_{xy}=800.48$ min$\cdot$mmHg
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.6\textwidth}
+			\begin{enumerate}
+				\item[3.] Según el modelo logarítmico, ¿cuántos minutos de ejercicio se necesitan para reducir el colesterol 100 mg/dl?
+			  ¿Es fiable la predicción?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.4\textwidth}
+			\structure{Datos}\\
+			$X\equiv$ Minutos de ejercicio\\
+			$Y\equiv$ Reducción del colesterol\\
+			$\bar x=214.8$ min\\
+			$s_x^2=4569.16$ min$^2$\\
+			$\overline {\log(y)}=2.7177$ $\log(\mbox{mmHg})$\\
+			$s_{\log(y)}^2=0.6178$ $\log(\mbox{mmHg})^2$\\
+			$s_{x\log(y)}=52.1504$ min$\cdot\log(\mbox{mmHg})$
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\end{document}

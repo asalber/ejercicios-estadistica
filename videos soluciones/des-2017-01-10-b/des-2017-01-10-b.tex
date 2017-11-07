@@ -1,0 +1,266 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = xelatex
+\documentclass[aspectratio=149,10pt,t]{beamer}
+%-------------------------------------------------------------------------------
+% GENERAL PACKAGES
+%-------------------------------------------------------------------------------
+% Language
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+% Maths
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246}
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
+% Creative common icons
+\usepackage[scale=1.5]{ccicons}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Estadística Descriptiva}\\
+Titulaciones: & \structure{Medicina}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{../img/logo_uspceu}
+
+\bigskip
+{\color{darkgrey}\ccbyncsaeu}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\large
+	En dos poblaciones de mujeres $A$ y $B$ se ha tomado una muestra y se ha medido el número de embarazos de cada mujer durante su vida fértil obteniéndo los siguientes resultados:
+
+	\[
+	\begin{array}{ccccccccccccccccc}
+	\toprule
+	A & 2 & 3 & 4 & 4 & 3 & 2 & 6 & 1 & 5 & 3 & 4 & 4 & 3 & 2 & 5 & 0\\
+	B & 1 & 0 & 2 & 1 & 0 & 2 & 0 & 3 & 0 & 1 & 0 & 2 & 5 & 1 & 1 & 1\\
+	\bottomrule
+	\end{array}
+	\]
+
+	\begin{enumerate}
+	  \item Construir los diagramas de caja de ambas muestras y compararlos.
+	  \item ¿En qué muestra es más representativa la media? Justificar la respuesta.
+	  \item Calcular el coeficiente de asimetría de ambas distribuciones.
+	  ¿Qué distribución es más asimétrica?
+	  \item ¿Qué número de embarazos es relativamente mayor, 5 embarazos en la población $A$ o 3 en la $B$?
+	\end{enumerate}
+
+	Utilizar las siguientes sumas para los cálculos:\\
+	$\sum a_i=51$, $\sum a_i^2=199$, $\sum (a_i-\bar a)^3=-11.6016$, $\sum (a_i-\bar a)^4=217.9954$,\\
+	$\sum b_i=20$, $\sum b_i^2=52$, $\sum (b_i-\bar b)^3=49.5$, $\sum (b_i-\bar b)^4=220.3125$.
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			En dos poblaciones de mujeres $A$ y $B$ se ha tomado una muestra y se ha medido el número de embarazos de cada mujer durante su vida fértil obteniéndo los siguientes resultados:
+			\[
+			\begin{array}{ccccccccccccccccc}
+			\toprule
+			A & 2 & 3 & 4 & 4 & 3 & 2 & 6 & 1 & 5 & 3 & 4 & 4 & 3 & 2 & 5 & 0\\
+			B & 1 & 0 & 2 & 1 & 0 & 2 & 0 & 3 & 0 & 1 & 0 & 2 & 5 & 1 & 1 & 1\\
+			\bottomrule
+			\end{array}
+			\]
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\structure{Datos}\\
+			$A\equiv$ Número de embarazos una mujer de la población $A$\\
+			$B\equiv$ Número de embarazos una mujer de la población $B$\\
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.6\textwidth}
+			\begin{enumerate}
+			  \item Construir los diagramas de caja de ambas muestras y compararlos.
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.4\textwidth}
+			\structure{Datos}\\
+			$A\equiv$ Número de embarazos una mujer de la población $A$\\
+			$B\equiv$ Número de embarazos una mujer de la población $B$
+			\[
+			\begin{array}{lll}
+				\begin{array}[t]{cr}
+					A & F_i\\
+					\midrule
+					0 & 0.0625\\
+					1 & 0.125\\
+					2 & 0.3125\\
+					3 & 0.5625\\
+					4 & 0.8125\\
+					5 & 0.9375\\
+					6 & 1\\
+					\bottomrule
+					\end{array} &
+					\quad &
+					\begin{array}[t]{cr}
+						B & F_i\\
+						\midrule
+						0 & 0.3125\\
+						1 & 0.6875\\
+						2 & 0.875\\
+						3 & 0.9375\\
+						5 & 1\\
+						\bottomrule
+					\end{array}
+				\end{array}
+			\]
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.65\textwidth}
+			\begin{enumerate}
+			  \item[2.] ¿En qué muestra es más representativa la media? Justificar la respuesta.
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.35\textwidth}
+			\structure{Datos}\\
+			$A\equiv$ Número de embarazos una mujer de la población $A$\\
+			$B\equiv$ Número de embarazos una mujer de la población $B$\\
+			$\sum a_i=51$ hijos\\
+			$\sum a_i^2=199$ hijos$^2$\\
+			$\sum (a_i-\bar a)^3=-11.6016$ hijos$^3$\\
+			$\sum (a_i-\bar a)^4=217.9954$ hijos$^4$\\
+			$\sum b_i=20$ hijos\\
+			$\sum b_i^2=52$ hijos$^2$\\
+			$\sum (b_i-\bar b)^3=49.5$ hijos$^3$\\
+			$\sum (b_i-\bar b)^4=220.3125$ hijos$^4$
+			\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.65\textwidth}
+			\begin{enumerate}
+			  \item[3.] Calcular el coeficiente de asimetría de ambas distribuciones.
+			  ¿Qué distribución es más asimétrica?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.35\textwidth}
+			\structure{Datos}\\
+			$A\equiv$ Número de embarazos una mujer de la población $A$\\
+			$B\equiv$ Número de embarazos una mujer de la población $B$\\
+			$\sum a_i=51$ hijos\\
+			$\sum a_i^2=199$ hijos$^2$\\
+			$\sum (a_i-\bar a)^3=-11.6016$ hijos$^3$\\
+			$\sum (a_i-\bar a)^4=217.9954$ hijos$^4$\\
+			$\sum b_i=20$ hijos\\
+			$\sum b_i^2=52$ hijos$^2$\\
+			$\sum (b_i-\bar b)^3=49.5$ hijos$^3$\\
+			$\sum (b_i-\bar b)^4=220.3125$ hijos$^4$\\
+			$\bar a=3.1875$ hijos\\
+			$s_a = 1.5091$ hijos\\
+			$\bar b=1.25$ hijos\\
+			$s_b = 1.299$ hijos
+			\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.65\textwidth}
+			\begin{enumerate}
+			  \item[4.] ¿Qué número de embarazos es relativamente mayor, 5 embarazos en la población $A$ o 3 en la $B$?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.35\textwidth}
+			\structure{Datos}\\
+			$A\equiv$ Número de embarazos una mujer de la población $A$\\
+			$B\equiv$ Número de embarazos una mujer de la población $B$\\
+			$\sum a_i=51$ hijos\\
+			$\sum a_i^2=199$ hijos$^2$\\
+			$\sum (a_i-\bar a)^3=-11.6016$ hijos$^3$\\
+			$\sum (a_i-\bar a)^4=217.9954$ hijos$^4$\\
+			$\sum b_i=20$ hijos\\
+			$\sum b_i^2=52$ hijos$^2$\\
+			$\sum (b_i-\bar b)^3=49.5$ hijos$^3$\\
+			$\sum (b_i-\bar b)^4=220.3125$ hijos$^4$\\
+			$\bar a=3.1875$ hijos\\
+			$s_a = 1.5091$ hijos\\
+			$\bar b=1.25$ hijos\\
+			$s_b = 1.299$ hijos
+			\end{column}
+	\end{columns}
+\end{frame}
+
+\end{document}
