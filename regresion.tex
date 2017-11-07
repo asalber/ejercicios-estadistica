@@ -763,8 +763,8 @@ Modelo logarítmico de la temperatura sobre el tiempo: $y=-31.0325+39.6781\log(x
 \begin{center}
 \begin{tabular}{lrrrrrrr}
 \toprule
-Concentración de fármaco en sangre & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
-Horas & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
+Tiempo (horas) & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+Concentración de fármaco en sangre & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -776,21 +776,21 @@ Se pide:
 ¿Es fiable la predicción?
 \end{enumerate}
 
-Usar las siguientes sumas ($C$=Concentración del fármaco y $T$=tiempo): $\sum c_i=35$ mg/dl, $\sum \log(c_i)=10.6046$
-$\log(\mbox{mg/dl})$, $\sum t_j=541$ horas, $\sum \log(t_j)= 29.147$ $\log(\mbox{horas})$, $\sum c_i^2=203$ (mg/dl)$^2$,
-$\sum \log(c_i)^2=17.5206$ $\log(\mbox{mg/dl})^2$, $\sum t_j^2=56937$ horas$^2$, $\sum \log(t_j)^2=124.0131$
-$\log(\mbox{horas})^2$, $\sum c_it_j=3328$ mg/dl$\cdot$horas, $\sum c_i\log(t_j)=154.3387$
-mg/dl$\cdot\log(\mbox{horas})$, $\sum \log(c_i)t_j=951.6961$ $\log(\mbox{mg/dl})\cdot$horas, $\sum
-\log(c_i)\log(t_j)=46.08046$ $\log(\mbox{mg/dl})\cdot\log(\mbox{horas})$.
+Usar las siguientes sumas ($C$=Concentración del fármaco y $T$=tiempo): $\sum t_i=35$ h, $\sum \log(t_i)=10.6046$
+$\log(\mbox{h})$, $\sum c_j=541$ mg/dl, $\sum \log(c_j)= 29.147$ $\log(\mbox{mg/dl})$, $\sum t_i^2=203$ h$^2$,
+$\sum \log(t_i)^2=17.5206$ $\log(\mbox{h})^2$, $\sum c_j^2=56937$ (mg/dl)$^2$, $\sum \log(c_j)^2=124.0131$
+$\log(\mbox{mg/dl})^2$, $\sum t_ic_j=3328$ h$\cdot$mg/dl, $\sum t_i\log(c_j)=154.3387$
+h$\cdot\log(\mbox{mg/dl})$, $\sum \log(t_i)c_j=951.6961$ $\log(\mbox{h})\cdot$mg/dl, $\sum
+\log(t_i)\log(c_j)=46.08046$ $\log(\mbox{h})\cdot\log(\mbox{mg/dl})$.
 }
 %SOLUCIÓN
 {Llamando $T$ al tiempo, $C$ a la concentración y $Z$ al logaritmo de la concentración:
 \begin{enumerate}
-\item $\bar t=5$ horas, $\bar c=77.2857$ mg/dl, $s_t^2=4$ horas$^2$,  $x_𝑦^2=2160.7755$ (mg/dl)$^2$, $s_{tc}=89$ horas(mg/dl).\\
+\item $\bar t=5$ h, $\bar c=77.2857$ mg/dl, $s_t^2=4$ h$^2$,  $s_c^2=2160.7755$ (mg/dl)$^2$, $s_{tc}=89$ h(mg/dl).\\
 Modelo lineal de $C$ sobre $T$: $c=−33.9643+22.25t$.\\
 $r^2=0.9165$.
 \item  $\bar z=4.1639$ $\log$(mg/dl), $s_z^2=0.3785$ $\log^2$(mg/dl),
-$s_{tz}=1.2291$ horas$\cdot\log$(mg/dl).\\
+$s_{tz}=1.2291$ h$\cdot\log$(mg/dl).\\
 Modelo exponencial de $C$ sobre $T$: $c=e^{0.3073x+2.6275}$.\\
 $r^2=0.9979$.
 \item $c(4.8)= 60.498$ mg/dl y es bastante fiable ya que el coeficiente de determinación es muy alto.
