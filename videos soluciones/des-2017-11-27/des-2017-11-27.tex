@@ -1,0 +1,380 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = xelatex
+\documentclass[aspectratio=149,10pt,t]{beamer}
+%-------------------------------------------------------------------------------
+% GENERAL PACKAGES
+%-------------------------------------------------------------------------------
+% Language
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+% Maths
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246}
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+% Boxes
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\newtcolorbox{datos}{
+  enhanced,
+  colback=blueceu!10, 
+  colframe=blueceu, 
+  fonttitle=\bfseries, 
+  left=3pt, 
+  right=3pt, 
+  boxrule=0.5pt,
+  %halign=left,
+  code={\setstretch{1.2}},
+  title={Datos},
+}
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
+% Creative common icons
+\usepackage[scale=1.5]{ccicons}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Estadística}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Estadística Descriptiva}\\
+Titulaciones: & \structure{Todas}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{../img/logo_uspceu}
+
+\bigskip
+{\color{darkgrey}\ccbyncsaeu}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\large
+	El siguiente diagrama muestra la distribución de emisiones de NO$_2$ ($\mu$g/m$^3$) en Madrid en los días de octubre de 2017. 
+	\begin{center}
+	\scalebox{0.9}{\input{histograma_emisiones_no2}}
+	\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\large
+	Se pide: 
+	
+	\begin{enumerate}
+		\item La normativa europea sobre calidad del aire establece que el valor medio mensual no debe exceder de 40 $\mu$g/m$^3$. ¿Se ha cumplido la norma en el mes de Octubre? 
+		¿Es este un valor representativo de las mediciones tomadas en octubre?
+		\item El Ayuntamiento de Madrid ha decidido que se establecerán restricciones de velocidad en los accesos los días en los que se superen los 72 $\mu$g/m$^3$ y que además de estas restricciones se establecerán también restricciones al aparcamiento los días que se superen los 92 $\mu$g/m$^3$.
+		¿Qué porcentaje de días de octubre se establecieron solo restricciones de velocidad en los accesos?
+		\item De acuerdo con esta muestra de datos tomada durante el mes de octubre, ¿puede establecerse por la forma de la distribución de la muestra que la distribución de las emisiones en toda la ciudad sigue una distribución normal?
+	\end{enumerate}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+	\large
+	\begin{enumerate}
+		\setcounter{enumi}{3}
+		\item Además del nivel de NO$_2$, el Ayuntamiento también controla los niveles de SO$_2$, y se sabe que el nivel medio de esta sustancia durante el mes de octubre fue de $2.85$ $\mu$g/m$^3$ con una desviación típica de $0.42$ $\mu$g/m$^3$. 
+		Si un día hubo un nivel de NO$_2$ de 46 y un nivel de SO$_2$ de $2.24$, ¿cuál de las dos sustancias tenía niveles más altos en referencia a sus mediciones?
+		\item Si el índice de calidad del aire (ICA) puede estimarse multiplicando el nivel de NO$_2$ por $0.90$ y sumándole una cantidad fija de 30. 
+		¿Cuál fue el índice medio de la calidad del aire en Madrid el mes de octubre? 
+		¿Es un valor más o menos representativo que el nivel de emisiones medio de NO$_2$?
+		\item ¿Existen días atípicos en las emisiones de NO$_2$ del mes de octubre? Justificar la respuesta.
+	\end{enumerate}
+	Utilizar las siguientes sumas para los cálculos: $\sum x_i=1945$ $\mu$g/m$^3$, $\sum x_i^2=131575$ ($\mu$g/m$^3$)$^2$, $\sum (x_i-\bar x)^3=93995.838$ ($\mu$g/m$^3$)$^3$ y $\sum (x_i-\bar x)^4=7766271.021$ ($\mu$g/m$^3$)$^4$.
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.55\textwidth}
+			\begin{enumerate}
+				\item La normativa europea sobre calidad del aire establece que el valor medio mensual no debe exceder de 40 $\mu$g/m$^3$. ¿Se ha cumplido la norma en el mes de Octubre? 
+				¿Es este un valor representativo de las mediciones tomadas en octubre?		
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.45\textwidth}
+			\begin{datos}
+				$X\equiv$ Emisiones de NO$_2$\\
+				$\sum x_i=1945$ $\mu$g/m$^3$\\
+				$\sum x_i^2=131575$ ($\mu$g/m$^3$)$^2$\\
+				$\sum (x_i-\bar x)^3=93995.838$ ($\mu$g/m$^3$)$^3$\\
+				$\sum (x_i-\bar x)^4=7766271.021$ ($\mu$g/m$^3$)$^4$
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.55\textwidth}
+			\begin{enumerate}
+				\item[2.] El Ayuntamiento de Madrid ha decidido que se establecerán restricciones de velocidad en los accesos los días en los que se superen los 72 $\mu$g/m$^3$ y que además de estas restricciones se establecerán también restricciones al aparcamiento los días que se superen los 92 $\mu$g/m$^3$.
+		¿Qué porcentaje de días de octubre se establecieron solo restricciones de velocidad en los accesos?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.45\textwidth}
+			\begin{datos}
+				\resizebox{\textwidth}{!}{\input{histograma_emisiones_no2}}
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			\begin{enumerate}
+				\item[2.] El Ayuntamiento de Madrid ha decidido que se establecerán restricciones de velocidad en los accesos los días en los que se superen los 72 $\mu$g/m$^3$ y que además de estas restricciones se establecerán también restricciones al aparcamiento los días que se superen los 92 $\mu$g/m$^3$.
+				¿Qué porcentaje de días de octubre se establecieron solo restricciones de velocidad en los accesos?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\begin{datos}
+			$X\equiv$ Emisiones de NO$_2$\\
+			\[
+				\begin{array}{cc}
+					X & F_i\\
+					\midrule
+					30 - 40 & 0.0645\\
+    			40 - 50 & 0.2581\\
+    			50 - 60 & 0.5161\\
+    			60 - 70 & 0.6774\\
+    			70 - 80 & 0.8387\\
+    			80 - 90 & 0.9032\\
+    			90 - 100 & 0.9677\\
+    			100 - 110 & 1.0000\\
+					\bottomrule
+				\end{array}
+			\]
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			\begin{enumerate}
+				\item[2.] El Ayuntamiento de Madrid ha decidido que se establecerán restricciones de velocidad en los accesos los días en los que se superen los 72 $\mu$g/m$^3$ y que además de estas restricciones se establecerán también restricciones al aparcamiento los días que se superen los 92 $\mu$g/m$^3$.
+				¿Qué porcentaje de días de octubre se establecieron solo restricciones de velocidad en los accesos?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\begin{datos}
+			$X\equiv$ Emisiones de NO$_2$\\
+			\[
+				\begin{array}{cc}
+					X & F_i\\
+					\midrule
+					30 - 40 & 0.0645\\
+    			40 - 50 & 0.2581\\
+    			50 - 60 & 0.5161\\
+    			60 - 70 & 0.6774\\
+    			70 - 80 & 0.8387\\
+    			80 - 90 & 0.9032\\
+    			90 - 100 & 0.9677\\
+    			100 - 110 & 1.0000\\
+					\bottomrule
+				\end{array}
+			\]
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			\begin{enumerate}
+				\item[2.] El Ayuntamiento de Madrid ha decidido que se establecerán restricciones de velocidad en los accesos los días en los que se superen los 72 $\mu$g/m$^3$ y que además de estas restricciones se establecerán también restricciones al aparcamiento los días que se superen los 92 $\mu$g/m$^3$.
+				¿Qué porcentaje de días de octubre se establecieron solo restricciones de velocidad en los accesos?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\begin{datos}
+			$X\equiv$ Emisiones de NO$_2$\\
+			\[
+				\begin{array}{cc}
+					X & F_i\\
+					\midrule
+					30 - 40 & 0.0645\\
+    			40 - 50 & 0.2581\\
+    			50 - 60 & 0.5161\\
+    			60 - 70 & 0.6774\\
+    			70 - 80 & 0.8387\\
+    			80 - 90 & 0.9032\\
+    			90 - 100 & 0.9677\\
+    			100 - 110 & 1.0000\\
+					\bottomrule
+				\end{array}
+			\]
+			F(92)=0.9161
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.55\textwidth}
+			\begin{enumerate}
+				\item[3.] De acuerdo con esta muestra de datos tomada durante el mes de octubre, ¿puede establecerse por la forma de la distribución de la muestra que la distribución de las emisiones en toda la ciudad sigue una distribución normal?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.45\textwidth}
+			\begin{datos}
+				$X\equiv$ Emisiones de NO$_2$\\
+				$\sum (x_i-\bar x)^3=93995.838$ ($\mu$g/m$^3$)$^3$\\
+				$\sum (x_i-\bar x)^4=7766271.021$ ($\mu$g/m$^3$)$^4$\\
+				$\bar x = 62.7419$ $\mu$g/m$^3$\\
+				$s_x=17.5444$ $\mu$g/m$^3$
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.65\textwidth}
+			\begin{enumerate}
+				\item[4.] Además del nivel de NO$_2$, el Ayuntamiento también controla los niveles de SO$_2$, y se sabe que el nivel medio de esta sustancia durante el mes de octubre fue de $2.85$ $\mu$g/m$^3$ con una desviación típica de $0.42$ $\mu$g/m$^3$. 
+				Si un día hubo un nivel de NO$_2$ de 46 y un nivel de SO$_2$ de $2.24$, ¿cuál de las dos sustancias tenía niveles más altos en referencia a sus mediciones?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.35\textwidth}
+			\begin{datos}
+				$X\equiv$ Emisiones de NO$_2$\\
+				$Y\equiv$ Emisiones de SO$_2$\\
+				$\bar x = 62.7419$ $\mu$g/m$^3$\\
+				$s_x=17.5444$ $\mu$g/m$^3$\\
+				$\bar y=2.85$ $\mu$g/m$^3$\\
+				$s_y=0.42$ $\mu$g/m$^3$
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.65\textwidth}
+			\begin{enumerate}
+				\item[5.] Si el índice de calidad del aire (ICA) puede estimarse multiplicando el nivel de NO$_2$ por $0.90$ y sumándole una cantidad fija de 30. 
+		¿Cuál fue el índice medio de la calidad del aire en Madrid el mes de octubre? 
+		¿Es un valor más o menos representativo que el nivel de emisiones medio de NO$_2$?
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.35\textwidth}
+			\begin{datos}
+				$X\equiv$ Emisiones de NO$_2$\\
+				$\bar x = 62.7419$ $\mu$g/m$^3$\\
+				$s_x=17.5444$ $\mu$g/m$^3$\\
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------SLIDE----
+\begin{frame}
+	\begin{columns}
+		\begin{column}[T]{0.7\textwidth}
+			\begin{enumerate}
+				\item[6.] ¿Existen días atípicos en las emisiones de NO$_2$ del mes de octubre? Justificar la respuesta.
+			\end{enumerate}
+		\end{column}
+		\begin{column}[T]{0.3\textwidth}
+			\begin{datos}
+			$X\equiv$ Emisiones de NO$_2$\\
+			\[
+				\begin{array}{cc}
+					X & F_i\\
+					\midrule
+					30 - 40 & 0.0645\\
+    			40 - 50 & 0.2581\\
+    			50 - 60 & 0.5161\\
+    			60 - 70 & 0.6774\\
+    			70 - 80 & 0.8387\\
+    			80 - 90 & 0.9032\\
+    			90 - 100 & 0.9677\\
+    			100 - 110 & 1.0000\\
+					\bottomrule
+				\end{array}
+			\]
+			\end{datos}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\end{document}
