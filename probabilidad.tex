@@ -155,7 +155,7 @@ Calcular:
 \end{enumerate}
 }
 %SOLUCIÓN
-{Llamando $PF$ al susceso que consiste en tener un padre fumador y $MF$ a tener una madre fumadora:
+{Llamando $PF$ al suceso que consiste en tener un padre fumador y $MF$ a tener una madre fumadora:
 \begin{enumerate}
 \item $P(MF/PF)=0.325$.
 \item $P(MF/\overline{PF})=0.2$.
@@ -1333,4 +1333,82 @@ $P(E|+A\cap +B)=0.7878$.
 \end{enumerate}
 }
 %RESOLUCIÓN
+{}
+
+\newproblem{pro-51}{med}{}
+%STATEMENT
+{En una población con 10000 personas hay 15 con tuberculosis en un momento concreto.
+Después de 5 años, 5 de ellas murieron y otras 3 cogieron la tuberculosis. 
+Suponiendo que el tamaño de la población no cambió en esos 5 años, calcular
+\begin{enumerate}
+\item La prevalencia inicial de la tuberculosis.
+\item La incidencia acumulada de tuberculosis en el periodo de 5 años.
+\item La tasa de incidencia (riesgo absoluto) de tuberculosis ese mismo periodo. 
+\item La prevalencia de la tuberculosis al final de ese periodo.
+\end{enumerate} 
+}
+%SOLUTION
+{
+\begin{enumerate}
+\item $P(T)=0.0015$.
+\item $R(T)=0.0003$, es decir, 3 por cada 10000 personas en 5 años.
+\item $R(T)=0.00006$, es decir, $0.6$ por cada 10000 personas-año. 
+\item $P(T)=0.0013$.
+\end{enumerate}
+}
+%RESOLUTION
+{}
+
+
+\newproblem{pro-52}{med}{}
+%STATEMENT
+{En un brote de varicela, esta fue diagnosticada a 18 de 160 niños vacunados y en 30 de 70 niños no vacunados.
+\begin{enumerate}
+\item Calcular e interpretar el riesgo relativo de sufrir varicela en niños vacunados.
+\item Calcular e interpretar el odds ratio (oportunidad relativa) de sufrir la varicela en niños vacunados.
+\item ¿Qué medida de asociación es más apropiada para este tipo de estudio, el riesgo relativo o el odds ratio?
+\end{enumerate}
+}
+%SOLUTION
+{
+\begin{enumerate}
+\item $RR(V)=0.2625$.
+\item $OR(V)=0.169$.
+\item El odds ratio, ya que se trata de un estudio retrospectivo.
+\end{enumerate}
+}
+%RESOLUTION
+{}
+
+
+\newproblem{pro-53}{med}{}
+%STATEMENT
+{Un ensayo clínico trata de determinar el efecto de un programa de ejercicios de preparación para el parto sobre los traumas perineales.
+La siguiente table resume los resultados.
+\begin{center}
+	\begin{tabular}{lcc}
+		\toprule
+		 & Episotomía & No episotomía\\
+		 Madres siguiendo el programa de ejercicios & 62 & 420 \\
+		 Madres no siguiendo el programa de ejercicios & 328 & 840\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Calcular el riesgo absoluto y relativo de episotomía en las madres que siguieron el programa de ejercicios.
+¿Qué se puede decir sobre la efectividad del programa de ejercicios de preparación al parto?
+\item Calcular e interpretar el odds ratio de episotomía en las madres que siguieron el programa de ejercicios.
+\item ¿Qué medida de asociación es más apropiada para este tipo de estudio, el riesgo relativo o el odds ratio?
+\end{enumerate}
+}
+%SOLUTION
+{
+\begin{enumerate}
+\item $R(E)=0.1476$ y $RR(E)=0.378$.
+\item $OR(E)=0.2703$.
+\item Ambas son válidas.
+\end{enumerate}
+}
+%RESOLUTION
 {}

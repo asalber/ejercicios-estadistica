@@ -1671,18 +1671,17 @@ y & 10 & 12 & 4 & 4.5 & 5.5 & 7 & 9 & 8 & 15 & 3\\
 \item Según el modelo de regresión más adecuado, ¿cuál es la obesidad esperada de una persona con un umbral reflejo de flexión nociceptiva de 10? ¿Es esta predicción fiable?
 \end{enumerate}
 
-Usar las siguientes sumas: $\sum x_i=627$, $\sum \log(x_i)=40.3858$, $\sum y_j=78$,
-$\sum \log(y_j)=19.4119$, $\sum x_i^2=45141$, $\sum \log(x_i)^2=165.4516$, $\sum y_j^2=738.5$, $\sum
-\log(y_j)^2=40.0458$, $\sum x_iy_j=5538.5$, $\sum x_i\log(y_j)=1306.051$, $\sum \log(x_i)y_j=327.3887$, $\sum
-\log(x_i)\log(y_j)=80.1831$.
+Usar las siguientes sumas ($X$=Obesidad e $Y$=Respuesta al dolor): $\sum x_i=629$, $\sum \log(x_i)=40.4121$, $\sum y_j=92.2$,
+$\sum \log(y_j)=21.339$, $\sum x_i^2=45445$, $\sum \log(x_i)^2=165.6795$, $\sum y_j^2=960.14$, $\sum
+\log(y_j)^2=47.6231$, $\sum x_iy_j=6537.7$, $\sum x_i\log(y_j)=1443.1275$, $\sum \log(x_i)y_j=387.5728$, $\sum \log(x_i)\log(y_j)=88.3696$.
 }
 %SOLUCIÓN
 {
 \begin{enumerate}[start=2]
-\item $\bar{x}=62.9$, $s_x^2=588.09$, $\bar{y}=9.22$, $s_y^2=11.0056$ y $s_{xy}=82.0356$.\\
+\item $\bar{x}=62.9$, $s_x^2=588.09$, $\bar{y}=9.22$, $s_y^2=11.0056$ and $s_{xy}=82.0356$.\\
 Recta de regresión de la respuesta al dolor sobre la obesidad: $y=1.3232+0.1255x$. $r^2=0.8422$.\\
-$\overline{\log(x)}=4.0412$, $s_{\log(x)^2}0.2366$ y $s_{\log(x)y}=1.4973$.
-Modelo logarítmico de la respuesta al dolor sobre la obesidad: $y=−16.3578+6.3293\log(x)$.
+$\overline{\log(x)}=4.0412$, $s_{\log(x)}^2=0.2366$ and $s_{\log(x)y}=1.4973$.
+Modelo logarítmico de la respuesta al dolor sobre la obesidad: $y=-16.3578+6.3293\log(x)$.
 $r^2=0.8611$.\\
 $y(50)=8.4023$.
 \item Modelo exponencial de la obesidad sobre la respuesta al dolor: $x=e^{2.7868+0.1361y}$.\\
