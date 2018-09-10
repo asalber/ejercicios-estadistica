@@ -1,6 +1,0 @@
-\select@language {spanish}
-\contentsline {section}{\numberline {1}Estad\IeC {\'\i }stica Descriptiva}{2}{section.1}
-\contentsline {section}{\numberline {2}Regresi\IeC {\'o}n y Correlaci\IeC {\'o}n}{10}{section.2}
-\contentsline {section}{\numberline {3}Probabilidad}{18}{section.3}
-\contentsline {section}{\numberline {4}Variables Aleatorias}{23}{section.4}
-\contentsline {section}{\numberline {5}Estimaci\IeC {\'o}n de par\IeC {\'a}metros}{33}{section.5}
