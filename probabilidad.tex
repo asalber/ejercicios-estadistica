@@ -1336,7 +1336,7 @@ $P(E|+A\cap +B)=0.7878$.
 {}
 
 \newproblem{pro-51}{med}{}
-%STATEMENT
+%ENUNCIADO
 {En una población con 10000 personas hay 15 con tuberculosis en un momento concreto.
 Después de 5 años, 5 de ellas murieron y otras 3 cogieron la tuberculosis. 
 Suponiendo que el tamaño de la población no cambió en esos 5 años, calcular
@@ -1347,7 +1347,7 @@ Suponiendo que el tamaño de la población no cambió en esos 5 años, calcular
 \item La prevalencia de la tuberculosis al final de ese periodo.
 \end{enumerate} 
 }
-%SOLUTION
+%SOLUCIÓN
 {
 \begin{enumerate}
 \item $P(T)=0.0015$.
@@ -1356,12 +1356,12 @@ Suponiendo que el tamaño de la población no cambió en esos 5 años, calcular
 \item $P(T)=0.0013$.
 \end{enumerate}
 }
-%RESOLUTION
+%RESOLUCIÓN
 {}
 
 
 \newproblem{pro-52}{med}{*}
-%STATEMENT
+%ENUNCIADO
 {En un brote de varicela, esta fue diagnosticada a 18 de 160 niños vacunados y en 30 de 70 niños no vacunados.
 \begin{enumerate}
 \item Calcular e interpretar el riesgo relativo de sufrir varicela en niños vacunados.
@@ -1369,7 +1369,7 @@ Suponiendo que el tamaño de la población no cambió en esos 5 años, calcular
 \item ¿Qué medida de asociación es más apropiada para este tipo de estudio, el riesgo relativo o el odds ratio?
 \end{enumerate}
 }
-%SOLUTION
+%SOLUCIÓN
 {
 \begin{enumerate}
 \item $RR(V)=0.2625$.
@@ -1377,12 +1377,12 @@ Suponiendo que el tamaño de la población no cambió en esos 5 años, calcular
 \item El odds ratio, ya que se trata de un estudio retrospectivo.
 \end{enumerate}
 }
-%RESOLUTION
+%RESOLUCIÓN
 {}
 
 
 \newproblem{pro-53}{med}{}
-%STATEMENT
+%ENUNCIADO
 {Un ensayo clínico trata de determinar el efecto de un programa de ejercicios de preparación para el parto sobre los traumas perineales.
 La siguiente tabla resume los resultados.
 \begin{center}
@@ -1402,7 +1402,7 @@ La siguiente tabla resume los resultados.
 \item ¿Qué medida de asociación es más apropiada para este tipo de estudio, el riesgo relativo o el odds ratio?
 \end{enumerate}
 }
-%SOLUTION
+%SOLUCIÓN
 {
 \begin{enumerate}
 \item $R(E)=0.1476$ y $RR(E)=0.378$.
@@ -1410,5 +1410,136 @@ La siguiente tabla resume los resultados.
 \item Ambas son válidas.
 \end{enumerate}
 }
-%RESOLUTION
+%RESOLUCIÓN
 {}
+
+\newproblem{pro-54}{bio}{}
+%ENUNCIADO
+{En una ciudad se han detectado muchos casos de personas intoxicadas en la última semana y se sospecha que la causa pueda ser el consumo de una determinada marca de agua embotellada.
+Para confirmar la asociación entre el consumo de este agua y la intoxicación se tomó una muestra de 750 personas intoxicadas y otra de 1250 sin intoxicar.
+En las personas intoxicadas se observó que 420 habían consumido el agua embotellada de esa marca, mientras que en las personas sin intoxicar, 80 habían consumido agua embotellada de la marca.
+Se pide
+\begin{enumerate}
+\item Calcular la incidencia de la intoxicación en las personas que consumieron agua embotellada y en las que no.
+\item Con estos datos, ¿es posible calcular la prevalencia de la intoxicación?
+\item Calcular el riesgo relativo de intoxicación al consumir agua embotellada e interpretarlo.
+\item Calcular el odds ratio de intoxicación al consumir agua embotellada.
+\item ¿Qué medida de asociación es más adecuada para este estudio? Justificar la respuesta
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $R_T(E)=0.84$ and $R_C(E)=0.22$.
+\item No, porque se trata de un estudio retrospectivo.
+\item $RR(E)=3.8182$.
+\item $OR(E)=18.6136$.
+\item El odds ratio, porque no se puede estimar la prevalencia de la intoxicación.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{
+}
+
+\newproblem{pro-55}{gen}{}
+%ENUNCIADO
+{El siguiente árbol corresponde al espacio probabilístico del experimento consistente en tomar una persona al azar de una población y comprobar si había tenido o no tres enfermedades $A$, $B$ y $C$.
+
+\begin{center}
+\begin{tikzpicture}[
+grow=right,
+sloped,
+level 1/.style ={level distance=2cm, sibling distance=3.2cm, parent anchor=east, child anchor=west},
+level 2/.style ={level distance=2cm, sibling distance=1.6cm},
+level 3/.style ={level distance=2cm, sibling distance=1cm},
+prob/.style={font=\footnotesize,above}
+]
+
+\node (root) {}
+child {node {$\overline A$}
+child {node {$\overline B$}
+child {node {$\overline C$}
+}
+child {node {$C$}}
+}
+child {node {$B$}
+child {node {$\overline C$}}
+child {node {$C$}  edge from parent node[prob] {$0.1$}}
+}
+}
+child {node {$A$}
+child {node {$\overline B$}
+child {node {$\overline C$}}
+child {node {$C$} edge from parent node[prob] {$0.15$}}
+}
+child {node {$B$}
+child {node {$\overline C$}  edge from parent node[prob] {$0.7$}}
+child {node {$C$}}
+edge from parent node[prob] {$0.2$}
+}
+};
+\end{tikzpicture}
+\end{center}
+
+Sabiendo que el $1.5$\% de la población ha tenido las tres enfermedades, que el 54\% no ha tenido ninguna, y que las enfermedades $A$ y $B$ son independientes, se pide:
+
+\begin{enumerate}
+\item Completar el árbol etiquetando las ramas con las probabilidades correspondientes.
+\item Calcular la probabilidad de tener la enfermedad $C$.
+\item Calcular la probabilidad de tener la enfermedad $B$ si se tiene la enfermedad $C$.
+\item Calcular la probabilidad de no tener la enfermedad $A$ si no se tienen las otras dos.
+\item ¿Son independientes los sucesos $B$ y $C$?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item \hfill\break
+
+\begin{tikzpicture}[
+grow=right,
+sloped,
+level 1/.style ={level distance=2cm, sibling distance=3.2cm, parent anchor=east, child anchor=west},
+level 2/.style ={level distance=2cm, sibling distance=1.6cm},
+level 3/.style ={level distance=2cm, sibling distance=1cm},
+prob/.style={font=\footnotesize,above}
+]
+
+\node (root) {}
+child {node {$\overline A$}
+child {node {$\overline B$}
+child {node {$\overline C$} edge from parent node[prob] {$0.9$}}
+child {node {$C$} edge from parent node[prob] {$0.1$}}
+edge from parent node[prob] {$0.8$}
+}
+child {node {$B$}
+child {node {$\overline C$} edge from parent node[prob] {$0.9$}}
+child {node {$C$}  edge from parent node[prob] {$0.1$}}
+edge from parent node[prob] {$0.2$}
+}
+edge from parent node[prob] {$0.25$}
+}
+child {node {$A$}
+child {node {$\overline B$}
+child {node {$\overline C$} edge from parent node[prob] {$0.85$}}
+child {node {$C$} edge from parent node[prob] {$0.15$}}
+edge from parent node[prob] {$0.8$}
+}
+child {node {$B$}
+child {node {$\overline C$} edge from parent node[prob] {$0.7$}}
+child {node {$C$ } edge from parent node[prob] {$0.3$}}
+edge from parent node[prob] {$0.2$}
+}
+edge from parent node[prob] {$0.75$}
+};
+\end{tikzpicture}
+
+\item $P(C)=0.12$.
+\item $P(B|C)=0.25$.
+\item $P(\overline A | \overline B \cap \overline C)=0.7606$.
+\item No, porque $P(B|C)\neq P(B)$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{
+}

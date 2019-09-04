@@ -2656,3 +2656,46 @@ Nacimientos: $\bar{z}=2.4525$, $s_z=1.1674$ y $cv_z=0.476$.
 %RESOLUCIÓN
 {
 }
+
+\newproblem{des-62}{far}{*}
+%STATEMENT
+{Se ha modificado un gen de una especie de rata para facilitar la metabolización del colesterol en sangre. Para comprobar la efectividad de la modificación genética se tomaron dos grupos de 20 ratas, unas con el gen modificado y las otras no, y se sometieron a una misma dieta con distintas concentraciones de aceite de palma durante un mes, obteniendo los siguientes resultados:
+
+\textbf{Cantidad de aceite de palma en gr} (igual en las dos muestras)\\
+\(\sum x_i=640.6467\), \(\sum x_i^2=23508.6387\),
+\(\sum(x_i-\bar x)^3=-5527.08\), \(\sum(x_i-\bar x)^4=792910\)\\
+\textbf{Colesterol en sangre en mg/dl de ratas no modificadas genéticamente}\\
+\(\sum y_j=2945.8545\), \(\sum y_j^2=439517.5975\),
+\(\sum(y_j-\bar y)^3=604.08\), \(\sum(y_j-\bar y)^4=3717331.07\)\\
+\textbf{Colesterol en sangre en mg/dl de ratas modificadas genéticamente}\\
+\(\sum y_j=2126.5899\), \(\sum y_j^2=226824.5373\),
+\(\sum(y_j-\bar y)^3=-629.4\), \(\sum(y_j-\bar y)^4=48248.29\)\\
+
+Se pide:
+
+\begin{enumerate}
+\item ¿En qué muestra es más representativa la media del colesterol, en las ratas modificadas genéticamente o en las no modificadas?
+\item ¿En qué muestra es más asimétrica la distribución del colesterol?
+\item ¿En qué muestra es menos normal el apuntamiento del colesterol?
+\item ¿Qué nivel de colesterol es relativamente mayor, el de una rata modificada genéticamente con nivel 130 mg/dl, o el de una rata no modificada con nivel 145 mg/dl?
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item Ratas no modificadas genéticamente: $\bar y=147.2927$ mg/dl,  $s^2_y=280.7332$ (mg/dl)$^2$, $s=16.7551$ mg/dl y $cv_y=0.1138$.\\
+Ratas modificadas genéticamente: $\bar y=106.3295$ mg/dl,  $s^2_y=35.265$ (mg/dl)$^2$, $s=5.9384$ mg/dl y $cv_y=0.0558$.\\
+Así, la media de las ratas modificadas genéticamente es más representativa ya que su coeficiente de variación es menor.
+\item Ratas no modificadas genéticamente: $g_1=0.0064$.\\
+Ratas modificadas genéticamente: $g_1-0.1503$.\\
+Por tanto, la distribución de ratas modificadas genéticamente es más asimétrica ya que el coeficiente de asimetría está más alejado de 0.
+\item Ratas no modificadas genéticamente: $g_2=-0.6416$.\\
+Ratas modificadas genéticamente: $g_2-1.0602$.\\
+Por tanto, el apuntamiento de la distribución de ratas modificadas genéticamente es menos normal ya que el coeficiente de apuntamiento está más alejado de 0.
+\item Ratas no modificadas genéticamente: $z(145)=-0.1368$.\\
+Ratas modificadas genéticamente:: $z(130)=3.986$.\\
+Por tanto, un nivel de colesterol de 130 mg/dl en ratas modificadas genéticamente es relativamente mayor que 145 mg/dl en ratas no modificadas genéticamente.
+\end{enumerate}
+}
+%RESOLUTION
+{
+}

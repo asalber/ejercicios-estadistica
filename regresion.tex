@@ -1833,7 +1833,7 @@ y = 0.0518\cdot 8+1.2153 = 1.6296 \text{ $\mu$gr/dl}.
 }
 
 
-\newproblem*{reg-45}{far}{*}
+\newproblem*{reg-45}{far}{}
 %ENUNCIADO
 {Dar ejemplos de:
 \begin{enumerate}
@@ -1844,3 +1844,38 @@ y = 0.0518\cdot 8+1.2153 = 1.6296 \text{ $\mu$gr/dl}.
 }
 
 
+\newproblem{reg-46}{far}{*}
+%STATEMENT
+{Se ha modificado un gen de una especie de rata para facilitar la metabolización del colesterol en sangre. Para comprobar la efectividad de la modificación genética se tomaron dos grupos de 20 ratas, unas con el gen modificado y las otras no, y se sometieron a una misma dieta con distintas concentraciones de aceite de palma durante un mes, obteniendo los siguientes resultados:
+
+\textbf{Cantidad de aceite de palma en gr} (igual en las dos muestras)\\
+\(\sum x_i=640.6467\), \(\sum x_i^2=23508.6387\).\\
+\textbf{Colesterol en sangre en mg/dl de ratas no modificadas genéticamente}\\
+\(\sum y_j=2945.8545\), \(\sum y_j^2=439517.5975\), \(\sum x_iy_j=98156.0658\).\\
+\textbf{Colesterol en sangre en mg/dl de ratas modificadas genéticamente}\\
+\(\sum y_j=2126.5899\), \(\sum y_j^2=226824.5373\), \(\sum x_iy_j=69517.3648\).
+
+Se pide:
+
+\begin{enumerate}
+\item ¿En qué grupo se ajusta mejor la recta de regresión del nivel de colesterol sobre la cantidad de aceite de palma?
+\item Según el modelo de regresión lineal, ¿qué cantidad de colesterol se espera que tenga una rata modificada genéticamente que toma 25 gr de aceite de palma en la dieta?
+      ¿Y una no modificada?
+\item ¿Qué cantidad máxima de aceite de palma hay que suministrar a una rata no modificada genéticamente para que su colesterol no pase de 150 mg/dl?
+      ¿Es fiable la predicción?
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item Cantidad de aceite de palma: $\bar x=32.0323$ gr,  $s^2_x=149.3614$ gr$^2$.\\
+Ratas no modificadas genéticamente: $\bar y=147.2927$ mg/dl,  $s^2_y=280.7332$ (mg/dl)$^2$, $s_{xy}=189.6733$ gr$\cdot$mg/dl y $r^2=0.858$.\\
+Ratas modificadas genéticamente: $\bar y=106.3295$ mg/dl,  $s^2_y=35.265$ (mg/dl)$^2$, $s_{xy}=69.8861$ gr$\cdot$mg/dl y $r^2=0.9273$.\\
+Por tanto, la recta de regresión se ajusta mejor en las ratas modificadas genéticamente ya que el coeficiente de determinación es mayor.
+\item Recta de regresión de $Y$ sobre $X$ en Ratas no modificadas genéticamente: $y=106.615+1.2699x$. Predicción: $y(25)=138.3624$ mg/dl.\\
+Recta de regresión de $Y$ sobre $X$ en ratas modificadas genéticamente: $y=91.3416+0.4679x$. Predicción: $y(25)=103.0391$ mg/dl.
+\item Recta de regresión de $X$ sobre $Y$ en ratas no modificadas genéticamente: $x=-67.4838+0.6756y$. Predicción: $x(150)=33.8615$ gr. La predicción es muy fiable ya que el coeficiente de determinación está próximo a 1.
+\end{enumerate}
+}
+%RESOLUTION
+{
+}
