@@ -1,6 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Estad\IeC {\'\i }stica Descriptiva}{2}{section.1}
-\contentsline {section}{\numberline {2}Regresi\IeC {\'o}n y Correlaci\IeC {\'o}n}{9}{section.2}
-\contentsline {section}{\numberline {3}Probabilidad}{15}{section.3}
-\contentsline {section}{\numberline {4}Variables Aleatorias Discretas}{23}{section.4}
-\contentsline {section}{\numberline {5}Variables Aleatorias Continuas}{28}{section.5}
