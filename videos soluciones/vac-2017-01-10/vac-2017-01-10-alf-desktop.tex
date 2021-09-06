@@ -14,7 +14,6 @@
 % Tables
 \usepackage{array}
 \usepackage{multirow}
-\usepackage{booktabs}
 % Graphics
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -68,14 +67,14 @@
 
 \large
 \begin{tabular}{rl}
-Temas: & \structure{Regresión lineal y no lineal}\\
+Temas: & \structure{Variables Aleatorias Continuas: Distribución Normal}\\
 Titulaciones: & \structure{Medicina}
 \end{tabular}
 
 \bigskip
 Alfredo Sánchez Alberca\\
 \url{asalber@ceu.es}\\
-\url{https://aprendeconalf.es}\\
+\url{http://aprendeconalf.es}\\
 
 \includegraphics[scale=0.2]{../img/logo_uspceu}
 
@@ -87,63 +86,32 @@ Alfredo Sánchez Alberca\\
 
 %----------------------------------------------------------------------SLIDE----
 \begin{frame}[c]
-	En un estudio se ha medido la reducción en el nivel de colesterol de un grupo de personas hipertensas tras un programa de ejercicios.
-	Los resultados aparecen en la siguiente tabla.
-
-	\medskip
-
-	\resizebox{\textwidth}{!}{
-	$
-	\begin{array}{lrrrrrrrrrr}
-		\toprule
-		\mbox{Minutos de ejercicio} & 96 & 106 & 163 & 207 & 227 & 244 & 261 & 271 & 272 & 301\\
-		\mbox{Reducción de colesterol (mg/dl)} & 4 & 5 & 8 & 13 & 15 & 17 & 22 & 39 & 31 & 45\\
-		\bottomrule
-	\end{array}
-	$
-	}
-
+	\large
+	Se ha medido la presión arterial sistólica a 8000 individuos de una población se ha observado que 2254 tiene más de 130 mmHg y 3126 tienen entre 110 y 130 mmHg.
+	Suponiendo que la presión arterial sistólica sigue una distribución de probabilidad normal, se pide:
 	\begin{enumerate}
-	  \item ¿Qué modelo de regresión explica mejor la reducción de colesterol en función de los minutos de ejercicio, el lineal o el exponencial? Justificar la respuesta.
-	  \item Según el modelo de regresión lineal, ¿cuánto disminuirá el colesterol por cada minuto más de ejercicio?
-	  \item Según el modelo logarítmico, ¿cuántos minutos de ejercicio se necesitan para reducir el colesterol 100 mg/dl?
-	  ¿Es fiable la predicción?
-	  Justificar la respuesta.
+	  \item Calcular la media y la desviación típica.
+	  \item Si se consideran hipertensas las personas con una presión arterial superior a 140 mmHg, ¿cuántas personas hipertensas hay en la población?
+	  \item Si una analítica sanguínea marca como anormales el 5\% de los individuos con menor presión arterial y el 5\% con mayor presión arterial, ¿entre qué presiones arteriales debe estar la presión de un individuo para que la analítica lo considere normal?
 	\end{enumerate}
-
-	Utilizar las siguientes sumas ($X$=Minutos de ejercicio e $Y$=Reducción de colesterol):\\
-	 $\sum x_i=2148$ min, $\sum x_i^2=507082$ min$^2$,\\
-	 $\sum \log(x_i)=53.0559$ $\log(\mbox{min})$, $\sum \log(x_i)^2=282.9578$ $\log(\mbox{min})^2$, \\
-	 $\sum y_j=199$ mg/dl, $\sum y_j^2=5779$ (mg/dl)$^2$,\\
-	 $\sum \log(y_j)=27.1766$ $\log(\mbox{mg/dl})$, $\sum \log(y_j)^2=80.035$ $\log(\mbox{mg/dl})^2$,\\
-	 $\sum x_iy_j=50750$ min$\cdot$mg/dl, $\sum x_i\log(y_j)=6359.0468$ min$\cdot\log(\mbox{mg/dl})$, $\sum \log(x_i)y_j=1097.978$ $\log(\mbox{min})$mg/dl, $\sum \log(x_i)\log(y_j)=147.0682$ $\log(\mbox{min})\log(\mbox{mg/dl})$.
 \end{frame}
 
 
 %----------------------------------------------------------------------SLIDE----
 \begin{frame}
 	\begin{columns}
-		\begin{column}[T]{0.6\textwidth}
+		\begin{column}[T]{0.7\textwidth}
+			Se ha medido la presión arterial sistólica a 8000 individuos de una población se ha observado que 2254 tiene más de 130 mmHg y 3126 tienen entre 110 y 130 mmHg.
+			Suponiendo que la presión arterial sistólica sigue una distribución de probabilidad normal, se pide:
 			\begin{enumerate}
-				\item ¿Qué modelo de regresión explica mejor la reducción de colesterol en función de los minutos de ejercicio, el lineal o el exponencial?
+			  \item Calcular la media y la desviación típica.
 			\end{enumerate}
 		\end{column}
-		\begin{column}[T]{0.4\textwidth}
+		\begin{column}[T]{0.3\textwidth}
 			\structure{Datos}\\
-			$X\equiv$ Minutos de ejercicio\\
-			$Y\equiv$ Reducción del colesterol\\
-			$\sum x_i=2148$ min\\
-			$\sum x_i^2=507082$ min$^2$\\
-	 	 	$\sum \log(x_i)=53.0559$ $\log(\mbox{min})$\\
-			$\sum \log(x_i)^2=282.9578$ $\log(\mbox{min})^2$\\
-	 	 	$\sum y_j=199$ mg/dl\\
-			$\sum y_j^2=5779$ (mg/dl)$^2$\\
-	 	 	$\sum \log(y_j)=27.1766$ $\log(\mbox{mg/dl})$\\
-			$\sum \log(y_j)^2=80.035$ $\log(\mbox{mg/dl})^2$\\
-	 	 	$\sum x_iy_j=50750$ min$\cdot$mg/dl\\
-			$\sum x_i\log(y_j)=6359.0468$ min$\cdot\log(\mbox{mg/dl})$\\
-			$\sum \log(x_i)y_j=1097.978$ $\log(\mbox{min})$mg/dl\\
-			$\sum \log(x_i)\log(y_j)=147.0682$ $\log(\mbox{min})\log(\mbox{mg/dl})$.
+			$X\equiv$ Presión arterial sistólica\\
+			$X\sim N(\mu,\sigma)$\\
+			$N=8000$
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -152,45 +120,34 @@ Alfredo Sánchez Alberca\\
 %----------------------------------------------------------------------SLIDE----
 \begin{frame}
 	\begin{columns}
-		\begin{column}[T]{0.6\textwidth}
+		\begin{column}[T]{0.7\textwidth}
 			\begin{enumerate}
-				\item[2.] Según el modelo de regresión lineal, ¿cuánto disminuirá el colesterol por cada minuto más de ejercicio?
+			  \item[2.] Si se consideran hipertensas las personas con una presión arterial superior a 140 mmHg, ¿cuántas personas hipertensas hay en la población?
 			\end{enumerate}
 		\end{column}
-		\begin{column}[T]{0.4\textwidth}
+		\begin{column}[T]{0.3\textwidth}
 			\structure{Datos}\\
-			$X\equiv$ Minutos de ejercicio\\
-			$Y\equiv$ Reducción del colesterol\\
-			$\bar x=214.8$ min\\
-			$s_x^2=4569.16$ min$^2$\\
-			$\bar y=19.9$ mmHg\\
-			$s_y^2=181.89$ mmHg$^2$\\
-			$s_{xy}=800.48$ min$\cdot$mmHg
+			$X\equiv$ Presión arterial sistólica\\
+			$X\sim N(118.7,\,19.42)$\\
+			$N=8000$
 		\end{column}
 	\end{columns}
 \end{frame}
 
 
-
-
 %----------------------------------------------------------------------SLIDE----
 \begin{frame}
 	\begin{columns}
-		\begin{column}[T]{0.6\textwidth}
+		\begin{column}[T]{0.7\textwidth}
 			\begin{enumerate}
-				\item[3.] Según el modelo logarítmico, ¿cuántos minutos de ejercicio se necesitan para reducir el colesterol 100 mg/dl?
-			  ¿Es fiable la predicción?
+			  \item[3.] Si una analítica sanguínea marca como anormales el 5\% de los individuos con menor presión arterial y el 5\% con mayor presión arterial, ¿entre qué presiones arteriales debe estar la presión de un individuo para que la analítica lo considere normal?
 			\end{enumerate}
 		\end{column}
-		\begin{column}[T]{0.4\textwidth}
+		\begin{column}[T]{0.3\textwidth}
 			\structure{Datos}\\
-			$X\equiv$ Minutos de ejercicio\\
-			$Y\equiv$ Reducción del colesterol\\
-			$\bar x=214.8$ min\\
-			$s_x^2=4569.16$ min$^2$\\
-			$\overline {\log(y)}=2.7177$ $\log(\mbox{mmHg})$\\
-			$s_{\log(y)}^2=0.6178$ $\log(\mbox{mmHg})^2$\\
-			$s_{x\log(y)}=52.1504$ min$\cdot\log(\mbox{mmHg})$
+			$X\equiv$ Presión arterial sistólica\\
+			$X\sim N(118.7,\,19.42)$\\
+			$N=8000$
 		\end{column}
 	\end{columns}
 \end{frame}

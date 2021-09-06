@@ -6,7 +6,7 @@
 %-------------------------------------------------------------------------------
 % Language
 \usepackage{polyglossia}
-\setmainlanguage{spanish}
+\setdefaultlanguage{spanish}
 % Maths
 \usepackage{amsmath} % Math symbols and environments
 \usepackage{amsfonts}
@@ -67,14 +67,14 @@
 
 \large
 \begin{tabular}{rl}
-Temas: & \structure{Variables Aleatorias Continuas: Distribución Normal}\\
+Temas: & \structure{Variables Aleatorias Discretas}\\
 Titulaciones: & \structure{Medicina}
 \end{tabular}
 
 \bigskip
 Alfredo Sánchez Alberca\\
 \url{asalber@ceu.es}\\
-\url{https://aprendeconalf.es}\\
+\url{http://aprendeconalf.es}\\
 
 \includegraphics[scale=0.2]{../img/logo_uspceu}
 
@@ -87,12 +87,11 @@ Alfredo Sánchez Alberca\\
 %----------------------------------------------------------------------SLIDE----
 \begin{frame}[c]
 	\large
-	Se ha medido la presión arterial sistólica a 8000 individuos de una población se ha observado que 2254 tiene más de 130 mmHg y 3126 tienen entre 110 y 130 mmHg.
-	Suponiendo que la presión arterial sistólica sigue una distribución de probabilidad normal, se pide:
+	En el servicio de emergencias de un municipio se sabe que por término medio se producen 6 avisos cada día.
+	Sabiendo que el servicio está organizado en 3 turnos diários de 8 horas, se pide:
 	\begin{enumerate}
-	  \item Calcular la media y la desviación típica.
-	  \item Si se consideran hipertensas las personas con una presión arterial superior a 140 mmHg, ¿cuántas personas hipertensas hay en la población?
-	  \item Si una analítica sanguínea marca como anormales el 5\% de los individuos con menor presión arterial y el 5\% con mayor presión arterial, ¿entre qué presiones arteriales debe estar la presión de un individuo para que la analítica lo considere normal?
+	  \item Calcular la probabilidad de que en un turno se produzcan más de 3 avisos.
+	  \item Calcular la probabilidad de que en alguno de los tres turnos de un día no se produzcan avisos.
 	\end{enumerate}
 \end{frame}
 
@@ -101,17 +100,16 @@ Alfredo Sánchez Alberca\\
 \begin{frame}
 	\begin{columns}
 		\begin{column}[T]{0.7\textwidth}
-			Se ha medido la presión arterial sistólica a 8000 individuos de una población se ha observado que 2254 tiene más de 130 mmHg y 3126 tienen entre 110 y 130 mmHg.
-			Suponiendo que la presión arterial sistólica sigue una distribución de probabilidad normal, se pide:
+			En el servicio de emergencias de un municipio se sabe que por término medio se producen 6 avisos cada día.
+			Sabiendo que el servicio está organizado en 3 turnos diários de 8 horas, se pide:
 			\begin{enumerate}
-			  \item Calcular la media y la desviación típica.
+			  \item Calcular la probabilidad de que en un turno se produzcan más de 3 avisos.
 			\end{enumerate}
 		\end{column}
 		\begin{column}[T]{0.3\textwidth}
 			\structure{Datos}\\
-			$X\equiv$ Presión arterial sistólica\\
-			$X\sim N(\mu,\sigma)$\\
-			$N=8000$
+			$X\equiv$ Número de avisos en un turno\\
+			$\mu_x=6/3=2$
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -121,33 +119,17 @@ Alfredo Sánchez Alberca\\
 \begin{frame}
 	\begin{columns}
 		\begin{column}[T]{0.7\textwidth}
+			En el servicio de emergencias de un municipio se sabe que por término medio se producen 6 avisos cada día.
+			Sabiendo que el servicio está organizado en 3 turnos diários de 8 horas, se pide:
 			\begin{enumerate}
-			  \item[2.] Si se consideran hipertensas las personas con una presión arterial superior a 140 mmHg, ¿cuántas personas hipertensas hay en la población?
+			  \item[2.] Calcular la probabilidad de que en alguno de los tres turnos de un día no se produzcan avisos.
 			\end{enumerate}
 		\end{column}
 		\begin{column}[T]{0.3\textwidth}
 			\structure{Datos}\\
-			$X\equiv$ Presión arterial sistólica\\
-			$X\sim N(118.7,\,19.42)$\\
-			$N=8000$
-		\end{column}
-	\end{columns}
-\end{frame}
-
-
-%----------------------------------------------------------------------SLIDE----
-\begin{frame}
-	\begin{columns}
-		\begin{column}[T]{0.7\textwidth}
-			\begin{enumerate}
-			  \item[3.] Si una analítica sanguínea marca como anormales el 5\% de los individuos con menor presión arterial y el 5\% con mayor presión arterial, ¿entre qué presiones arteriales debe estar la presión de un individuo para que la analítica lo considere normal?
-			\end{enumerate}
-		\end{column}
-		\begin{column}[T]{0.3\textwidth}
-			\structure{Datos}\\
-			$X\equiv$ Presión arterial sistólica\\
-			$X\sim N(118.7,\,19.42)$\\
-			$N=8000$
+			$X\equiv$ Número de avisos en un turno\\
+			$X\sim P(2)$\\
+			$Y\equiv$ Número de turnos sin avisos en un día
 		\end{column}
 	\end{columns}
 \end{frame}
